@@ -125,7 +125,7 @@
 	<footer style="color: white;">
 		<?php 
 			echo "Всего посещений: " . $allVisits['all_visits'] . " ";
-		    echo "Всего пользователей: " . $uniqueVisits[0];
+		    echo "Уникальных посещений: " . $uniqueVisits[0];
 		?>
 	</footer>
 

@@ -109,13 +109,20 @@ div.newsWrapper {
 }
 
 div.news {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 	width: 30%;
+	height: 500px;
 	border: 2px solid rgba(255,255,255, 1);
 	padding: 1%;
 }
 
 div.news > img {
 	margin: 2% 0;
+	width: 300px;
+	max-width: 100%;
 }
 
 div.news > p {

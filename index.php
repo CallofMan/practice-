@@ -77,7 +77,7 @@
 			<a href="#" style="margin-bottom: unset">Главная</a>
 		</nav>
 
-		<script style="flex-grow: 1;" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A99dc76f7c463cec37b1c102ed12522e228ad0aa2b6582984d06190ddb248d015&amp;height=250&amp;lang=ru_RU&amp;scroll=true"></script>
+		<script style="flex-grow: 1; width: 93%;" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A99dc76f7c463cec37b1c102ed12522e228ad0aa2b6582984d06190ddb248d015&amp;height=250&amp;width=93%&amp;%lang=ru_RU&amp;scroll=true"></script>
 
 		<!-- <script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
 			
@@ -96,16 +96,7 @@
 
 				<div class="newsWrapper">
 
-					<a class="news">
-						<h3>Антенны и распространение радиоволн</h3>
-						<img src="img/news/1.jpg">
-						<article>
-							В октябре 2019 года Санкт-Петербургская Антенная Неделя была проведена в СПбГЭТУ «ЛЭТИ» и включала в себя две конференции: русскоязычную «Антенны и Распространение Радиоволн» и англоязычную «Antennas Design and Measurement International Conference».
-						</article>
-						<p>01.01.2001</p>
-					</a>
-
-					<a class="news">
+					<a href="" class="news">
 						<h3>Антенны и распространение радиоволн</h3>
 						<img src="img/news/1.jpg">
 						<article>
@@ -114,7 +105,7 @@
 						<p>01.01.2001</p>
 					</a>
 					
-					<a class="news">
+					<a href="" class="news">
 						<h3>Антенны и распространение радиоволн</h3>
 						<img src="img/news/1.jpg">
 						<article>
@@ -123,7 +114,7 @@
 						<p>01.01.2001</p>
 					</a>
 
-					<a class="news">
+					<a href="" class="news">
 						<h3>Антенны и распространение радиоволн</h3>
 						<img src="img/news/1.jpg">
 						<article>
@@ -132,7 +123,7 @@
 						<p>01.01.2001</p>
 					</a>
 
-					<a class="news">
+					<a href="" class="news">
 						<h3>Антенны и распространение радиоволн</h3>
 						<img src="img/news/1.jpg">
 						<article>
@@ -141,7 +132,7 @@
 						<p>01.01.2001</p>
 					</a>
 
-					<a class="news">
+					<a href="" class="news">
 						<h3>Антенны и распространение радиоволн</h3>
 						<img src="img/news/1.jpg">
 						<article>
@@ -150,7 +141,7 @@
 						<p>01.01.2001</p>
 					</a>
 
-					<a class="news">
+					<a href="" class="news">
 						<h3>Антенны и распространение радиоволн</h3>
 						<img src="img/news/1.jpg">
 						<article>
@@ -159,7 +150,7 @@
 						<p>01.01.2001</p>
 					</a>
 
-					<a class="news">
+					<a href="" class="news">
 						<h3>Антенны и распространение радиоволн</h3>
 						<img src="img/news/1.jpg">
 						<article>
@@ -167,7 +158,16 @@
 						</article>
 						<p>01.01.2001</p>
 					</a>
-			
+
+					<a href="" class="news">
+						<h3>Антенны и распространение радиоволн</h3>
+						<img src="img/news/1.jpg">
+						<article>
+							В октябре 2019 года Санкт-Петербургская Антенная Неделя была проведена в СПбГЭТУ «ЛЭТИ» и включала в себя две конференции: русскоязычную «Антенны и Распространение Радиоволн» и англоязычную «Antennas Design and Measurement International Conference».
+						</article>
+						<p>01.01.2001</p>
+					</a>
+
 				</div>
 
 			</div>

@@ -27,6 +27,10 @@ div.wrapper {
 	margin: 0 auto;
 }
 
+header, section.center, section.leftSidebar, footer{
+	background-color: rgba(253, 253, 253, 0.3) !important;
+}
+
 header {
 	display: flex;
 	flex-flow: row wrap;
@@ -64,6 +68,9 @@ section.leftSidebar {
 	width: 14%;
 	padding: 0.6% 0.3%;
 	flex-grow: 1;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
 }
 
 nav.leftSidebarNavigation {
@@ -124,36 +131,42 @@ div.newsWrapper {
 	margin-top: 2%;
 }
 
-div.news {
+a.news {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: 2px solid #1fcecb;
+	border: 2px solid  rgba(0, 169, 251, 0.8);
 	background-color: rgba(0, 0, 0, 0.7);
 	padding: 25px;
 	border-radius: 3px;
+	color: rgba(214,205,205,1);
+	text-decoration: none;
 }
 
-div.news h3 {
+a.news:hover {
+	border: 2px solid #1fcecb;
+}
+
+a.news h3 {
 	text-align: center;
 }
 
-div.news img {
+a.news img {
 	margin: 2% 0;
 	width: 300px;
 	max-width: 100%;
 	border-radius: 7px;
 }
 
-div.news article {
+a.news article {
 	margin-top: 5%;
 	margin-bottom: 15px;
 	text-indent: 15px;
 	line-height: 25px;
 }
 
-div.news > p {
+a.news > p {
 	margin-top: auto;
 	float: right;
 }

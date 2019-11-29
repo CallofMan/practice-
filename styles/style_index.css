@@ -6,13 +6,9 @@
 }
 
 html {
-	/*background-image: url(../background/home_bg.png);*/
-	/* background-image: url(../background/background2.2.png); */
 	background-image: url(../background/tile.png);
 	background-repeat: repeat;
 	backdrop-filter: blur(6px);
-	/* background-attachment: fixed; */
-	/* background-size: cover; */
 }
 
 body
@@ -40,7 +36,6 @@ header {
 	margin-top: 0.5%;
 	padding: 10px;
 	width: 95%;
-	/* border: 2px solid rgba(0, 169, 251, 0.7); */
 }
 
 img.logo {
@@ -66,7 +61,6 @@ main {
 
 section.leftSidebar {
 	background-color: rgba(0, 0, 0, 0.5);
-	/* border: 2px solid rgba(0, 169, 251, 0.7); */
 	width: 14%;
 	padding: 0.6% 0.3%;
 	flex-grow: 1;
@@ -83,19 +77,15 @@ nav.leftSidebarNavigation {
 
 nav.leftSidebarNavigation > a {
 	display: block;
-	/* border: 2px solid #1fcecb; */
 	color: rgb(7, 136, 247);
 	text-decoration: none;
 	text-align: center;
 	margin-bottom: 4%;
-	/* background-color: white; */
 	border-radius: 3px;
 	
 	background-color: rgba(0, 169, 251, 0.3);
 	color: white;
-
-	font-size: 17px;
-	padding: 1% 0;
+	padding: 4% 2%;
 	width: 95%;
 	/* font-size: 1vw; */
 	transition: all .1s;
@@ -103,7 +93,6 @@ nav.leftSidebarNavigation > a {
 
 nav.leftSidebarNavigation > a:hover {
 	background-color: #1fcecb;
-	/* border: 2px solid white; */
 	color: white;
 	transition: all .1s;
 }
@@ -114,7 +103,6 @@ section.center {
 	justify-content: flex-start;
 	align-items: flex-start;
 	background-color: rgba(0, 0, 0, 0.5);
-	/* border: 2px solid #1978e4b5; */
 	width: 75%;
 	margin-left: 2%;
 	padding: 1%;
@@ -130,10 +118,6 @@ section.center h2
 	color: rgba(214,205,205,1);
 }
 div.newsWrapper {
-	/* display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: center; */
 	display: grid;
 	grid-gap: 5px;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -141,18 +125,15 @@ div.newsWrapper {
 }
 
 div.news {
-	/* align-self: stretch; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* min-height: 500px; */
-	/* border: 2px solid rgba(255,255,255, 1); */
 	border: 2px solid #1fcecb;
 	background-color: rgba(0, 0, 0, 0.7);
 	padding: 25px;
 	border-radius: 3px;
-}'
+}
 
 div.news h3 {
 	text-align: center;
@@ -179,7 +160,6 @@ div.news > p {
 
 footer {
 	margin-top: auto;
-	/* border: 2px solid #1978e4b5; */
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 95%;
 	padding: 10px;

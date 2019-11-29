@@ -3,10 +3,41 @@
 	
 	$db = mysqli_query($link, "SELECT * FROM okbmei");
 
-	$update = mysqli_query($link, "UPDATE quantity_all_visits SET all_visits = all_visits + 1 WHERE id = 1");
+	// ip посетителя
+	$ip = $_SERVER['REMOTE_ADDR'];
 
+	// Проверка на существующий ip
+	$queryAllIp = mysqli_query($link, "SELECT ip FROM ip");
+
+	$key = 1;
+	while ($allIp = $queryAllIp->fetch_assoc())
+	{
+		if ($allIp['ip'] == $ip)
+		{
+			$key = 0;
+			break;
+		}
+	}
+
+	// Занесение в базу ip, если такого раньше не было
+	if ($key == 1)
+	{
+		$queryIp = mysqli_query($link, "INSERT INTO ip VALUES (NULL, '$ip')");
+	}
+
+	// Подсчёт уникальных пользователей
+	$queryUniqueVisits = mysqli_query($link, "SELECT COUNT(*) FROM ip");
+	$uniqueVisits = $queryUniqueVisits->fetch_array();
+
+	// Обновление количества уникальных пользователей в базе
+	$updateUnique = mysqli_query($link, "UPDATE quantity_all_visits SET unique_visits = $uniqueVisits[0] WHERE id = 1");
+
+	// Обновление счётчика посещений в базе
+	$updateAll = mysqli_query($link, "UPDATE quantity_all_visits SET all_visits = all_visits + 1 WHERE id = 1");
+
+	// Предвывод счётчика посещений
 	$result = mysqli_query($link, "SELECT all_visits FROM quantity_all_visits WHERE id = 1");
-	$quantity = $result->fetch_assoc();
+	$allVisits = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -92,7 +123,10 @@
 	</main>
 
 	<footer style="color: white;">
-		<?php echo $quantity['all_visits']; ?>
+		<?php 
+			echo "Всего посещений: " . $allVisits['all_visits'] . " ";
+		    echo "Всего пользователей: " . $uniqueVisits[0];
+		?>
 	</footer>
 
 </div>

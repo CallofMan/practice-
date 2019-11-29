@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 29 2019 г., 11:08
+-- Время создания: Ноя 29 2019 г., 11:58
 -- Версия сервера: 10.3.13-MariaDB
 -- Версия PHP: 7.1.22
 
@@ -25,6 +25,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `ip`
+--
+
+CREATE TABLE `ip` (
+  `id` int(11) NOT NULL,
+  `ip` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `ip`
+--
+
+INSERT INTO `ip` (`id`, `ip`) VALUES
+(3, '127.0.0.1');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `quantity_all_visits`
 --
 
@@ -39,17 +57,33 @@ CREATE TABLE `quantity_all_visits` (
 --
 
 INSERT INTO `quantity_all_visits` (`id`, `all_visits`, `unique_visits`) VALUES
-(1, 35, 1);
+(1, 52, 1);
 
 --
 -- Индексы сохранённых таблиц
 --
 
 --
+-- Индексы таблицы `ip`
+--
+ALTER TABLE `ip`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `quantity_all_visits`
 --
 ALTER TABLE `quantity_all_visits`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `ip`
+--
+ALTER TABLE `ip`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

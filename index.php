@@ -1,11 +1,45 @@
-<?
-require_once 'connection.php';
-session_start();
+<?php
+	require_once 'connection.php';
+	
+	$db = mysqli_query($link, "SELECT * FROM okbmei");
 
-if (!isset($_SESSION['counter'])) {
-	$query = mysqli_query("UPDATE ");
-}
+	// ip посетителя
+	$ip = $_SERVER['REMOTE_ADDR'];
+
+	// Проверка на существующий ip
+	$queryAllIp = mysqli_query($link, "SELECT ip FROM ip");
+
+	$key = 1;
+	while ($allIp = $queryAllIp->fetch_assoc())
+	{
+		if ($allIp['ip'] == $ip)
+		{
+			$key = 0;
+			break;
+		}
+	}
+
+	// Занесение в базу ip, если такого раньше не было
+	if ($key == 1)
+	{
+		$queryIp = mysqli_query($link, "INSERT INTO ip VALUES (NULL, '$ip')");
+	}
+
+	// Подсчёт уникальных пользователей
+	$queryUniqueVisits = mysqli_query($link, "SELECT COUNT(*) FROM ip");
+	$uniqueVisits = $queryUniqueVisits->fetch_array();
+
+	// Обновление количества уникальных пользователей в базе
+	$updateUnique = mysqli_query($link, "UPDATE quantity_all_visits SET unique_visits = $uniqueVisits[0] WHERE id = 1");
+
+	// Обновление счётчика посещений в базе
+	$updateAll = mysqli_query($link, "UPDATE quantity_all_visits SET all_visits = all_visits + 1 WHERE id = 1");
+
+	// Предвывод счётчика посещений
+	$result = mysqli_query($link, "SELECT all_visits FROM quantity_all_visits WHERE id = 1");
+	$allVisits = $result->fetch_assoc();
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,7 +89,7 @@ if (!isset($_SESSION['counter'])) {
 
 					<div class="news">
 						<h3>Антенны и распространение радиоволн</h3>
-						<img src="img/news/1.jpg" style="width: 300px;">
+						<img src="img/news/1.jpg">
 						<article>
 							В октябре 2019 года Санкт-Петербургская Антенная Неделя была проведена в СПбГЭТУ «ЛЭТИ» и включала в себя две конференции: русскоязычную «Антенны и Распространение Радиоволн» и англоязычную «Antennas Design and Measurement International Conference».
 						</article>
@@ -64,7 +98,7 @@ if (!isset($_SESSION['counter'])) {
 
 					<div class="news">
 						<h3>IV отраслевая Спартакиада «Роскосмоса»</h3>
-						<img src="img/news/2.jpg" style="width: 300px;">
+						<img src="img/news/2.jpg">
 						<article>
 							16 сентября 2019 г. состоялось открытие Четвертой отраслевой Спартакиады Государственной корпорации по космической деятельности «Роскосмос». Парадным строем с флагами родного предприятия представили АО «ОКБ МЭИ» на открытии IV Спартакиады лучшие из лучших.
 						</article>
@@ -73,7 +107,7 @@ if (!isset($_SESSION['counter'])) {
 
 					<div class="news">
 						<h3>Роскосмос как всегда на высоте!</h3>
-						<img src="img/news/3.jpg" style="width: 300px;">
+						<img src="img/news/3.jpg">
 						<article>
 							1 сентября 2019 года завершилось грандиозное по своему масштабу мероприятие – Международный авиационно-космический Салон «Макс 2019».
 						</article>
@@ -88,30 +122,12 @@ if (!isset($_SESSION['counter'])) {
 
 	</main>
 
-	<footer>
-		<?
-		$get_counter = mysqli_query("SELECT * FROM counter WHERE `id` >=1");
-		$counter = mysqli_fetch_assoc($get_counter);?>
-		<p>Количество посещений сайта: <?echo $counter['id']; ?></p>
-
+	<footer style="color: white;">
+		<?php 
+			echo "Всего посещений: " . $allVisits['all_visits'] . " ";
+		    echo "Уникальных посещений: " . $uniqueVisits[0];
+		?>
 	</footer>
-	
-	
-
-	<!-- 
-		Counter
-
-	<script type="text/javascript">
-	document.write('<a href="//www.liveinternet.ru/click" '+
-	'target="_blank"><img src="//counter.yadro.ru/hit?t27.12;r'+
-	escape(document.referrer)+((typeof(screen)=='undefined')?'':
-	';s'+screen.width+''+screen.height+''+(screen.colorDepth?
-	screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
-	';h'+escape(document.title.substring(0,150))+';'+Math.random()+
-	'" alt="" title="LiveInternet: показано количество просмотров и'+
-	' посетителей" '+
-	'border="0" width="88" height="120"></a>')
-	</script>-->
 
 </div>
 

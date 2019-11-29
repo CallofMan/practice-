@@ -6,8 +6,8 @@
 
 html, body {
 	height: 100%;
-	background-image: url(../background/home_bg.png);
-	/*background-image: url(../background/background.png);*/
+	/*background-image: url(../background/home_bg.png);*/
+	background-image: url(../background/background2.2.png);
 	background-repeat: no-repeat;
 	/*background-position: 20%;*/
 }
@@ -17,6 +17,9 @@ div.wrapper {
 	flex-flow: column;
 	justify-content: flex-start;
 	align-items: center;
+	height: 100%;
+	width: 86%;
+	margin: 0 auto;
 }
 
 header {
@@ -24,7 +27,7 @@ header {
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: flex-start;
-	background-color: rgba(68, 93, 119, 0.4);
+	background-color: rgba(0, 0, 0, 0.3);
 	margin-top: 0.5%;
 	padding: 10px;
 	width: 95%;
@@ -53,7 +56,7 @@ main {
 }
 
 section.leftSidebar {
-	background-color: rgba(52, 181, 255, 0.1);
+	background-color: rgba(0, 0, 0, 0.5);
 	border: 2px solid #1978e4b5;
 	width: 14%;
 	padding: 0.6% 0.3%;
@@ -92,7 +95,7 @@ section.center {
 	flex-flow:  column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	background-color: rgba(58, 87, 122, 0.2);
+	background-color: rgba(0, 0, 0, 0.5);
 	border: 2px solid #1978e4b5;
 	width: 75%;
 	margin-left: 2%;
@@ -116,6 +119,7 @@ div.news {
 	width: 30%;
 	height: 500px;
 	border: 2px solid rgba(255,255,255, 1);
+	background-color: rgba(0, 0, 0, 0.7);
 	padding: 1%;
 }
 
@@ -131,9 +135,10 @@ div.news > p {
 }
 
 footer {
-	margin-top: 1%;
-	background-color: rgba(99, 94,105б 0.3);
+	margin-top: auto;
 	border: 2px solid #1978e4b5;
+	background-color: rgba(0, 0, 0, 0.5);
 	width: 95%;
 	padding: 10px;
+	margin-bottom: 1%;
 }

@@ -1,10 +1,12 @@
 <?php
 	require_once 'connection.php';
-	session_start();
+	
+	$db = mysqli_query($link, "SELECT * FROM okbmei");
 
-	if (!isset($_SESSION['counter'])) {
-		$query = mysqli_query("UPDATE ");
-	}
+	$update = mysqli_query($link, "UPDATE quantity_all_visits SET all_visits = all_visits + 1 WHERE id = 1");
+
+	$result = mysqli_query($link, "SELECT all_visits FROM quantity_all_visits WHERE id = 1");
+	$quantity = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -89,30 +91,9 @@
 
 	</main>
 
-	<footer>
-		<?
-		$get_counter = mysqli_query("SELECT * FROM counter WHERE `id` >=1");
-		$counter = mysqli_fetch_assoc($get_counter);?>
-		<p>Количество посещений сайта: <?echo $counter['id']; ?></p>
-
+	<footer style="color: white;">
+		<?php echo $quantity['all_visits']; ?>
 	</footer>
-	
-	
-
-	<!-- 
-		Counter
-
-	<script type="text/javascript">
-	document.write('<a href="//www.liveinternet.ru/click" '+
-	'target="_blank"><img src="//counter.yadro.ru/hit?t27.12;r'+
-	escape(document.referrer)+((typeof(screen)=='undefined')?'':
-	';s'+screen.width+''+screen.height+''+(screen.colorDepth?
-	screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
-	';h'+escape(document.title.substring(0,150))+';'+Math.random()+
-	'" alt="" title="LiveInternet: показано количество просмотров и'+
-	' посетителей" '+
-	'border="0" width="88" height="120"></a>')
-	</script>-->
 
 </div>
 

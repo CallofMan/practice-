@@ -25,7 +25,6 @@ header {
 	align-items: flex-start;
 	background-color: rgba(68, 93, 119, 0.4);
 	margin-top: 0.5%;
-	border-radius: 10px;
 	padding: 10px;
 	width: 95%;
 	border: 2px solid #1978e4b5;
@@ -54,7 +53,6 @@ main {
 
 section.leftSidebar {
 	background-color: rgba(52, 181, 255, 0.1);
-	border-radius: 10px;
 	border: 2px solid #1978e4b5;
 	width: 14%;
 	padding: 0.6% 0.3%;
@@ -75,7 +73,6 @@ nav.leftSidebarNavigation > a {
 	text-align: center;
 	margin-bottom: 4%;
 	background-color: white;
-	border-radius: 10px;
 	font-size: 22px;
 	padding: 1% 0;
 	font-style: normal;
@@ -93,7 +90,6 @@ section.center {
 	align-items: flex-start;
 	background-color: rgba(58, 87, 122, 0.2);
 	border: 2px solid #1978e4b5;
-	border-radius: 10px;
 	width: 75%;
 	margin-left: 2%;
 	padding: 1%;
@@ -112,7 +108,6 @@ div.news {
 	width: 30%;
 	border: 2px solid rgba(255,255,255, 1);
 	padding: 1%;
-	border-radius: 10px;
 }
 
 div.news > img {
@@ -128,7 +123,6 @@ footer {
 	margin-top: 1%;
 	background-color: rgba(99, 94,105б 0.3);
 	border: 2px solid #1978e4b5;
-	border-radius: 10px;
 	width: 95%;
 	padding: 10px;
 }

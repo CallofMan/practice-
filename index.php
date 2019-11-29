@@ -1,11 +1,12 @@
-<?
-require_once 'connection.php';
-session_start();
+<?php
+	require_once 'connection.php';
+	session_start();
 
-if (!isset($_SESSION['counter'])) {
-	$query = mysqli_query("UPDATE ");
-}
+	if (!isset($_SESSION['counter'])) {
+		$query = mysqli_query("UPDATE ");
+	}
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>

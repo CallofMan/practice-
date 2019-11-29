@@ -131,7 +131,7 @@ div.newsWrapper {
 	margin-top: 2%;
 }
 
-div.news {
+a.news {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -148,25 +148,25 @@ a.news:hover {
 	border: 2px solid #1fcecb;
 }
 
-div.news h3 {
+a.news h3 {
 	text-align: center;
 }
 
-div.news img {
+a.news img {
 	margin: 2% 0;
 	width: 300px;
 	max-width: 100%;
 	border-radius: 7px;
 }
 
-div.news article {
+a.news article {
 	margin-top: 5%;
 	margin-bottom: 15px;
 	text-indent: 15px;
 	line-height: 25px;
 }
 
-div.news > p {
+a.news > p {
 	margin-top: auto;
 	float: right;
 }

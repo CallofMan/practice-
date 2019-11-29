@@ -69,6 +69,7 @@ nav.leftSidebarNavigation {
 
 nav.leftSidebarNavigation > a {
 	display: block;
+	border: 2px solid #1fcecb;
 	color: rgb(7, 136, 247);
 	text-decoration: none;
 	text-align: center;
@@ -81,7 +82,9 @@ nav.leftSidebarNavigation > a {
 }
 
 nav.leftSidebarNavigation > a:hover {
-	background-image: linear-gradient(to right, #FFFFFF, #000000);
+	background-color: #1fcecb;
+	border: 2px solid white;
+	color: white;
 }
 
 section.center {

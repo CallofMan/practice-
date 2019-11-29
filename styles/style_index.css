@@ -58,7 +58,7 @@ main {
 section.leftSidebar {
 	background-color: rgba(0, 0, 0, 0.5);
 	border: 2px solid #1978e4b5;
-	width: 14%;
+	min-width: 14%;
 	padding: 0.6% 0.3%;
 }
 
@@ -81,7 +81,8 @@ nav.leftSidebarNavigation > a {
 	font-size: 22px;
 	padding: 1% 0;
 	font-style: normal;
-	width: 95%;
+	min-width: 96%;
+
 }
 
 nav.leftSidebarNavigation > a:hover {
@@ -132,6 +133,15 @@ div.news > img {
 div.news > p {
 	margin-top: 3%;
 	float: right;
+}
+
+div.news > h3 {
+	text-align: center;
+}
+
+div.news > article {
+	text-indent: 8px;
+	line-height: 20px;
 }
 
 footer {

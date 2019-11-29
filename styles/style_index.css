@@ -1,0 +1,139 @@
+* {
+	padding:  0;
+	margin:  0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+	height: 100%;
+	background-image: url(../background/home_bg.png);
+	/*background-image: url(../background/background.png);*/
+	background-repeat: no-repeat;
+	/*background-position: 20%;*/
+}
+
+div.wrapper {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+header {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	background-color: rgba(68, 93, 119, 0.4);
+	margin-top: 0.5%;
+	padding: 10px;
+	width: 95%;
+	border: 2px solid #1978e4b5;
+}
+
+img.logo {
+	width: 80%;
+}
+
+a.login {
+	display: block;
+	color: white;
+	text-decoration: none;
+	border-bottom: 2px solid white;
+	font-size: 16px;
+}
+
+main {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 94%;
+	margin-top: 0.8%;
+}
+
+section.leftSidebar {
+	background-color: rgba(52, 181, 255, 0.1);
+	border: 2px solid #1978e4b5;
+	width: 14%;
+	padding: 0.6% 0.3%;
+}
+
+nav.leftSidebarNavigation {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+}
+
+nav.leftSidebarNavigation > a {
+	display: block;
+	border: 2px solid #1fcecb;
+	color: rgb(7, 136, 247);
+	text-decoration: none;
+	text-align: center;
+	margin-bottom: 4%;
+	background-color: white;
+	font-size: 22px;
+	padding: 1% 0;
+	font-style: normal;
+	width: 95%;
+}
+
+nav.leftSidebarNavigation > a:hover {
+	background-color: #1fcecb;
+	border: 2px solid white;
+	color: white;
+}
+
+section.center {
+	display: flex;
+	flex-flow:  column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	background-color: rgba(58, 87, 122, 0.2);
+	border: 2px solid #1978e4b5;
+	width: 75%;
+	margin-left: 2%;
+	padding: 1%;
+	color: white;
+}
+
+div.newsWrapper {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 2%;
+}
+
+div.news {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 30%;
+	height: 500px;
+	border: 2px solid rgba(255,255,255, 1);
+	padding: 1%;
+}
+
+div.news > img {
+	margin: 2% 0;
+	width: 300px;
+	max-width: 100%;
+}
+
+div.news > p {
+	margin-top: 3%;
+	float: right;
+}
+
+footer {
+	margin-top: 1%;
+	background-color: rgba(99, 94,105б 0.3);
+	border: 2px solid #1978e4b5;
+	width: 95%;
+	padding: 10px;
+}

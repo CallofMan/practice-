@@ -15,6 +15,8 @@ for (let i = 0; i < allImages.length; i++)
         button.style.backgroundColor = "#FFFFFF";
         button.style.borderRadius = "100%";
         button.style.cursor = "pointer";
+        allImages[i].querySelector("img").style.border = "1px solid #2AAEFF";
+		allImages[i].querySelector("img").style.borderRadius = "5px";
         }
     button.addEventListener('click', function () 
     {

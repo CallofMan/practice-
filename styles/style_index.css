@@ -199,6 +199,7 @@ a.news > p {
 }
 
 footer {
+	justify-content: center;
 	margin-top: auto;
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 95%;
@@ -243,6 +244,11 @@ nav.footerNav > a.bottomA {
 nav.footerNav > a:hover {
 	transition: all .2s;
 	background-color: #1fcecb;
+}
+
+div#footerMap {
+	display: flex;
+	justify-content: center;
 }
 
 div.counter {

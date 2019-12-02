@@ -76,6 +76,7 @@
 		<nav class="leftSidebarNavigation">		
 			<a href="#">Главная</a>
 			<a href="#">Телефонный справочник</a>
+			<a href="#footerMap">Как добраться</a>
 			<a href="#" style="margin-bottom: unset">О компании</a>
 		</nav>
 
@@ -143,14 +144,6 @@
 
 		<div class="footerNav">
 			<nav class="footerNav Left">
-				<a href="">О компании</a>
-				<a href="">История компании</a>
-				<a href="">Контакты</a>
-				<a href="">Как добраться</a>
-				<a href="" class="bottomA">Коллектив</a>
-			</nav>
-
-			<nav class="footerNav Left">
 				<a href="">Lorem ipsum</a>
 				<a href="">Lorem ipsum</a>
 				<a href="">Lorem ipsum</a>
@@ -166,15 +159,25 @@
 				<a href="" class="bottomA">Lorem ipsum</a>
 			</nav>
 
-				
+			<nav class="footerNav Left">
+				<a href="">Lorem ipsum</a>
+				<a href="">Lorem ipsum</a>
+				<a href="">Lorem ipsum</a>
+				<a href="">Lorem ipsum</a>
+				<a href="" class="bottomA">Lorem ipsum</a>
+			</nav>		
+
+		</div>
+
+		<div id="footerMap">
+
 				<!-- <script style="flex-grow: 1; width: 93%;" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A99dc76f7c463cec37b1c102ed12522e228ad0aa2b6582984d06190ddb248d015&amp;height=400&amp;width=93%&amp;%lang=ru_RU&amp;scroll=true"></script> -->
 
 				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad30690010cac316c23ee0f843f9ae9db86e1352d97cde92bcf23c421ccedeba5&amp;width=1052&amp;height=564&amp;lang=ru_RU&amp;scroll=true"></script>
 
 				<!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad30690010cac316c23ee0f843f9ae9db86e1352d97cde92bcf23c421ccedeba5&amp;width=1266&amp;height=697&amp;lang=ru_RU&amp;scroll=true"></script> -->
 
-
-		</div>
+			</div>
 		
 		<div class="counter">
 			<?php 

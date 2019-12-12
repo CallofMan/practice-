@@ -1,4 +1,6 @@
 <?php
+    SESSION_START();
+
     require_once "connection.php";
 ?>
 
@@ -40,24 +42,6 @@
         {
             cursor: pointer;
         }
-        /*
-        a 
-        {
-            border: 0px solid black;
-            background-color: black;
-            opacity: 0.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 200px;
-            min-height: 50px;
-            font-size: 20pt;
-            color: white;
-            text-decoration: none;
-            margin-top: 20px;
-            margin-left: 90%;
-        }
-        */
         a 
         {
             display: flex;
@@ -129,8 +113,14 @@
 
                     $count = mysqli_num_rows($result);
 
-                    if($count)          echo "Отлично";
-                    else                echo "Неверный логин или пароль";
+                    // Проверка на роль
+                    if($count)
+                    {
+                        $role = mysqli_query($link, "SELECT name_role FROM roles, users WHERE roles.role = users.role AND login = $login");
+                        $resultRole = $role->fetch_array();
+                        echo $resultRole[0];
+                    }
+                    else echo "Неверный логин или пароль";
                 }
             ?>
         </h1>

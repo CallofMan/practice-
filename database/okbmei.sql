@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 13 2019 г., 00:47
+-- Время создания: Дек 13 2019 г., 00:57
 -- Версия сервера: 10.3.13-MariaDB
 -- Версия PHP: 7.1.22
 
@@ -120,10 +120,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `first_name`, `second_name`, `login`, `password`, `telephone`, `mail`, `name_role`, `position`) VALUES
-(1, 'Конь', 'Грустный', 'конь', 'грустный', '3244', '23423', 'Админ', 'Директор'),
-(2, 'Конь', 'Весёлый', 'Конь', 'Весёлый', '1231', '3123', 'Пользователь', 'Работник'),
-(3, 'Человек', 'Посредственный', 'человек', '2', '213', '123123', 'Пользователь', 'Работник'),
-(4, 'Сверх', 'Человек', '1', '1', '1', '1', 'Админ', 'Директор');
+(1, 'Конь', 'Грустный', 'конь', 'грустный', '21312', '1323', 'Пользователь', 'Сотрудник'),
+(2, 'Человек', 'Посредственный', '2', '2', '1231', '4124', 'Пользователь', 'Сотрудник'),
+(3, 'Сверх', 'Человек', '111', '111', '111', '111', 'Админ', 'Директор');
 
 --
 -- Индексы сохранённых таблиц
@@ -168,6 +167,7 @@ ALTER TABLE `rooms`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`,`name_role`),
+  ADD UNIQUE KEY `login` (`login`),
   ADD KEY `position` (`name_role`);
 
 --
@@ -178,7 +178,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `ip`
 --
 ALTER TABLE `ip`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `messages`

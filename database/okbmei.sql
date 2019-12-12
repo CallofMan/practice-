@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 13 2019 г., 00:43
+-- Время создания: Дек 13 2019 г., 00:47
 -- Версия сервера: 10.3.13-MariaDB
 -- Версия PHP: 7.1.22
 
@@ -58,6 +58,13 @@ CREATE TABLE `quantity_all_visits` (
   `all_visits` int(99) NOT NULL,
   `unique_visits` int(99) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `quantity_all_visits`
+--
+
+INSERT INTO `quantity_all_visits` (`id`, `all_visits`, `unique_visits`) VALUES
+(1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -171,7 +178,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `ip`
 --
 ALTER TABLE `ip`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `messages`

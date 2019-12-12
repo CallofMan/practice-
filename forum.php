@@ -133,9 +133,9 @@
                         // Проверка на корректные логин и пароль
                         if($result["login"] == $login && $result["password"] == $password)
                         {
-                            echo "Заебись";
+                            echo "Отлично";
                         }
-                        else echo "Не заебись";
+                        else echo "Неправильный логин или пароль";
                         
                     }
                 }

@@ -1,10 +1,5 @@
 <?php
     require_once "connection.php";
-
-    $query = mysqli_query($link, "SELECT login, password FROM users");
-    
-    
-    
 ?>
 
 <!DOCTYPE html>
@@ -112,7 +107,7 @@
         {
             color: white;
             opacity: 0.8;
-            font-size: 30pt;
+            font-size: 25pt;
         }
     </style>
 
@@ -128,16 +123,14 @@
                     $login = $_POST["login"];
                     $password = $_POST["password"];
 
-                    while($result = mysqli_fetch_assoc($query))
-                    {
-                        // Проверка на корректные логин и пароль
-                        if($result["login"] == $login && $result["password"] == $password)
-                        {
-                            echo "Отлично";
-                        }
-                        else echo "Неправильный логин или пароль";
-                        
-                    }
+                    // Проверка на корректные логин и пароль
+                    $result = mysqli_query($link, "SELECT login, password FROM users 
+                    WHERE login = $login AND password = $password");
+
+                    $count = mysqli_num_rows($result);
+
+                    if($count)          echo "Отлично";
+                    else                echo "Неверный логин или пароль";
                 }
             ?>
         </h1>

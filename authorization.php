@@ -2,6 +2,36 @@
     SESSION_START();
 
     require_once "connection.php";
+
+    if (isset($_POST["verificated"]))
+    {
+        $login = $_POST["login"];
+        $password = $_POST["password"];
+
+        // Проверка на корректные логин и пароль
+        $result = mysqli_query($link, "SELECT login, password FROM users 
+        WHERE login = $login AND password = $password");
+
+        $count = mysqli_num_rows($result);
+        
+        $key = 0;
+
+        // Проверка на роль
+        if($count)
+        {
+            $role = mysqli_query($link, "SELECT name_role FROM roles, users WHERE roles.role = users.role AND login = $login");
+            $resultRole = $role->fetch_array();
+            
+        }
+        else $key = 1;
+
+        if ($resultRole[0] == "Админ"){
+            Header("Location: personalAccount.php");
+        }
+        else if ($resultRole[0] == "Пользователь"){
+            Header("Location: forum.html");
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -21,26 +51,8 @@
     <form method="POST" id="auth">
         <h1>
             <?php
-                if (isset($_POST["verificated"]))
-                {
-                    $login = $_POST["login"];
-                    $password = $_POST["password"];
-
-                    // Проверка на корректные логин и пароль
-                    $result = mysqli_query($link, "SELECT login, password FROM users 
-                    WHERE login = $login AND password = $password");
-
-                    $count = mysqli_num_rows($result);
-
-                    // Проверка на роль
-                    if($count)
-                    {
-                        $role = mysqli_query($link, "SELECT name_role FROM roles, users WHERE roles.role = users.role AND login = $login");
-                        $resultRole = $role->fetch_array();
-                        echo $resultRole[0];
-                    }
-                    else echo "Неверный логин или пароль";
-                }
+                if($key == 1)
+                    echo "Неверный логин или пароль";
             ?>
         </h1>
 

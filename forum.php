@@ -34,10 +34,15 @@
                 <a href="">Новости</a>
             </nav>
             <aside>
-                <p>Комната</p>
-                <p>Комната</p>
-                <p>Комната</p>
-                <p>Комната</p>
+                <?php
+                    $queryRoom = mysqli_query($link, "SELECT name_room, role FROM rooms");
+
+                    while($nameRoom = mysqli_fetch_assoc($queryRoom))
+                    {
+                        echo "<p>" . $nameRoom['name_room'] . "</p>";
+                    }
+                    
+                ?>
             </aside>
             <div id="name">
                 <h3>Васян Васяныч</h3>

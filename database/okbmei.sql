@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 13 2019 г., 11:00
+-- Время создания: Дек 13 2019 г., 18:46
 -- Версия сервера: 10.3.13-MariaDB
 -- Версия PHP: 7.1.22
 
@@ -54,6 +54,17 @@ CREATE TABLE `messages` (
   `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Дамп данных таблицы `messages`
+--
+
+INSERT INTO `messages` (`id_message`, `id_user`, `id_room`, `text_message`, `date`) VALUES
+(1, 2, 2, 'ttedfdsgdfsgdsfh', '2019-12-12 00:00:00'),
+(2, 2, 1, 'dsagsf', '2019-12-13 17:58:26'),
+(3, 2, 1, 'dfsagg', '2019-12-13 18:00:41'),
+(4, 2, 1, 'вапвыарар', '2019-12-13 18:03:17'),
+(5, 1, 1, 'вапыппывапып', '2019-12-13 18:23:58');
+
 -- --------------------------------------------------------
 
 --
@@ -71,7 +82,7 @@ CREATE TABLE `quantity_all_visits` (
 --
 
 INSERT INTO `quantity_all_visits` (`id`, `all_visits`, `unique_visits`) VALUES
-(1, 11, 1);
+(1, 71, 1);
 
 -- --------------------------------------------------------
 
@@ -103,6 +114,17 @@ CREATE TABLE `rooms` (
   `name_room` varchar(30) NOT NULL,
   `role` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `rooms`
+--
+
+INSERT INTO `rooms` (`id_room`, `name_room`, `role`) VALUES
+(1, 'Общая', 0),
+(2, 'Для элиты', 1),
+(3, 'Израиль', 1),
+(4, 'Древляне', 1),
+(5, 'Неверленд', 0);
 
 -- --------------------------------------------------------
 
@@ -190,13 +212,13 @@ ALTER TABLE `ip`
 -- AUTO_INCREMENT для таблицы `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id_message` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_message` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id_room` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_room` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

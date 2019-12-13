@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 13 2019 г., 01:18
+-- Время создания: Дек 13 2019 г., 11:00
 -- Версия сервера: 10.3.13-MariaDB
 -- Версия PHP: 7.1.22
 
@@ -32,6 +32,13 @@ CREATE TABLE `ip` (
   `id` int(11) NOT NULL,
   `ip` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `ip`
+--
+
+INSERT INTO `ip` (`id`, `ip`) VALUES
+(8, '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -64,7 +71,7 @@ CREATE TABLE `quantity_all_visits` (
 --
 
 INSERT INTO `quantity_all_visits` (`id`, `all_visits`, `unique_visits`) VALUES
-(1, 0, 0);
+(1, 11, 1);
 
 -- --------------------------------------------------------
 
@@ -165,7 +172,7 @@ ALTER TABLE `rooms`
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_user`,`role`),
+  ADD PRIMARY KEY (`id_user`),
   ADD UNIQUE KEY `login` (`login`),
   ADD KEY `name_role` (`role`);
 
@@ -177,7 +184,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `ip`
 --
 ALTER TABLE `ip`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `messages`

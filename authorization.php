@@ -29,7 +29,7 @@
             Header("Location: personalAccount.php");
         }
         else if ($resultRole[0] == "Пользователь"){
-            Header("Location: forum.php");
+            Header("Location: forum.html");
         }
     }
 ?>

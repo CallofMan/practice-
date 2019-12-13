@@ -21,12 +21,23 @@
     
 
     <div id="right">
-        <nav></nav>
-        <aside></aside>
+        <nav>
+            <a href="index.php">Главная</a>
+            <a href="">Личный кабинет</a>
+            <a href="">Телефонный справочник</a>
+            <a href="">Новости</a>
+        </nav>
+        <aside>
+            <p>Комната</p>
+            <p>Комната</p>
+            <p>Комната</p>
+            <p>Комната</p>
+        </aside>
+        <div id="name">
+            <h3>Васян Васяныч</h3>
+        </div>
     </div>
 
-    <footer>
-        
-    </footer>
+
 </body>
 </html>

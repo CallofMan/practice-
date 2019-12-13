@@ -19,6 +19,7 @@ body
 	margin: 0 auto;
     max-width: 1440px;
     display: flex;
+    justify-content: space-around;
 }
 
 #chat
@@ -26,7 +27,7 @@ body
     display: flex;
     border: 0px solid black;
     height: 900px;
-    width: 900px;
+    flex: 7 1 900px;
     flex-direction: column;
     justify-content: space-between;
     padding: 30px 0px;
@@ -35,7 +36,7 @@ body
 section
 {
     display: flex;
-    max-width: 900px;
+    max-width: 1000px;
     min-height: 750px;
     border: 0px solid black;
     background-color: black;
@@ -45,7 +46,7 @@ section
 {
     display: flex;
     border: 1px solid black;
-    min-width: 100%;
+    max-width: 1000px;
     min-height: 60px;
     justify-content: space-between;
 }
@@ -69,4 +70,78 @@ section
     background-color: white;
     opacity: 0.8;
     color: black;
+}
+
+#right
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0px solid black;
+    height: 900px;
+    flex: 1 7 300px;
+    padding: 30px 0px;
+    margin-right: 160px;
+}
+nav, aside 
+{
+    border: 0px solid black;
+    background-color: black;
+    opacity: 0.8;
+    min-width: 100%;
+    min-height: 300px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+nav
+{
+    margin-top: 20px;
+}
+aside
+{
+    margin-bottom: 20px;
+}
+a, p
+{
+    display: block;
+	color: rgb(7, 136, 247);
+	text-decoration: none;
+	text-align: center;
+	margin-bottom: 4%;
+	border-radius: 3px;
+	
+	background-color: rgba(0, 169, 251, 0.3);
+	color: white;
+	padding: 4% 2%;
+	width: 95%;
+	/* font-size: 1vw; */
+	transition: all .1s;
+}
+p
+{
+    cursor: pointer;
+}
+a:hover, p:hover
+{
+    background-color: #1fcecb;
+	color: white;
+    transition: all .1s;
+}
+#name
+{
+    border: 0px solid black;
+    opacity: 0.8;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    min-width: 100%;
+}
+h3
+{
+    color: white;
+    font-size: 20pt;
 }

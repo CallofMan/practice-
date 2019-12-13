@@ -102,7 +102,7 @@
     <form method="POST" id="auth">
         <h1>
             <?php
-                if (isset($_POST["ferificated"]))
+                if (isset($_POST["verificated"]))
                 {
                     $login = $_POST["login"];
                     $password = $_POST["password"];
@@ -128,7 +128,7 @@
         <input type="text" name="login" class="auth_out" placeholder="Введите логин" required autofocus>
         <input type="password" name="password" class="auth_out" placeholder="Введите пароль" required>
 
-        <input type="submit" name="ferificated" value="Войти" id="auth_out">
+        <input type="submit" name="verificated" value="Войти" id="auth_out">
     </form>
 </body>
 </html>

@@ -37,11 +37,12 @@
                 <?php
                     $queryRoom = mysqli_query($link, "SELECT name_room, role FROM rooms");
 
+                    $countId = 0;
                     while($nameRoom = mysqli_fetch_assoc($queryRoom))
                     {
-                        echo "<p>" . $nameRoom['name_room'] . "</p>";
+                        ++$countId;
+                        echo "<p id=room" . $countId . ">" . $nameRoom['name_room'] . "</p>";
                     }
-                    
                 ?>
             </aside>
             <div id="name">

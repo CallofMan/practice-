@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 12 2019 г., 20:52
+-- Время создания: Дек 13 2019 г., 01:18
 -- Версия сервера: 10.3.13-MariaDB
 -- Версия PHP: 7.1.22
 
@@ -32,13 +32,6 @@ CREATE TABLE `ip` (
   `id` int(11) NOT NULL,
   `ip` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `ip`
---
-
-INSERT INTO `ip` (`id`, `ip`) VALUES
-(4, '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -71,7 +64,7 @@ CREATE TABLE `quantity_all_visits` (
 --
 
 INSERT INTO `quantity_all_visits` (`id`, `all_visits`, `unique_visits`) VALUES
-(1, 205, 1);
+(1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -81,8 +74,16 @@ INSERT INTO `quantity_all_visits` (`id`, `all_visits`, `unique_visits`) VALUES
 
 CREATE TABLE `roles` (
   `role` int(1) NOT NULL,
-  `position` varchar(30) NOT NULL
+  `name_role` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `roles`
+--
+
+INSERT INTO `roles` (`role`, `name_role`) VALUES
+(0, 'Пользователь'),
+(1, 'Админ');
 
 -- --------------------------------------------------------
 
@@ -110,8 +111,18 @@ CREATE TABLE `users` (
   `password` varchar(40) NOT NULL,
   `telephone` varchar(18) NOT NULL,
   `mail` varchar(40) NOT NULL,
-  `position` varchar(30) NOT NULL
+  `role` int(1) NOT NULL,
+  `position` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id_user`, `first_name`, `second_name`, `login`, `password`, `telephone`, `mail`, `role`, `position`) VALUES
+(1, 'Конь', 'Грустный', 'конь', 'грустный', '3244', '23423', 0, 'Сотрудник'),
+(2, 'Человек', 'Посредственный', '222', '222', '222', '222', 0, 'Сотрудник'),
+(3, 'Сверх', 'Человек', '111', '111', '111', '111', 1, 'Директор');
 
 --
 -- Индексы сохранённых таблиц
@@ -141,8 +152,7 @@ ALTER TABLE `quantity_all_visits`
 -- Индексы таблицы `roles`
 --
 ALTER TABLE `roles`
-  ADD PRIMARY KEY (`role`),
-  ADD KEY `position` (`position`);
+  ADD PRIMARY KEY (`role`);
 
 --
 -- Индексы таблицы `rooms`
@@ -155,8 +165,9 @@ ALTER TABLE `rooms`
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_user`,`position`),
-  ADD KEY `position` (`position`);
+  ADD PRIMARY KEY (`id_user`,`role`),
+  ADD UNIQUE KEY `login` (`login`),
+  ADD KEY `name_role` (`role`);
 
 --
 -- AUTO_INCREMENT для сохранённых таблиц
@@ -166,7 +177,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `ip`
 --
 ALTER TABLE `ip`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `messages`
@@ -184,7 +195,7 @@ ALTER TABLE `rooms`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -198,16 +209,16 @@ ALTER TABLE `messages`
   ADD CONSTRAINT `messages_ibfk_2` FOREIGN KEY (`id_room`) REFERENCES `rooms` (`id_room`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ограничения внешнего ключа таблицы `roles`
---
-ALTER TABLE `roles`
-  ADD CONSTRAINT `roles_ibfk_1` FOREIGN KEY (`position`) REFERENCES `users` (`position`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Ограничения внешнего ключа таблицы `rooms`
 --
 ALTER TABLE `rooms`
   ADD CONSTRAINT `rooms_ibfk_1` FOREIGN KEY (`role`) REFERENCES `roles` (`role`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role`) REFERENCES `roles` (`role`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

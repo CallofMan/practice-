@@ -64,7 +64,7 @@
 		</div>
 
 		<div class="login">
-			<a href="innerPart/login/auth.php" class="login">Личный кабинет</a>
+			<a href="authorization.php" class="login">Личный кабинет</a>
 		</div>
 
 	</header>

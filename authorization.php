@@ -12,19 +12,18 @@
         $result = mysqli_query($link, "SELECT login, password FROM users 
         WHERE login = $login AND password = $password");
 
-        $count = mysqli_num_rows($result);
-        
+        $comeback = 0;
         $key = 0;
 
-        // Проверка на роль
-        if($count)
+        if($result)
         {
-            $role = mysqli_query($link, "SELECT name_role FROM roles, users WHERE roles.role = users.role AND login = $login");
+            // Проверка на роль
+            $role = mysqli_query($link, "SELECT name_role FROM roles, users 
+            WHERE roles.role = users.role AND login = $login");
             $resultRole = $role->fetch_array();
-            
         }
         else $key = 1;
-
+    
         if ($resultRole[0] == "Админ"){
             Header("Location: personalAccount.php");
         }

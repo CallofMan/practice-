@@ -1,3 +1,9 @@
+<?php
+    SESSION_START();
+
+    require_once 'messages.php';
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,8 +19,8 @@
 
             </section>
 
-            <form method="GET" id="form_message">
-                <textarea name="message" placeholder="Введите сообщение" require id="message"></textarea>
+            <form action="" method="POST" id="form_message">
+                <textarea name="message" placeholder="Введите сообщение" required id="message"></textarea>
                 <input type="submit" name="send" value="Send" id="send">
             </form>
         </div>

@@ -21,14 +21,21 @@
             $role = mysqli_query($link, "SELECT name_role FROM roles, users 
             WHERE roles.role = users.role AND login = $login");
             $resultRole = $role->fetch_array();
+
+            $idUserQuery = mysqli_query($link, "SELECT id_user FROM users WHERE login = $login");
+            $idUser = $idUserQuery->fetch_assoc();
         }
         else $key = 1;
     
         if ($resultRole[0] == "Админ"){
+            $_SESSION['role'] = 1;
+            $_SESSION['id'] = $idUser['id_user'];
             Header("Location: personalAccount.php");
         }
         else if ($resultRole[0] == "Пользователь"){
-            Header("Location: forum.html");
+            $_SESSION['role'] = 0;
+            $_SESSION['id'] = $idUser['id_user'];
+            Header("Location: forum.php");
         }
     }
 ?>

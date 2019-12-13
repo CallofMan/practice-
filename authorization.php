@@ -10,19 +10,25 @@
 
         // Проверка на корректные логин и пароль
         $result = mysqli_query($link, "SELECT login, password FROM users 
-        WHERE login = $login AND password = $password");
-
+        WHERE login = '$login' AND password = '$password'");
+        
         $comeback = 0;
         $key = 0;
 
-        if($result)
+
+        while(mysqli_fetch_assoc($result))
+        {
+            ++$comeback;
+        }
+
+        if($comeback)
         {
             // Проверка на роль
             $role = mysqli_query($link, "SELECT name_role FROM roles, users 
-            WHERE roles.role = users.role AND login = $login");
+            WHERE roles.role = users.role AND login = '$login'");
             $resultRole = $role->fetch_array();
 
-            $idUserQuery = mysqli_query($link, "SELECT id_user FROM users WHERE login = $login");
+            $idUserQuery = mysqli_query($link, "SELECT id_user FROM users WHERE login = '$login'");
             $idUser = $idUserQuery->fetch_assoc();
         }
         else $key = 1;

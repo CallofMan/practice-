@@ -15,7 +15,7 @@
         $comeback = 0;
         $key = 0;
 
-
+        // Считаем количество возращённых строк
         while(mysqli_fetch_assoc($result))
         {
             ++$comeback;
@@ -33,6 +33,7 @@
         }
         else $key = 1;
     
+        // Заносим роль и айди пользователя сессию для дальнейшего юзинга
         if ($resultRole[0] == "Админ"){
             $_SESSION['role'] = 1;
             $_SESSION['id'] = $idUser['id_user'];

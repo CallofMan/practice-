@@ -43,10 +43,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>АО "Особое конструктоское бюро Мосчковского энергетического института"</title>
+	<title>АО "Особое конструкторское бюро Московского энергетического института"</title>
 	<meta charset="utf-8">
+	<link rel="icon" href="img/favicon.ico">
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="styles/style_index.css">
+		<link rel="stylesheet" type="text/css" href="styles/style_index.css">	
+	<!-- Slider -->
+		<link rel="stylesheet" href="slider/css/style.css">
+	<!-- Slider -->
 	<!-- CSS -->
 </head>
 <body>
@@ -60,7 +64,7 @@
 		</div>
 
 		<div class="login">
-			<a href="innerPart/login/auth.php" class="login">Личный кабинет</a>
+			<a href="authorization.php" class="login">Личный кабинет</a>
 		</div>
 
 	</header>
@@ -72,12 +76,11 @@
 		<nav class="leftSidebarNavigation">		
 			<a href="#">Главная</a>
 			<a href="#">Телефонный справочник</a>
-			<a href="#">О компании</a>
-			<a href="#">Главная</a>
-			<a href="#" style="margin-bottom: unset">Главная</a>
+			<a href="#footerMap">Как добраться</a>
+			<a href="#" style="margin-bottom: unset">О компании</a>
 		</nav>
 
-		<script style="flex-grow: 1; width: 93%;" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A99dc76f7c463cec37b1c102ed12522e228ad0aa2b6582984d06190ddb248d015&amp;height=250&amp;width=93%&amp;%lang=ru_RU&amp;scroll=true"></script>
+		<!-- <script style="flex-grow: 1; width: 93%;" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A99dc76f7c463cec37b1c102ed12522e228ad0aa2b6582984d06190ddb248d015&amp;height=250&amp;width=93%&amp;%lang=ru_RU&amp;scroll=true"></script> -->
 
 		<!-- <script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
 			
@@ -90,7 +93,15 @@
 
 		<section class="center">
 			
-			<div class="">
+		<div class="images">
+
+			<div class="image"><img src="./img/news/1.jpg" alt="image"></div>
+			<div class="image"><img src="./img/news/2.jpg" alt="image"></div>
+			<div class="image"><img src="./img/news/3.jpg" alt="image"></div>
+			<div class="image"><img src="./img/news/1.jpg" alt="image"></div>
+			<div class="buttons"></div>
+
+		</div>
 
 				<h2>Новости</h2>
 
@@ -123,67 +134,63 @@
 						<p>01.01.2001</p>
 					</a>
 
-					<a href="" class="news">
-						<h3>Антенны и распространение радиоволн</h3>
-						<img src="img/news/1.jpg">
-						<article>
-							В октябре 2019 года Санкт-Петербургская Антенная Неделя была проведена в СПбГЭТУ «ЛЭТИ» и включала в себя две конференции: русскоязычную «Антенны и Распространение Радиоволн» и англоязычную «Antennas Design and Measurement International Conference».
-						</article>
-						<p>01.01.2001</p>
-					</a>
-
-					<a href="" class="news">
-						<h3>Антенны и распространение радиоволн</h3>
-						<img src="img/news/1.jpg">
-						<article>
-							В октябре 2019 года Санкт-Петербургская Антенная Неделя была проведена в СПбГЭТУ «ЛЭТИ» и включала в себя две конференции: русскоязычную «Антенны и Распространение Радиоволн» и англоязычную «Antennas Design and Measurement International Conference».
-						</article>
-						<p>01.01.2001</p>
-					</a>
-
-					<a href="" class="news">
-						<h3>Антенны и распространение радиоволн</h3>
-						<img src="img/news/1.jpg">
-						<article>
-							В октябре 2019 года Санкт-Петербургская Антенная Неделя была проведена в СПбГЭТУ «ЛЭТИ» и включала в себя две конференции: русскоязычную «Антенны и Распространение Радиоволн» и англоязычную «Antennas Design and Measurement International Conference».
-						</article>
-						<p>01.01.2001</p>
-					</a>
-
-					<a href="" class="news">
-						<h3>Антенны и распространение радиоволн</h3>
-						<img src="img/news/1.jpg">
-						<article>
-							В октябре 2019 года Санкт-Петербургская Антенная Неделя была проведена в СПбГЭТУ «ЛЭТИ» и включала в себя две конференции: русскоязычную «Антенны и Распространение Радиоволн» и англоязычную «Antennas Design and Measurement International Conference».
-						</article>
-						<p>01.01.2001</p>
-					</a>
-
-					<a href="" class="news">
-						<h3>Антенны и распространение радиоволн</h3>
-						<img src="img/news/1.jpg">
-						<article>
-							В октябре 2019 года Санкт-Петербургская Антенная Неделя была проведена в СПбГЭТУ «ЛЭТИ» и включала в себя две конференции: русскоязычную «Антенны и Распространение Радиоволн» и англоязычную «Antennas Design and Measurement International Conference».
-						</article>
-						<p>01.01.2001</p>
-					</a>
-
 				</div>
-
-			</div>
 
 		</section>
 
 	</main>
 
 	<footer style="color: white;">
-		<?php 
-			echo "Всего посещений: " . $allVisits['all_visits'] . " ";
-		    echo "Уникальных посещений: " . $uniqueVisits[0];
-		?>
+
+		<div class="footerNav">
+			<nav class="footerNav Left">
+				<a href="">Lorem ipsum</a>
+				<a href="">Lorem ipsum</a>
+				<a href="">Lorem ipsum</a>
+				<a href="">Lorem ipsum</a>
+				<a href="" class="bottomA">Lorem ipsum</a>
+			</nav>
+
+			<nav class="footerNav Left">
+				<a href="">Lorem ipsum</a>
+				<a href="">Lorem ipsum</a>
+				<a href="">Lorem ipsum</a>
+				<a href="">Lorem ipsum</a>
+				<a href="" class="bottomA">Lorem ipsum</a>
+			</nav>
+
+			<nav class="footerNav Left">
+				<a href="">Lorem ipsum</a>
+				<a href="">Lorem ipsum</a>
+				<a href="">Lorem ipsum</a>
+				<a href="">Lorem ipsum</a>
+				<a href="" class="bottomA">Lorem ipsum</a>
+			</nav>		
+
+		</div>
+
+		<div id="footerMap">
+
+				<!-- <script style="flex-grow: 1; width: 93%;" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A99dc76f7c463cec37b1c102ed12522e228ad0aa2b6582984d06190ddb248d015&amp;height=400&amp;width=93%&amp;%lang=ru_RU&amp;scroll=true"></script> -->
+
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad30690010cac316c23ee0f843f9ae9db86e1352d97cde92bcf23c421ccedeba5&amp;width=1052&amp;height=564&amp;lang=ru_RU&amp;scroll=true"></script>
+
+				<!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad30690010cac316c23ee0f843f9ae9db86e1352d97cde92bcf23c421ccedeba5&amp;width=1266&amp;height=697&amp;lang=ru_RU&amp;scroll=true"></script> -->
+
+			</div>
+		
+		<div class="counter">
+			<?php 
+				echo "<p>Всего посещений: " . $allVisits['all_visits'] . "</p>";
+			    echo "<p>Уникальных посещений: " . $uniqueVisits[0] . "</p>";
+			?>
+		</div>
+
 	</footer>
 
 </div>
+
+<script type="text/javascript" src="slider.js"> </script>
 
 </body>
 </html>

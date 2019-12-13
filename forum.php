@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Forum</title>
+    <link rel="stylesheet" href="styles/style_forum.css">
 </head>
 <body>
-    <section>
+    <div id="chat">
+        <section>
 
+        </section>
 
-    </section>
+        <form method="GET" id="form_message">
+            <textarea name="message" placeholder="Введите сообщение" require id="message"></textarea>
+            <input type="submit" name="send" value="Send" id="send">
+        </form>
+    </div>
+    
 
     <div id="right">
         <nav></nav>

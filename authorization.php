@@ -25,10 +25,12 @@
         }
         else $key = 1;
 
-        if ($resultRole[0] == "Админ")
+        if ($resultRole[0] == "Админ"){
+            Header("Location: personalAccount.php");
+        }
+        else if ($resultRole[0] == "Пользователь"){
             Header("Location: forum.php");
-        else 
-            Header("Location: ");
+        }
     }
 ?>
 

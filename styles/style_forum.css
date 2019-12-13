@@ -144,3 +144,21 @@ h3
     color: white;
     font-size: 20pt;
 }
+
+@media screen and (max-width: 1400px)
+{
+    body
+    {
+        flex-flow: column nowrap;
+    }
+    #right
+    {
+        height: auto;
+        order: -1;
+        margin-right: 0;
+    }
+    #chat
+    {
+        margin-left: 0;
+    }
+}

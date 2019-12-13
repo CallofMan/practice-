@@ -82,8 +82,13 @@
                         <li>Почта</li>
 
                     </ul>
+                    
+                    <div class="buttons">
 
-                    <input type="submit" value="Добавить пользователя" class="button">
+                        <input type="submit" value="Добавить пользователя" class="addUser">
+                        <input type="submit" value="Добавить комнату" class="addRoom">
+
+                    </div>
 
                 </div>
 

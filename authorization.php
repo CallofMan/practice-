@@ -26,9 +26,7 @@
         else $key = 1;
 
         if ($resultRole[0] == "Админ")
-            Header("Location: forum.php");
-        else 
-            Header("Location: ");
+            Header("Location: personalAccount.php");
     }
 ?>
 

@@ -9,6 +9,7 @@ html {
 	background-image: url(../background/tile.png);
 	background-repeat: repeat;
 	backdrop-filter: blur(6px);
+	min-height: 100%;
 }
 
 body

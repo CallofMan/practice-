@@ -46,7 +46,12 @@
                 ?>
             </aside>
             <div id="name">
-                <h3>Васян Васяныч</h3>
+                <?php
+                    $idUserForum = $_SESSION['id'];
+                    $queryName = mysqli_query($link, "SELECT first_name, second_name FROM users WHERE id_user = $idUserForum");
+                    $nameUser = $queryName->fetch_assoc();
+                    echo '<h3 style="color: white;">' . $nameUser["first_name"] . ' ' . $nameUser["second_name"] . '</h3>';
+                ?>
             </div>
         </div>
 </body>

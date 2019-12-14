@@ -139,11 +139,6 @@ a:hover, p:hover
     min-height: 70px;
     min-width: 100%;
 }
-h3
-{
-    color: white;
-    font-size: 20pt;
-}
 
 @media screen and (max-width: 1400px)
 {

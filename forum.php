@@ -29,7 +29,7 @@
         <div id="right">
             <nav>
                 <a href="index.php">Главная</a>
-                <a href="">Личный кабинет</a>
+                <a href="personalAccount.php">Личный кабинет</a>
                 <a href="">Телефонный справочник</a>
                 <a href="">Новости</a>
             </nav>

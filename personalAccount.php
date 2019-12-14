@@ -1,3 +1,7 @@
+<?
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +33,14 @@
                     <a href="#">Телефонный справочник</a>
                     <a href="#footerMap">Как добраться</a>
                     <a href="#">О компании</a>
-                    <a href="#">Создать заявку</a>
+                    <? if ( $_SESSION['role'] == 1) {
+                        echo "<a href='requests.php'>Заявки</a>";
+                    }
+                    if ( $_SESSION['role'] == 0) {
+                        echo "<a href='requests.php'>Создать заявку</a>";
+                    }
+                    ?>
+                    
                     
                 </nav>
             

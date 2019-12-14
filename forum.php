@@ -1,7 +1,7 @@
 <?php
     SESSION_START();
 
-    require_once 'messages.php';
+    require_once 'messagesUnload.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,56 @@
 <body>
         <div id="chat">
             <section>
-
+                <div class="message_block">
+                    <h4>Алексей пидор</h4>
+                    <p class="message_content">egeads gdbfsfbhsgdsfb vdfshbdsfg</p>
+                    <h6>2019-12-12 18:32:11</h6>
+                </div>
+                <div class="message_block">
+                    <h4>Алексей пидор</h4>
+                    <p class="message_content">egeadsggfdsrgsdfgsfgfujhjik sadbkfjhausf ouiahsw oi udvnuiasd dufnasi udfuah sdfkulhs akdljfnsaijdn fiuahr ffiuhansd iugfniuas dfiuasdiuf asuid fniudbfsfbhsg dsfbvdfs hbdsfg</p>
+                    <h6>2019-12-12 18:32:11</h6>
+                </div>
+                <div class="message_block">
+                    <h4>Алексей пидор</h4>
+                    <p class="message_content">egeadsggfdsrgsdfgsfgfujhjik sadbkfjhausf ouiahsw oi udvnuiasd dufnasi udfuah sdfkulhs akdljfnsaijdn fiuahr ffiuhansd iugfniuas dfiuasdiuf asuid fniudbfsfbhsg dsfbvdfs hbdsfg</p>
+                    <h6>2019-12-12 18:32:11</h6>
+                </div>
+                <div class="message_block">
+                    <h4>Алексей пидор</h4>
+                    <p class="message_content">egeadsggfdsrgsdfgsfgfujhjik sadbkfjhausf ouiahsw oi udvnuiasd dufnasi udfuah sdfkulhs akdljfnsaijdn fiuahr ffiuhansd iugfniuas dfiuasdiuf asuid fniudbfsfbhsg dsfbvdfs hbdsfg</p>
+                    <h6>2019-12-12 18:32:11</h6>
+                </div>
+                <div class="message_block">
+                    <h4>Алексей пидор</h4>
+                    <p class="message_content">egeadsggfdsrgsdfgsfgfujhjik sadbkfjhausf ouiahsw oi udvnuiasd dufnasi udfuah sdfkulhs akdljfnsaijdn fiuahr ffiuhansd iugfniuas dfiuasdiuf asuid fniudbfsfbhsg dsfbvdfs hbdsfg</p>
+                    <h6>2019-12-12 18:32:11</h6>
+                </div>
+                <div class="message_block">
+                    <h4>Алексей пидор</h4>
+                    <p class="message_content">egeadsggfdsrgsdfgsfgfujhjik sadbkfjhausf ouiahsw oi udvnuiasd dufnasi udfuah sdfkulhs akdljfnsaijdn fiuahr ffiuhansd iugfniuas dfiuasdiuf asuid fniudbfsfbhsg dsfbvdfs hbdsfg</p>
+                    <h6>2019-12-12 18:32:11</h6>
+                </div>
+                <div class="message_block">
+                    <h4>Алексей пидор</h4>
+                    <p class="message_content">egeadsggfdsrgsdfgsfgfujhjik sadbkfjhausf ouiahsw oi udvnuiasd dufnasi udfuah sdfkulhs akdljfnsaijdn fiuahr ffiuhansd iugfniuas dfiuasdiuf asuid fniudbfsfbhsg dsfbvdfs hbdsfg</p>
+                    <h6>2019-12-12 18:32:11</h6>
+                </div>
+                <div class="message_block">
+                    <h4>Алексей пидор</h4>
+                    <p class="message_content">egeadsggfdsrgsdfgsfgfujhjik sadbkfjhausf ouiahsw oi udvnuiasd dufnasi udfuah sdfkulhs akdljfnsaijdn fiuahr ffiuhansd iugfniuas dfiuasdiuf asuid fniudbfsfbhsg dsfbvdfs hbdsfg</p>
+                    <h6>2019-12-12 18:32:11</h6>
+                </div>
+                <div class="message_block">
+                    <h4>Алексей пидор</h4>
+                    <p class="message_content">egeadsggfdsrgsdfgsfgfujhjik sadbkfjhausf ouiahsw oi udvnuiasd dufnasi udfuah sdfkulhs akdljfnsaijdn fiuahr ffiuhansd iugfniuas dfiuasdiuf asuid fniudbfsfbhsg dsfbvdfs hbdsfg</p>
+                    <h6>2019-12-12 18:32:11</h6>
+                </div>
+                <div class="message_block">
+                    <h4>Алексей пидор</h4>
+                    <p class="message_content">egeadsggfdsrgsdfgsfgfujhjik sadbkfjhausf ouiahsw oi udvnuiasd dufnasi udfuah sdfkulhs akdljfnsaijdn fiuahr ffiuhansd iugfniuas dfiuasdiuf asuid fniudbfsfbhsg dsfbvdfs hbdsfg</p>
+                    <h6>2019-12-12 18:32:11</h6>
+                </div>
             </section>
 
             <form action="" method="POST" id="form_message">
@@ -41,7 +90,7 @@
                     while($nameRoom = mysqli_fetch_assoc($queryRoom))
                     {
                         ++$countId;
-                        echo "<p id=room" . $countId . ">" . $nameRoom['name_room'] . "</p>";
+                        echo "<p id='room" . $countId . "' class='roomP'>" . $nameRoom['name_room'] . "</p>";
                     }
                 ?>
             </aside>

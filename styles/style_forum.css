@@ -7,6 +7,7 @@
 html,body
 {
     min-height: 100%;
+    backdrop-filter: blur(6px);
 }
 html {
 	background-image: url(../background/tile.png);
@@ -34,12 +35,24 @@ body
 section
 {
     display: flex;
-    max-width: 1000px;
-    min-height: 750px;
+    min-width: 1000px;
+    height: 750px;
     border: 0px solid black;
     background-color: black;
     opacity: 0.8;
+    padding: 10px;
+    flex-direction: column;
+    overflow-y: scroll;
 }
+
+::-webkit-scrollbar { width: 4px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #999;}
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #999;}
+::-webkit-resizer { background-color: #666;}
+
 #form_message
 {
     display: flex;
@@ -68,6 +81,36 @@ section
     background-color: white;
     opacity: 0.8;
     color: black;
+}
+
+/*Блок сообщений*/
+.message_block
+{
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    padding: 0px;
+}
+.message_content
+{
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    min-width: 200px;
+    color: black;
+    padding: 10px;
+    margin: 5px;
+    overflow-x: visible;
+}
+h4,h6
+{
+    color: white;
+}
+h6
+{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
 }
 
 #right
@@ -102,7 +145,7 @@ aside
 {
     margin-bottom: 20px;
 }
-a, p
+a, .roomP
 {
     display: block;
 	color: rgb(7, 136, 247);
@@ -118,11 +161,11 @@ a, p
 	/* font-size: 1vw; */
 	transition: all .1s;
 }
-p
+.roomP
 {
     cursor: pointer;
 }
-a:hover, p:hover
+a:hover, .roomP:hover
 {
     background-color: #1fcecb;
 	color: white;
@@ -155,5 +198,14 @@ a:hover, p:hover
     #chat
     {
         margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    section
+    {
+        min-width: 320px;
+        margin-left: 15px;
     }
 }

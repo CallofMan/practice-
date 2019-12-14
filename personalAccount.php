@@ -25,10 +25,11 @@
             
                 <nav class="navigation">	
 
-                    <a href="#">Главная</a>
+                    <a href="index.php">Главная</a>
                     <a href="#">Телефонный справочник</a>
                     <a href="#footerMap">Как добраться</a>
                     <a href="#">О компании</a>
+                    <a href="#">Создать заявку</a>
                     
                 </nav>
             
@@ -82,8 +83,13 @@
                         <li>Почта</li>
 
                     </ul>
+                    
+                    <div class="buttons">
 
-                    <input type="submit" value="Добавить пользователя" class="button">
+                        <input type="submit" value="Добавить пользователя" class="addUser">
+                        <input type="submit" value="Добавить комнату" class="addRoom">
+
+                    </div>
 
                 </div>
 

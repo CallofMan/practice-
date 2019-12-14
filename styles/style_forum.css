@@ -57,7 +57,7 @@ section
 {
     display: flex;
     border: 1px solid black;
-    max-width: 1000px;
+    min-width: 1000px;
     min-height: 60px;
     justify-content: space-between;
 }
@@ -210,5 +210,9 @@ a:hover, .roomP:hover
     {
         min-width: 320px;
         margin-left: 15px;
+    }
+    #form_message
+    {
+        min-width: 320px;
     }
 }

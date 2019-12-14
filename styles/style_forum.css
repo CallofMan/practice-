@@ -87,6 +87,7 @@ section
 .message_block
 {
     display: flex;
+    align-self: flex-start;
     border: 1px solid black;
     flex-direction: column;
     padding: 0px;
@@ -94,6 +95,7 @@ section
 .message_content
 {
     display: flex;
+    align-self: flex-start;
     justify-content: flex-start;
     background-color: white;
     min-width: 200px;

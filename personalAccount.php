@@ -25,7 +25,7 @@
             
                 <nav class="navigation">	
 
-                    <a href="#">Главная</a>
+                    <a href="index.php">Главная</a>
                     <a href="#">Телефонный справочник</a>
                     <a href="#footerMap">Как добраться</a>
                     <a href="#">О компании</a>

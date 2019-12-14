@@ -223,6 +223,10 @@ ul.infoUser > li {
 	ul.listUsers > li > p {
 		font-size: 10px;
 	}
+	
+	section.center, ul.listUsers {
+		height: 450px;
+	}
 }
 
 @media screen and (max-width: 850px)
@@ -256,6 +260,17 @@ ul.infoUser > li {
 	a.login {
 		font-size: 10px;
 	}
+
+	section.center, ul.listUsers {
+		height: 350px;
+	}
+}
+
+@media screen and (max-width: 700px)
+{
+	section.center, ul.listUsers {
+		height: 275px;
+	}
 }
 
 @media screen and (max-width: 500px) 
@@ -282,5 +297,9 @@ ul.infoUser > li {
 
 	img.logo {
 		width: 45%;
+	}
+
+	section.center, ul.listUsers {
+		height: 225px;
 	}
 }

@@ -1,3 +1,9 @@
+<?php
+    SESSION_START();
+
+    require_once 'messages.php';
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,8 +19,8 @@
 
             </section>
 
-            <form method="GET" id="form_message">
-                <textarea name="message" placeholder="Введите сообщение" require id="message"></textarea>
+            <form action="" method="POST" id="form_message">
+                <textarea name="message" placeholder="Введите сообщение" required id="message"></textarea>
                 <input type="submit" name="send" value="Send" id="send">
             </form>
         </div>
@@ -28,10 +34,16 @@
                 <a href="">Новости</a>
             </nav>
             <aside>
-                <p>Комната</p>
-                <p>Комната</p>
-                <p>Комната</p>
-                <p>Комната</p>
+                <?php
+                    $queryRoom = mysqli_query($link, "SELECT name_room, role FROM rooms");
+
+                    $countId = 0;
+                    while($nameRoom = mysqli_fetch_assoc($queryRoom))
+                    {
+                        ++$countId;
+                        echo "<p id=room" . $countId . ">" . $nameRoom['name_room'] . "</p>";
+                    }
+                ?>
             </aside>
             <div id="name">
                 <h3>Васян Васяныч</h3>

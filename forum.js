@@ -37,27 +37,29 @@ showMessages = function(arg)
 let send = document.getElementById('send');
 send.addEventListener("click", function(event)
 {
-    // Отключение перезагрузки страницы при нажатии на кнопку
-    event.preventDefault();
-
     let message = document.getElementById('message');
-    // Какие данные буду передавать в запрос php
-    let data_body = "message=" + message.value; 
-    
-    // Подключение к серверу
-    let connection = fetch("messagesUnload.php", { 
-        method: "POST",
-        body: data_body,   
-        headers:{"content-type": "application/x-www-form-urlencoded"} 
-        });
-    
-    // Если коннект успешный, то поле ввода текста очистится
-    connection.then(()=>{
-    message.value = ""; 
-    
-    showMessages(true);
-    
-    })
+
+    if(message.value != '')
+    { 
+        // Отключение перезагрузки страницы при нажатии на кнопку
+        event.preventDefault();
+
+        // Какие данные буду передавать в запрос php
+        let data_body = "message=" + message.value; 
+        
+        // Подключение к серверу
+        let connection = fetch("messagesUnload.php", {
+            method: "POST",
+            body: data_body,   
+            headers:{"content-type": "application/x-www-form-urlencoded"} 
+            });
+        
+        // Если коннект успешный, то поле ввода текста очистится
+        connection.then(()=>{
+            message.value = ""; 
+            showMessages(true);
+        })
+    }
 });
 
 // Вывод в первый раз, чтобы не запаздывало на секунду

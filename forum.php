@@ -1,8 +1,7 @@
 <?php
     SESSION_START();
 
-    require_once 'messagesUnload.php';
-    require_once 'messagesUpload.php';
+    require_once "connection.php";
 
     if($_SESSION['role'] != '0' && $_SESSION['role'] != '1')
     {
@@ -26,7 +25,7 @@
             
             </section>
             <form action="" method="POST" id="form_message">
-                <textarea name="message" placeholder="Введите сообщение" required id="message"></textarea>
+                <textarea name="message" placeholder="Введите сообщение" required id="message" autofocus></textarea>
                 <input type="submit" name="send" value="Send" id="send">
             </form>
         </div>

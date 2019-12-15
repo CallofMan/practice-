@@ -91,6 +91,7 @@ section
     border: 1px solid black;
     flex-direction: column;
     padding: 0px;
+    margin-bottom: 10px;
 }
 .message_content
 {
@@ -155,7 +156,7 @@ a, .roomP
 	color: rgb(7, 136, 247);
 	text-decoration: none;
 	text-align: center;
-	margin-bottom: 4%;
+	margin: 4%;
 	border-radius: 3px;
 	
 	background-color: rgba(0, 169, 251, 0.3);
@@ -209,11 +210,47 @@ a:hover, .roomP:hover
 {
     section
     {
-        min-width: 320px;
-        margin-left: 15px;
+        min-width: 300px;
+        margin: 0px;
+        padding: 0px;
+        max-height: 500px;
+        overflow-x: hidden;
+        flex-grow: 8;
+    }
+    div#chat
+    {
+        max-height: 485px;
+        padding: 0px;
+        justify-content: flex-start;
     }
     #form_message
     {
-        min-width: 320px;
+        max-height: 50px;
+        min-height: auto;
+        min-width: 300px;
+        flex-grow: 1;
+    }
+    div#right
+    {
+        padding-bottom: 15px;
+        padding-top: 0px;
+        margin: 0px;
+    }
+    nav
+    {
+        margin: 0px;
+    }
+    a 
+    {
+        margin: 4% auto;
+    }
+    p.message_content
+    {
+        margin: 5px 0px;
+        max-width: 100%;
+    }
+    #message
+    {
+        font-size: 14pt;
     }
 }

@@ -23,7 +23,12 @@
 			
         <img class="logo" src="../background/logo_okbmei1.png" alt="logo">
 
-        <a href="authorization.php" class="login">Авторизация</a>
+        <?
+            if (!isset($_SESSION['id'])) {
+                echo "<a href='authorization.php' class='login'>Авторизация</a>";
+            }
+    	?>
+        <a href="logout.php" class="login">Выйти</a>
     
     </header>
 
@@ -55,7 +60,8 @@
                     echo "<a href='allRequests.php' class='allRequests' style='color: white;'>Все заявки</a>"; 
 	                }
 	                if ( $_SESSION['role'] == 0) {
-	                    echo "<p>Новая заявка</p>";
+	                   echo "<a href='requests.php' class='allRequests active'>Новая заявка</a>";
+	                   echo "<a href='allRequests.php' class='allRequests' style='color: white;'>Все мои заявки</a>";
 	                }
 	                ?>
 				</div>
@@ -69,7 +75,8 @@
 						$count = mysqli_query($link, "SELECT * FROM `categories`;");
 						$countRows = mysqli_num_rows($count);
 						?>
-						<select name="requestCategory">
+						<select name="requestCategory" required="">
+							<option value=></option>
 							<?
 								for ($j = 0; $j < $countRows; $j++) {
 									$countResult = mysqli_fetch_assoc($count);
@@ -84,7 +91,7 @@
 						<input style="width: 450px;" type="text" name="requestName" required autocomplete="off">
 
 						<p class="requestDescription">Описание</p>
-						<textarea placeholder="Введите сюда описание заявки" style="width: 650px; height:40px" name="requestDescription"></textarea>
+						<textarea placeholder="Введите сюда описание заявки" class="description" name="requestDescription"></textarea>
 
 						<div class="statusBar">
 							<div>
@@ -110,7 +117,7 @@
 
 						<div class="requestComment" style="margin-top: 20px;">
 							<p>Добавьте комментарий, если необходимо</p>
-							<textarea style="width: 650px; height: 100px;" name="requestComment"> </textarea>
+							<textarea class="comment" name="requestComment"> </textarea>
 						</div>
 
 						<div class="requestButtons">

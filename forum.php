@@ -1,8 +1,7 @@
 <?php
     SESSION_START();
 
-    require_once 'messagesUnload.php';
-    require_once 'messagesUpload.php';
+    require_once "connection.php";
 
     if($_SESSION['role'] != '0' && $_SESSION['role'] != '1')
     {
@@ -22,33 +21,11 @@
 <body>
         <div id="chat">
             <section>
-                <div class="message_block">
-                    <h4>Алексей пидор</h4>
-                    <p class="message_content">egeads gdbfsfbhsgdsfb vdfshbdsfg</p>
-                    <h6>2019-12-12 18:32:11</h6>
-                </div>
-                <div class="message_block">
-                    <h4>Алексей пидор</h4>
-                    <p class="message_content">egeadsggfdsrgsdfgsfgfujhjik sadbkfjhausf ouiahsw oi udvnuiasd dufnasi udfuah sdfkulhs akdljfnsaijdn fiuahr ffiuhansd iugfniuas dfiuasdiuf asuid fniudbfsfbhsg dsfbvdfs hbdsfg</p>
-                    <h6>2019-12-12 18:32:11</h6>
-                </div>
-                <?php
-                    $lengthArray = count($messagesArray);
-
-                    for($i = 0; $i < $lengthArray; $i++)
-                    {
-                        $idUserM = $messagesArray[$i][1];
-                        echo "SELECT first_name, second_name FROM users, messages WHERE users.id_user = messages.id_user AND id_user = $idUserM";
-                        $queryNameUserM = mysqli_query($link, "SELECT first_name, second_name FROM users WHERE id_user = $idUserM");
-                        $nameUserM = $queryNameUserM->fetch_assoc();
-                        echo "<div class='message_block' id='message" . $messagesArray[$i][0] . "'><h4>" . $nameUserM['first_name'] . " " . $nameUserM['second_name'] . "</h4> <p class='message_content'> " . $messagesArray[$i][2] . " </p> <h6>" . $messagesArray[$i][3] . "</h6> </div>";
-                    }
-                    
-                ?>
+                
+            
             </section>
-
             <form action="" method="POST" id="form_message">
-                <textarea name="message" placeholder="Введите сообщение" required id="message"></textarea>
+                <textarea name="message" placeholder="Введите сообщение" required id="message" autofocus></textarea>
                 <input type="submit" name="send" value="Send" id="send">
             </form>
         </div>
@@ -94,4 +71,5 @@
             </div>
         </div>
 </body>
+<script src="forum.js"></script>
 </html>

@@ -1,4 +1,5 @@
 <?
+    require_once 'connection.php';
     SESSION_START();
 
     if($_SESSION['role'] != '1' || $_SESSION['role'] == '0')
@@ -24,8 +25,12 @@
         <header>
 			
             <img class="logo" src="../background/logo_okbmei1.png" alt="logo">
-
-            <a href="authorization.php" class="login">Авторизация</a>
+            <?
+                if (!isset($_SESSION['id'])) {
+                    echo "<a href='authorization.php' class='login'>Авторизация</a>";
+                }
+            ?>
+            <a href="logout.php" class="login">Выйти</a>
     
         </header>
 
@@ -54,37 +59,21 @@
             <section class="center">
 
                 <ul class="listUsers">
-
-                    <li>
-                        <h4>Ivan Ivanov</h4>
-                        <p>edit</p>
-                        <p>delete</p>
-                    </li>
-
-                    <li>
-                        <h4>Ivan Ivanov</h4>
-                        <p>edit</p>
-                        <p>delete</p>
-                    </li>
-
-                    <li>
-                        <h4>Ivan Ivanov</h4>
-                        <p>edit</p>
-                        <p>delete</p>
-                    </li>
-
-                    <li>
-                        <h4>Ivan Ivanov</h4>
-                        <p>edit</p>
-                        <p>delete</p>
-                    </li>
-
-                    <li>
-                        <h4>Ivan Ivanov</h4>
-                        <p>edit</p>
-                        <p>delete</p>
-                    </li>
-
+                    <?
+                    $selectUsers = mysqli_query($link, "SELECT first_name, second_name FROM `users`");
+                    if ($selectUsers) {
+                        for ($i = 0; $i < mysqli_num_rows($selectUsers); $i++) {
+                            $selectUsersResult = mysqli_fetch_assoc($selectUsers);
+                            ?>
+                            <li>
+                                <h4><?echo $selectUsersResult['first_name']." ".$selectUsersResult['second_name']?></h4>
+                                <a href="" class="userListButtons">edit</a>
+                                <a href="" class="userListButtons">delete</a>
+                            </li>
+                            <?
+                        }
+                    }
+                    ?>
                 </ul>
 
                 <div class="infoAndButton">

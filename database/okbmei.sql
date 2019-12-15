@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 15 2019 г., 00:17
--- Версия сервера: 10.3.13-MariaDB-log
--- Версия PHP: 7.1.32
+-- Время создания: Дек 15 2019 г., 05:46
+-- Версия сервера: 10.3.13-MariaDB
+-- Версия PHP: 7.1.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -85,7 +85,18 @@ INSERT INTO `messages` (`id_message`, `id_user`, `id_room`, `text_message`, `dat
 (3, 2, 1, 'dfsagg', '2019-12-13 18:00:41'),
 (4, 2, 1, 'вапвыарар', '2019-12-13 18:03:17'),
 (5, 1, 1, 'вапыппывапып', '2019-12-13 18:23:58'),
-(6, 1, 1, 'Hello world!', '2019-12-14 19:05:52');
+(6, 1, 1, 'Hello world!', '2019-12-14 19:05:52'),
+(7, 2, 1, 'gfsdagag', '2019-12-15 02:01:21'),
+(8, 2, 1, 'asfdgghdfhsh', '2019-12-15 02:01:23'),
+(9, 2, 1, 'sdfgdsfgds', '2019-12-15 02:01:24'),
+(10, 2, 1, 'fsdagfahgdfshbfghdhjhgfdghdfghdrftytrythy', '2019-12-15 02:13:30'),
+(11, 2, 1, 'ersagsfegnlksdnflk asndlkf lkasdjfli asjl; kfjoaiw4jf oiaer ghfoiawsesh goil;haeroi;ghasdg ', '2019-12-15 02:13:35'),
+(12, 2, 1, 'впаыап выап выап ыва пвыап выапыа ', '2019-12-15 02:21:44'),
+(13, 2, 1, 'gdsgfshshf', '2019-12-15 03:06:01'),
+(14, 2, 1, 'fsaddfadgsdfgsfgs', '2019-12-15 04:08:50'),
+(15, 2, 1, 'ыфаывафываыфввпп', '2019-12-15 04:31:38'),
+(16, 3, 1, 'gfdshhjgfdgj sdfhg gsdfh  fgd', '2019-12-15 04:38:22'),
+(17, 3, 1, 'fdsafasgsdfhgdfh dsfh ', '2019-12-15 05:22:05');
 
 -- --------------------------------------------------------
 
@@ -124,7 +135,7 @@ CREATE TABLE `quantity_all_visits` (
 --
 
 INSERT INTO `quantity_all_visits` (`id`, `all_visits`, `unique_visits`) VALUES
-(1, 92, 1);
+(1, 322, 1);
 
 -- --------------------------------------------------------
 
@@ -151,7 +162,11 @@ CREATE TABLE `requests` (
 
 INSERT INTO `requests` (`requestId`, `userid`, `requestCategory`, `requestName`, `requestDescription`, `requestStatus`, `requestPriority`, `requestDateCreated`, `requestDate`, `requestComment`) VALUES
 (34, 3, 2, 'Тестовая заявка 1', 'Нужны 2 coreI7 ', 1, 3, '2019-12-14 23:52:24', '2019-12-17', ' '),
-(35, 3, 1, 'Тестовая 2', 'Нужна термопаста', 1, 1, '2019-12-14 23:53:48', '2019-12-19', ' ');
+(35, 3, 1, 'Тестовая 2', 'Нужна термопаста', 1, 1, '2019-12-14 23:53:48', '2019-12-19', ' '),
+(36, 3, 1, 'gfhdgh', 'gfdhdfghdfghfdgj', 1, 2, '2019-12-15 02:01:08', '2019-12-05', ' fgdhfjhhdfgrjgrfdj'),
+(37, 3, 1, 'rwqerqwer', 'wqerqwerwqer', 1, 2, '2019-12-15 02:12:04', '2019-12-10', ' rwqerwreqwrwqer'),
+(38, 3, 1, 'asdasd', 'asdasdasdasd', 1, 2, '2019-12-15 02:13:12', '2019-12-04', ' sadasdasdsdgaasdg'),
+(39, 3, 1, 'fsaddgasdg', 'sadfgfgsadfsdagsdag', 1, 2, '2019-12-15 05:06:52', '2019-12-09', ' fasdfsagsfdhgfshfgdh');
 
 -- --------------------------------------------------------
 
@@ -335,7 +350,7 @@ ALTER TABLE `ip`
 -- AUTO_INCREMENT для таблицы `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id_message` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_message` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT для таблицы `priorities`
@@ -347,7 +362,7 @@ ALTER TABLE `priorities`
 -- AUTO_INCREMENT для таблицы `requests`
 --
 ALTER TABLE `requests`
-  MODIFY `requestId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `requestId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT для таблицы `rooms`

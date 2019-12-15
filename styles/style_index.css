@@ -327,3 +327,21 @@ div.counter {
 		width: 45%;
 	}
 }
+
+@media screen and (max-width: 640px)
+{
+	main 
+    {
+        flex-flow: column;
+    }
+	section.leftSidebar
+	{
+		min-width: 100%;
+		margin-bottom: 20px;
+	}
+	section.center
+	{
+		min-width: 100%;
+		margin: 0px;
+	}
+}

@@ -66,11 +66,11 @@
 		</div>
 
 		<div class="login">
-			<a href="authorization.php" class="login">Авторизация</a>
 			<?
 			if (isset($_SESSION['id'])) {
 				echo "<a href='logout.php' class='login'>Выйти</a>";
 			}
+			else echo "<a href='authorization.php' class='login'>Авторизация</a>";
 			?>
 		</div>
 

@@ -78,7 +78,6 @@ nav.leftSidebarNavigation {
 	justify-content: flex-start;
 	align-items: center;
 	width: 100%;
-	margin-bottom: 10%;
 }
 
 nav.leftSidebarNavigation > a {
@@ -86,7 +85,7 @@ nav.leftSidebarNavigation > a {
 	color: rgb(7, 136, 247);
 	text-decoration: none;
 	text-align: center;
-	margin-bottom: 4%;
+	margin: 4% 0px;
 	border-radius: 3px;
 	
 	background-color: rgba(0, 169, 251, 0.3);

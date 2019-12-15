@@ -84,7 +84,7 @@
 						<input style="width: 450px;" type="text" name="requestName" required autocomplete="off">
 
 						<p class="requestDescription">Описание</p>
-						<textarea placeholder="Введите сюда описание заявки" style="width: 650px; height:40px" name="requestDescription"></textarea>
+						<textarea placeholder="Введите сюда описание заявки" style="width: 650px; height:40px" name="requestDescription" readonly></textarea>
 
 						<div class="statusBar">
 							<div>
@@ -110,7 +110,7 @@
 
 						<div class="requestComment" style="margin-top: 20px;">
 							<p>Добавьте комментарий, если необходимо</p>
-							<textarea style="width: 650px; height: 100px;" name="requestComment"> </textarea>
+							<textarea style="width: 650px; height: 100px;" name="requestComment" readonly> </textarea>
 						</div>
 
 						<div class="requestButtons">

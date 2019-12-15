@@ -22,16 +22,6 @@
 <body>
         <div id="chat">
             <section>
-                <div class="message_block">
-                    <h4>Алексей пидор</h4>
-                    <p class="message_content">egeads gdbfsfbhsgdsfb vdfshbdsfg</p>
-                    <h6>2019-12-12 18:32:11</h6>
-                </div>
-                <div class="message_block">
-                    <h4>Алексей пидор</h4>
-                    <p class="message_content">egeadsggfdsrgsdfgsfgfujhjik sadbkfjhausf ouiahsw oi udvnuiasd dufnasi udfuah sdfkulhs akdljfnsaijdn fiuahr ffiuhansd iugfniuas dfiuasdiuf asuid fniudbfsfbhsg dsfbvdfs hbdsfg</p>
-                    <h6>2019-12-12 18:32:11</h6>
-                </div>
                 <?php
                     $lengthArray = count($messagesArray);
 
@@ -46,7 +36,6 @@
                     
                 ?>
             </section>
-
             <form action="" method="POST" id="form_message">
                 <textarea name="message" placeholder="Введите сообщение" required id="message"></textarea>
                 <input type="submit" name="send" value="Send" id="send">
@@ -94,4 +83,5 @@
             </div>
         </div>
 </body>
+<script src="forum.js"></script>
 </html>

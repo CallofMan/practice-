@@ -95,10 +95,10 @@
 									<input type="text" readonly value="<?echo $selectRequestsResult['categoryName'];?>">
 									
 									<p style="margin-top: 2%;">Описание заявки</p>
-									<textarea><?echo $selectRequestsResult['requestDescription']?></textarea>
+									<textarea readonly><?echo $selectRequestsResult['requestDescription']?></textarea>
 									
 									<p style="margin-top: 2%;">Комментарий к заявке</p>
-									<textarea><?echo $selectRequestsResult['requestComment']?></textarea>
+									<textarea readonly><?echo $selectRequestsResult['requestComment']?></textarea>
 									
 									<div style="float: right;">
 									<p>Создана</p>

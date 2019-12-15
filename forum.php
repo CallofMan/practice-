@@ -57,7 +57,17 @@
         <div id="right">
             <nav>
                 <a href="index.php">Главная</a>
-                <a href="requests.php">Оставить заявку</a>
+                <?php
+                    if($_SESSION['role'] == '0')
+                    {
+                        echo "<a href='requests.php'>Оставить заявку</a>";
+                    }
+                    if($_SESSION['role'] == '1')
+                    {
+                        echo "<a href='allRequests.php'>Заявки</a>";
+                    }
+                ?>
+                
                 <a href="">Телефонный справочник</a>
                 <a href="">Новости</a>
             </nav>

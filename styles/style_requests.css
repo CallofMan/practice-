@@ -88,6 +88,7 @@ nav.navigation > a {
 	width: 18%;
 	transition: all .1s;
 	font-size: 18px;
+	padding: 2% 1%;
 }
 
 nav.navigation > a:hover {

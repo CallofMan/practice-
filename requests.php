@@ -1,6 +1,11 @@
 <?php
     SESSION_START();
-    require_once "connection.php";
+	require_once "connection.php";
+	
+	if($_SESSION['role'] != '0' && $_SESSION['role'] != '1')
+	{
+		Header("Location: index.php");
+	}
 ?>
 
 <!DOCTYPE html>
@@ -8,6 +13,7 @@
 <head>
 	<title>Заявки</title>
 	<link rel="stylesheet" type="text/css" href="styles/style_requests.css">
+	<link rel="stylesheet" href="styles/general.css">
 </head>
 <body>
 
@@ -17,7 +23,7 @@
 			
         <img class="logo" src="../background/logo_okbmei1.png" alt="logo">
 
-        <a href="authorization.php" class="login">Личный кабинет</a>
+        <a href="authorization.php" class="login">Авторизация</a>
     
     </header>
 
@@ -29,16 +35,11 @@
 
                 <a href="index.php">Главная</a>
                 <a href="#">Телефонный справочник</a>
-                <a href="#footerMap">Как добраться</a>
-                <a href="#">О компании</a>
-                <? if ( $_SESSION['role'] == 1) {
-                    echo "<a href='requests.php'>Заявки</a>";
-                }
-                if ( $_SESSION['role'] == 0) {
-                    echo "<a href='requests.php'>Создать заявку</a>";
-                }
-                ?>
-                    
+                <a href="forum.php">Форум</a>
+				<?php 
+					if($_SESSION['role'] == 1)
+					echo "<a href='personalAccount.php'>Личный кабинет</a>";
+				?>         
             </nav>
             
         </section>

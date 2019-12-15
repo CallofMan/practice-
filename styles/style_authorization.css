@@ -6,7 +6,7 @@ body, html
 {
     border: 0px solid black;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.7;
     height: 400px;
     width: 600px;
     display: flex;
@@ -25,8 +25,23 @@ body, html
 #auth_out
 {
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+	color: rgb(7, 136, 247);
+	background-color: rgba(0, 169, 251, 0.3);
+	color: white;
+	/* font-size: 1vw; */
+	transition: all .1s;
 }
-a 
+#auth_out:hover
+{
+    background-color: #1fcecb;
+	color: white;
+	transition: all .1s;
+}
+a
 {
     display: flex;
     justify-content: center;
@@ -45,7 +60,7 @@ a
     transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
     z-index: 1;
 }
-a:after 
+a:after
 {
     content: '';
     display: block;
@@ -61,11 +76,11 @@ a:after
     transform-origin: bottom center;
     z-index: -1;
 }
-a:hover 
+a:hover
 {
     color: #2D2D2D;
 }
-a:hover:after 
+a:hover:after
 {
     right: 0;
     left: 0;

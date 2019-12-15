@@ -48,7 +48,6 @@ img.logo {
 
 a.login {
 	display: block;
-	text-decoration: none;
 	border-bottom: 2px solid rgba(214,205,205,1);
 	font-size: 16px;
 	color: rgba(214,205,205,1);
@@ -303,7 +302,7 @@ div.counter {
 	}
 }
 
-@media screen and (max-width: 550px)
+@media screen and (max-width: 320px)
 {
 	section.leftSidebar
 	{
@@ -319,5 +318,13 @@ div.counter {
 	{
 		margin-bottom: 10px;
 		margin-left: unset;
+	}
+}
+
+@media screen and (max-width: 800px)
+{
+	div.logo 
+	{
+		width: 45%;
 	}
 }

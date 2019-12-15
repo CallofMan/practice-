@@ -1,0 +1,53 @@
+a.login
+{
+    display: flex;
+    justify-content: center;
+    border: 0px solid black;
+    align-items: center;
+    height: 30px;
+    background-color: black;
+    opacity: 0.6;
+    padding: 1rem 1.25rem;
+    font-family: arial;
+    font-size: 10pt;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    z-index: 1;
+}
+a.login:after
+{
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 1.25rem;
+    left: 1.25rem;
+    background-color: #ffffff;
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    -webkit-transform-origin: bottom center;
+    transform-origin: bottom center;
+    z-index: -1;
+}
+a.login:hover
+{
+    color: #2D2D2D;
+}
+a.login:hover:after
+{
+    right: 0;
+    left: 0;
+    height: 100%;
+}
+
+::-webkit-scrollbar { width: 4px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #999;}
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #999;}
+::-webkit-resizer { background-color: #666;}

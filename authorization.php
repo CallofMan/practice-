@@ -59,13 +59,14 @@
 
 </head>
 <body>
-    <a href="index.php">Назад</a>
+    <a href="index.php">Главная</a>
 
     <form method="POST" id="auth">
         <h1>
             <?php
                 if($key == 1)
                     echo "Неверный логин или пароль";
+                else echo "Авторизируйтесь";
             ?>
         </h1>
 

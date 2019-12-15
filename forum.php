@@ -3,6 +3,11 @@
 
     require_once 'messagesUnload.php';
     require_once 'messagesUpload.php';
+
+    if($_SESSION['role'] != '0' && $_SESSION['role'] != '1')
+    {
+        Header("Location: index.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +57,17 @@
         <div id="right">
             <nav>
                 <a href="index.php">Главная</a>
-                <a href="personalAccount.php">Личный кабинет</a>
+                <?php
+                    if($_SESSION['role'] == '0')
+                    {
+                        echo "<a href='requests.php'>Оставить заявку</a>";
+                    }
+                    if($_SESSION['role'] == '1')
+                    {
+                        echo "<a href='allRequests.php'>Заявки</a>";
+                    }
+                ?>
+                
                 <a href="">Телефонный справочник</a>
                 <a href="">Новости</a>
             </nav>

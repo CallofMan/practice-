@@ -63,7 +63,8 @@
                         echo "<a href='requests.php'>Оставить заявку</a>";
                     }
                     if($_SESSION['role'] == '1')
-                    {
+                    {   
+                        echo "<a href='personalAccount.php'>Личный кабинет</a>";
                         echo "<a href='allRequests.php'>Заявки</a>";
                     }
                 ?>

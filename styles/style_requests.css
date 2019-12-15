@@ -166,6 +166,16 @@ div.requestMain > p.requestDescription {
 	margin-top: 10px;
 }
 
+div.requestMain textarea.description {
+	width: 650px; 
+	height:40px;
+}
+
+div.requestMain textarea.comment {
+	width: 650px;
+	height: 100px;
+}
+
 div.statusBar {
 	display: flex; 
 	flex-flow: row wrap;
@@ -270,16 +280,21 @@ div.requestWrapper {
 		font-size: 10px;
 	}
 
-	section.center, ul.listUsers {
+	/* section.center, ul.listUsers {
 		height: 350px;
+	} */
+}
+
+@media screen and (max-width: 750px) {
+	div.requestMain textarea.description, div.requestMain textarea.comment {
+		width: 400px; 
 	}
 }
 
-@media screen and (max-width: 700px)
-{
-	section.center, ul.listUsers {
+@media screen and (max-width: 700px) {
+	/* section.center, ul.listUsers {
 		height: 275px;
-	}
+	} */
 }
 
 @media screen and (max-width: 500px) 
@@ -308,7 +323,7 @@ div.requestWrapper {
 		width: 45%;
 	}
 
-	section.center, ul.listUsers {
+	/* section.center, ul.listUsers {
 		height: 225px;
-	}
+	} */
 }

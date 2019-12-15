@@ -67,6 +67,11 @@
 
 		<div class="login">
 			<a href="authorization.php" class="login">Авторизация</a>
+			<?
+			if (isset($_SESSION['id'])) {
+				echo "<a href='logout.php' class='login'>Выйти</a>";
+			}
+			?>
 		</div>
 
 	</header>

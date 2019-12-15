@@ -102,8 +102,8 @@
                     
                     <div class="buttons">
 
-                        <input type="submit" value="Добавить пользователя" class="addUser">
-                        <input type="submit" value="Добавить комнату" class="addRoom">
+                            <a href="addUser.php" class="addUser">Добавить пользователя</a>
+                            <a href="#" class="addRoom">Добавить комнату</a>
 
                     </div>
 

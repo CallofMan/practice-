@@ -9,6 +9,7 @@
 	<title>Все заявки</title>
 	<link rel="stylesheet" type="text/css" href="styles/style_requests.css">
 	<link rel="stylesheet" href="styles/general.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 

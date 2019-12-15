@@ -13,6 +13,7 @@
 <head>
 	<title>Заявки</title>
 	<link rel="stylesheet" type="text/css" href="styles/style_requests.css">
+	<link rel="stylesheet" href="styles/general.css">
 </head>
 <body>
 

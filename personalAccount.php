@@ -15,6 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>personalAccount</title>
     <link rel="stylesheet" href="styles/style_personalAccount.css">
+    <link rel="stylesheet" href="styles/general.css">
 </head>
 <body>
 

@@ -53,6 +53,7 @@
 		<link rel="stylesheet" href="slider/css/style.css">
 	<!-- Slider -->
 	<!-- CSS -->
+		<link rel="stylesheet" href="styles/general.css">
 </head>
 <body>
 
@@ -87,7 +88,7 @@
 				if($_SESSION['role'] == '0')
 				{
 					echo "<a href='forum.php'>Форум</a>";
-					echo "<a href='requests.php'>Оставить заявку<a>";
+					echo "<a href='requests.php'>Оставить заявку</a>";
 				}
 			?>
 		</nav>

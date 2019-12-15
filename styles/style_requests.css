@@ -1,0 +1,314 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+html {
+	background-image: url(../background/tile.png);
+	background-repeat: repeat;
+	backdrop-filter: blur(6px);
+	min-height: 100%;
+}
+
+body
+{
+	margin: 0 auto;
+	max-width: 1440px;
+}
+
+#wrapper {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	background-color: rgba(0, 0, 0, 0.3);
+	margin-top: 0.5%;
+	padding: 10px;
+	width: 95%;
+}
+
+img.logo {
+	width: 40%;
+}
+
+a.login {
+	display: block;
+	text-decoration: none;
+	border-bottom: 2px solid rgba(214,205,205,1);
+	font-size: 16px;
+	color: rgba(214,205,205,1);
+}
+
+main {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 95%;
+	margin-top: 1%;
+}
+
+section.top {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	padding: 0.6% 0.3%;
+	display: flex;
+}
+
+nav.navigation {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1%;
+	width: 100%;
+}
+
+nav.navigation > a {
+	display: block;
+	color: rgb(7, 136, 247);
+	text-decoration: none;
+	text-align: center;
+	border-radius: 3px;
+	background-color: rgba(0, 169, 251, 0.3);
+	color: white;
+	padding: 0.2% 1%;
+	width: 18%;
+	transition: all .1s;
+	font-size: 18px;
+	padding: 2% 1%;
+}
+
+nav.navigation > a:hover {
+	background-color: #1fcecb;
+	color: white;
+	transition: all .1s;
+}
+
+section.center {
+	width: 100%;
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-top: 1%;
+}
+
+div.infoAndButton {
+	display: flex;
+	width: 100%;
+	flex-flow: column;
+	align-items: flex-start;
+	margin: 1%;
+}
+
+div.upField, div.requestMain {
+	width: 100%;
+}
+
+div.upField {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+div.upField > img {
+	width: 40px;
+}
+
+div.upField > p {
+	margin-left: 15px;
+	color: white;
+}
+
+.active {
+	color: yellow;
+	border-bottom: 2px solid white;
+	padding-bottom: 5px;
+}
+
+a.allRequests {
+	text-decoration: none;
+	margin-left: 15px;
+	transition: all .1s;
+}
+
+a.allRequests:hover {
+	color: yellow;
+	border-bottom: 2px solid white;
+	padding-bottom: 5px;
+	transition: all .1s;
+}
+
+div.requestMain {
+	color: white;
+	margin-top: 0.5%;
+	padding: 1%;
+	border: 2px solid grey;
+}
+
+p.requestName > span {
+ color: pink;
+}
+
+div.requestMain > p.requestDescription {
+	margin-top: 10px;
+}
+
+div.statusBar {
+	display: flex; 
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 10px;
+}
+
+p.success {
+	color: lime;
+	width: 100%;
+}
+
+div.requestsWrapper {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+div.requestWrapper {
+	color: white;
+	border: 2px solid  rgba(0, 169, 251, 0.8);
+	border-radius: 3px;
+	padding: 10px;
+	width: 40%;
+	margin-top: 1%;
+}
+
+@media screen and (max-width: 1500px)
+{
+	.addUser, .addRoom {
+		font-size: 20px;
+	}
+	nav.navigation > a {
+		font-size: 15px;
+	}
+
+}
+
+@media screen and (max-width: 1100px)
+{
+	nav.navigation > a {
+		font-size: 12px;
+	}
+
+	div.infoAndButton > img {
+		width: 40%;
+	}
+
+	ul.infoUser > li {
+		font-size: 14px;
+	}
+
+	.addUser, .addRoom {
+		font-size: 16px;
+	}
+
+	ul.listUsers > li > h4 {
+		font-size: 12px;
+	}
+
+	ul.listUsers > li > p {
+		font-size: 10px;
+	}
+	
+	section.center, ul.listUsers {
+		height: 450px;
+	}
+}
+
+@media screen and (max-width: 850px)
+{
+	nav.navigation {
+		flex-flow: column;
+	}
+
+	nav.navigation > a {
+		font-size: 2vw;
+		width: 90%;
+		margin: 1%;
+	}
+
+	ul.infoUser > li {
+		font-size: 10px;
+	}
+
+	.addUser, .addRoom {
+		font-size: 12px;
+	}
+
+	ul.listUsers > li > h4 {
+		font-size: 10px;
+	}
+
+	ul.listUsers > li > p {
+		font-size: 7px;
+	}
+
+	a.login {
+		font-size: 10px;
+	}
+
+	section.center, ul.listUsers {
+		height: 350px;
+	}
+}
+
+@media screen and (max-width: 700px)
+{
+	section.center, ul.listUsers {
+		height: 275px;
+	}
+}
+
+@media screen and (max-width: 500px) 
+{
+	ul.infoUser > li {
+		font-size: 7px;
+	}
+
+	.addUser, .addRoom {
+		font-size: 7px;
+	}
+
+	ul.listUsers > li > h4 {
+		font-size: 6px;
+	}
+
+	ul.listUsers > li > p {
+		font-size: 4px;
+	}
+
+	a.login {
+		font-size: 7px;
+	}
+
+	img.logo {
+		width: 45%;
+	}
+
+	section.center, ul.listUsers {
+		height: 225px;
+	}
+}

@@ -1,0 +1,218 @@
+* {
+	padding:  0;
+	margin:  0;
+	font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+html,body
+{
+    min-height: 100%;
+    backdrop-filter: blur(6px);
+}
+html {
+	background-image: url(../background/tile.png);
+    background-repeat: repeat;
+    backdrop-filter: blur(6px);
+}
+body
+{
+    margin: 0 auto;
+    max-width: 1700px;
+    display: flex; 
+}
+
+#chat
+{
+    display: flex;
+    border: 0px solid black;
+    height: 900px;
+    flex: 7 1 900px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0px;
+    margin-left: 160px;
+}
+section
+{
+    display: flex;
+    min-width: 1000px;
+    height: 750px;
+    border: 0px solid black;
+    background-color: black;
+    opacity: 0.8;
+    padding: 10px;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar { width: 4px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #999;}
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #999;}
+::-webkit-resizer { background-color: #666;}
+
+#form_message
+{
+    display: flex;
+    border: 1px solid black;
+    min-width: 1000px;
+    min-height: 60px;
+    justify-content: space-between;
+}
+#message
+{
+    flex: 5 2 750px;
+    font-size: 20pt;
+}
+#send
+{
+    border: 0px solid black;
+    flex: 2 5 100px;
+    cursor: pointer;
+    font-size: 20pt;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+}
+#send:hover
+{
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+}
+
+/*Блок сообщений*/
+.message_block
+{
+    display: flex;
+    align-self: flex-start;
+    border: 1px solid black;
+    flex-direction: column;
+    padding: 0px;
+}
+.message_content
+{
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+    background-color: white;
+    min-width: 200px;
+    color: black;
+    padding: 10px;
+    margin: 5px;
+    overflow-x: visible;
+}
+h4,h6
+{
+    color: white;
+}
+h6
+{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
+}
+
+#right
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0px solid black;
+    height: 900px;
+    flex: 1 7 300px;
+    padding: 30px 0px;
+    margin-right: 160px;
+    margin-left: 1%;
+}
+nav, aside 
+{
+    border: 0px solid black;
+    background-color: black;
+    opacity: 0.8;
+    min-width: 100%;
+    min-height: 300px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+nav
+{
+    margin-top: 20px;
+}
+aside
+{
+    margin-bottom: 20px;
+    padding: 10px 0px;
+}
+a, .roomP
+{
+    display: block;
+	color: rgb(7, 136, 247);
+	text-decoration: none;
+	text-align: center;
+	margin-bottom: 4%;
+	border-radius: 3px;
+	
+	background-color: rgba(0, 169, 251, 0.3);
+	color: white;
+	padding: 4% 2%;
+	width: 95%;
+	/* font-size: 1vw; */
+	transition: all .1s;
+}
+.roomP
+{
+    cursor: pointer;
+}
+a:hover, .roomP:hover
+{
+    background-color: #1fcecb;
+	color: white;
+    transition: all .1s;
+}
+#name
+{
+    border: 0px solid black;
+    opacity: 0.8;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    min-width: 100%;
+}
+
+@media screen and (max-width: 1400px)
+{
+    body
+    {
+        flex-flow: column nowrap;
+    }
+    #right
+    {
+        height: auto;
+        order: -1;
+        margin-right: 0;
+    }
+    #chat
+    {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    section
+    {
+        min-width: 320px;
+        margin-left: 15px;
+    }
+    #form_message
+    {
+        min-width: 320px;
+    }
+}

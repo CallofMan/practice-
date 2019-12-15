@@ -59,7 +59,7 @@
 
 </head>
 <body>
-    <a href="index.php">Назад</a>
+    <a href="index.php">Главная</a>
 
     <form method="POST" id="auth">
         <h1>

@@ -1,5 +1,10 @@
 <?
-session_start();
+    SESSION_START();
+
+    if($_SESSION['role'] != '1' || $_SESSION['role'] == '0')
+    {
+        Header("Location: index.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +24,7 @@ session_start();
 			
             <img class="logo" src="../background/logo_okbmei1.png" alt="logo">
 
-            <a href="authorization.php" class="login">Личный кабинет</a>
+            <a href="authorization.php" class="login">Авторизация</a>
     
         </header>
 
@@ -31,8 +36,7 @@ session_start();
 
                     <a href="index.php">Главная</a>
                     <a href="#">Телефонный справочник</a>
-                    <a href="#footerMap">Как добраться</a>
-                    <a href="#">О компании</a>
+                    <a href="forum.php">Форум</a>
                     <? if ( $_SESSION['role'] == 1) {
                         echo "<a href='requests.php'>Заявки</a>";
                     }

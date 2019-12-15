@@ -1,4 +1,5 @@
 <?php
+	SESSION_START();
 	require_once 'connection.php';
 	
 	$db = mysqli_query($link, "SELECT * FROM okbmei");
@@ -64,7 +65,7 @@
 		</div>
 
 		<div class="login">
-			<a href="authorization.php" class="login">Личный кабинет</a>
+			<a href="authorization.php" class="login">Авторизация</a>
 		</div>
 
 	</header>
@@ -74,10 +75,21 @@
 		<section class="leftSidebar">
 		
 		<nav class="leftSidebarNavigation">		
-			<a href="#">Главная</a>
 			<a href="#">Телефонный справочник</a>
 			<a href="#footerMap">Как добраться</a>
-			<a href="#" style="margin-bottom: unset">О компании</a>
+			<a href="#">О компании</a>
+			<?php
+				if($_SESSION['role'] == 1)
+				{
+					echo "<a href='forum.php'>Форум</a>";
+					echo "<a href='personalAccount.php'>Личный кибинет</a>";
+				}
+				if($_SESSION['role'] == '0')
+				{
+					echo "<a href='forum.php'>Форум</a>";
+					echo "<a href='requests.php'>Оставить заявку<a>";
+				}
+			?>
 		</nav>
 
 		<!-- <script style="flex-grow: 1; width: 93%;" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A99dc76f7c463cec37b1c102ed12522e228ad0aa2b6582984d06190ddb248d015&amp;height=250&amp;width=93%&amp;%lang=ru_RU&amp;scroll=true"></script> -->

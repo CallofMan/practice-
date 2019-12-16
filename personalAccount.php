@@ -42,7 +42,7 @@
 
                     <a href="index.php">Главная</a>
                     <a href="#">Телефонный справочник</a>
-                    <a href="forum.php">Форум</a>
+                    <a href="forum.php?id=1">Форум</a>
                     <? if ( $_SESSION['role'] == 1) {
                         echo "<a href='requests.php'>Заявки</a>";
                     }

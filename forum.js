@@ -19,9 +19,24 @@ buttonRoom.forEach(function(dick)
         var idRoom = event.target.getAttribute('id');
         room = document.getElementById(idRoom);
         room.style.backgroundColor = "rgb(7, 136, 247)";
+
+        // Парсинг айдишника из строки в интеджер
+        switch(idRoom)
+        {
+            case "room1":       idRoom = 1;         break;
+            case "room2":       idRoom = 2;         break;
+            case "room3":       idRoom = 3;         break;
+            case "room4":       idRoom = 4;         break;
+            case "room5":       idRoom = 5;         break;
+            case "room6":       idRoom = 6;         break;
+            case "room7":       idRoom = 7;         break;
+            case "room8":       idRoom = 8;         break;
+            case "room9":       idRoom = 9;         break;
+            case "room10":      idRoom = 10;        break;
+            default: console.log("Не получилось взять айди комнаты.");
+        }
     })
 })
-
 
 
 // Начался ajax

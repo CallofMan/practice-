@@ -63,7 +63,13 @@ showMessages = function(arg)
 {
     // Создаем экземпляр класса XMLHttpRequest
     const request = new XMLHttpRequest();
+    const url = "messagesUpload.php";
+    const params = "id_room=" + idRoom;
 
+    request.open("POST", url, true);
+    //В заголовке говорим что тип передаваемых данных закодирован. 
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
     request.onreadystatechange = function()
     {
         // Если запрос отправлен успешно, то вставляю все сообщения из базы в форму
@@ -85,8 +91,7 @@ showMessages = function(arg)
         }
     }
     
-    request.open("POST", "messagesUpload.php", true);
-    request.send();
+    request.send(params);
 };
 
 // Функция отправки сообщений в базу

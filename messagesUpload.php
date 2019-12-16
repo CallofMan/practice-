@@ -3,9 +3,10 @@ SESSION_START();
 require_once "connection.php";
 
 $idUserFromSession = $_SESSION['id'];
+$id_room = $_POST['id_room'];
 
 $messagesArray = []; 
-$queryMessages = mysqli_query($link, "SELECT id_message, id_user, text_message, date FROM messages");
+$queryMessages = mysqli_query($link, "SELECT id_message, id_user, text_message, date FROM messages WHERE id_room = $id_room");
 
 while($messages = mysqli_fetch_assoc($queryMessages))
 {

@@ -88,12 +88,12 @@
 			<?php
 				if($_SESSION['role'] == 1)
 				{
-					echo "<a href='forum.php'>Форум</a>";
+					echo "<a href='forum.php?id=1'>Форум</a>";
 					echo "<a href='personalAccount.php'>Личный кибинет</a>";
 				}
 				if($_SESSION['role'] == '0')
 				{
-					echo "<a href='forum.php'>Форум</a>";
+					echo "<a href='forum.php?id=1'>Форум</a>";
 					echo "<a href='requests.php'>Оставить заявку</a>";
 				}
 			?>

@@ -50,6 +50,9 @@
                 <a href="">Новости</a>
             </nav>
             <aside>
+                
+                <h1>Комнаты</h1>
+
                 <?php
                     $queryRoom = mysqli_query($link, "SELECT name_room, role FROM rooms");
 

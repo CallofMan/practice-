@@ -141,6 +141,12 @@ nav, aside
     align-items: center;
     padding: 10px 0px;
 }
+
+aside h1 {
+    color: white;
+
+}
+
 a, .roomP
 {
     display: block;
@@ -189,11 +195,38 @@ a:hover, .roomP:hover
     {
         height: auto;
         order: -1;
-        margin-right: 0;
+        margin: 0;
+        padding: 0px;
     }
     #chat
     {
         margin-left: 0;
+    }
+
+    #chat h4 {
+        font-size: 22px;
+    }
+
+    #chat h6 {
+        font-size: 20px;
+    }
+
+    p.message_content {
+        font-size: 25px;
+    }
+
+    nav a, aside p.roomP {
+        font-size: 40px;
+        margin: 0% 4%;
+        margin-top: 2%;
+    }
+
+    aside h1 {
+        font-size: 40px;
+    }
+
+    div#name h3 {
+        font-size: 40px;
     }
 }
 
@@ -231,6 +264,25 @@ a:hover, .roomP:hover
     {
         margin: 0px;
     }
+
+    #chat h4 {
+        font-size: 16px;
+    }
+
+    #chat h6 {
+        font-size: 13px;
+    }
+
+    p.message_content {
+        font-size: 14px;
+    }
+
+    nav a, aside p.roomP {
+        font-size: 40px;
+        margin: 0% 4%;
+        margin-top: 2%;
+    }
+    
     a 
     {
         margin: 4% auto;

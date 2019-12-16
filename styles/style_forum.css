@@ -65,6 +65,7 @@ section
 {
     flex: 5 2 750px;
     font-size: 14pt;
+    min-height: 70px;
 }
 #send
 {

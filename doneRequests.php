@@ -55,8 +55,8 @@
 		        	<img src="img/requests/new_request_icon.png" alt="new request">
 					<? if ( $_SESSION['role'] == 1) {
                     echo "<a href='requests.php' class='allRequests' style='color: white;'>Новая заявка</p>";
-                    echo "<a href='allRequests.php' class='allRequests active'>Все заявки</a>";
-                    echo "<a href='doneRequests.php' class='allRequests' style='color: white;'>Исполненные заявки</a>"; 
+                    echo "<a href='allRequests.php' class='allRequests' style='color: white;'>Все заявки</a>";
+                    echo "<a href='allRequests.php' class='allRequests active'>Исполненные заявки</a>"; 
 	                }
 	                if ( $_SESSION['role'] == 0) {
 	                	echo "<a href='requests.php' class='allRequests' style='color: white;'>Новая заявка</p>";
@@ -73,13 +73,12 @@
 							$selectRequests = mysqli_query($link, 
 							"SELECT 
 							requestId, requestName, requestDescription, requestDateCreated, requestDate, first_name, second_name, mail, categoryName, statusName, requestComment
-							FROM `requests`, `users`, `categories`, `priorities`, `statuses`
+							FROM requests, users, categories, priorities, statuses
 							WHERE requests.userid = users.id_user 
 							AND requests.requestCategory = categories.categoryId
 							AND requests.requestPriority = priorities.priorityId
 							AND requests.requestStatus = statuses.statusId
-							AND requests.requestStatus <> 3
-							ORDER BY `requestStatus`
+							AND requests.requestStatus = 3
 							");
 
 							$count = mysqli_num_rows($selectRequests);
@@ -110,61 +109,10 @@
 										<p style="margin-top: 2%;">Комментарий к заявке</p>
 										<textarea readonly><?echo $selectRequestsResult['requestComment']?></textarea>
 										
-										<div class="requestFooter">
-											<a class="requestButton" href="changeRequest.php?id=<?echo $selectRequestsResult['requestId']?>">Изменить заявку</a>
-											<p>Создана <br> <?echo $selectRequestsResult['requestDateCreated']; ?></p>
-										</div>
-									</div>
-									<?
-								}
-							}
-						}
-
-						
-
-						if ($_SESSION['role'] == '0') {
-							$userId = $_SESSION['id'];
-							$selectRequests = mysqli_query($link, 
-							"SELECT 
-							requestId, requestName, requestDescription, requestDateCreated, requestDate, categoryName, statusName, requestComment
-							FROM `requests`, `categories`, `priorities`, `statuses`
-							WHERE requests.userid = $userId 
-							AND requests.requestCategory = categories.categoryId
-							AND requests.requestPriority = priorities.priorityId
-							AND requests.requestStatus = statuses.statusId
-							");
-
-							$count = mysqli_num_rows($selectRequests);
-
-							if ($selectRequests) {
-								for ($i = 0; $i < $count; $i++) {
-									$selectRequestsResult = mysqli_fetch_assoc($selectRequests);
-									?>
-									<div class="requestWrapper">
-										<h1>
-											
-											<?echo "№" . $selectRequestsResult['requestId'] . " " . $selectRequestsResult['requestName'] . " до " . $selectRequestsResult['requestDate']; ?>
-												
-										</h1>
-
-										<select style="margin-bottom: 2%;">			
-											<option><?echo $selectRequestsResult['statusName']?></option>
-										</select>
-
-										<p style="margin-top: 2%;">Категория</p>
-										<input type="text" readonly value="<?echo $selectRequestsResult['categoryName'];?>">
-										
-										<p style="margin-top: 2%;">Описание заявки</p>
-										<textarea readonly><?echo $selectRequestsResult['requestDescription']?></textarea>
-										
-										<p style="margin-top: 2%;">Комментарий к заявке</p>
-										<textarea readonly><?echo $selectRequestsResult['requestComment']?></textarea>
-										
 										<div style="float: right;">
-										<p>Создана</p>
-										<p><?echo $selectRequestsResult['requestDateCreated']?></p>
+											<p>Создана</p>
+											<p><?echo $selectRequestsResult['requestDateCreated']?></p>
 										</div>
-
 									</div>
 									<?
 								}

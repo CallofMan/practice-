@@ -6,14 +6,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Все заявки</title>
+	<title>Изменение заявки</title>
 	<link rel="stylesheet" type="text/css" href="styles/style_requests.css">
 	<link rel="stylesheet" href="styles/general.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
+	<link rel="icon" href="img/favicon.ico">
 </head>
+<body>
 
-<div class="wrapper">
+div class="wrapper">
 	
 	<header>
 			
@@ -55,8 +57,7 @@
 		        	<img src="img/requests/new_request_icon.png" alt="new request">
 					<? if ( $_SESSION['role'] == 1) {
                     echo "<a href='requests.php' class='allRequests' style='color: white;'>Новая заявка</p>";
-                    echo "<a href='allRequests.php' class='allRequests active'>Все заявки</a>";
-                    echo "<a href='doneRequests.php' class='allRequests' style='color: white;'>Исполненные заявки</a>"; 
+                    echo "<a href='allRequests.php' class='allRequests active'>Все заявки</a>"; 
 	                }
 	                if ( $_SESSION['role'] == 0) {
 	                	echo "<a href='requests.php' class='allRequests' style='color: white;'>Новая заявка</p>";
@@ -78,8 +79,6 @@
 							AND requests.requestCategory = categories.categoryId
 							AND requests.requestPriority = priorities.priorityId
 							AND requests.requestStatus = statuses.statusId
-							AND requests.requestStatus <> 3
-							ORDER BY `requestStatus`
 							");
 
 							$count = mysqli_num_rows($selectRequests);
@@ -95,7 +94,9 @@
 
 										<h2><?echo $selectRequestsResult['requestName']." до ".$selectRequestsResult['requestDate'];?></h2>
 
-										<input style="margin-bottom: 2%; width: 135px;" value="<?echo $selectRequestsResult['statusName']?>" readonly>
+										<select style="margin-bottom: 2%;">			
+											<option><?echo $selectRequestsResult['statusName']?></option>
+										</select>
 
 										<p><?echo "<b>" . $selectRequestsResult['first_name'] . " " . $selectRequestsResult['second_name']."</b>";?></p>
 
@@ -110,10 +111,11 @@
 										<p style="margin-top: 2%;">Комментарий к заявке</p>
 										<textarea readonly><?echo $selectRequestsResult['requestComment']?></textarea>
 										
-										<div class="requestFooter">
-											<a class="requestButton" href="changeRequest.php?id=<?echo $selectRequestsResult['requestId']?>">Изменить заявку</a>
-											<p>Создана <br> <?echo $selectRequestsResult['requestDateCreated']; ?></p>
+										<div style="float: right;">
+										<p>Создана</p>
+										<p><?echo $selectRequestsResult['requestDateCreated']?></p>
 										</div>
+
 									</div>
 									<?
 								}
@@ -190,4 +192,3 @@
 
 </body>
 </html>
-

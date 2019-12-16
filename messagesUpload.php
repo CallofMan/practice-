@@ -2,6 +2,10 @@
 SESSION_START();
 require_once "connection.php";
 
+$roomId = $_GET['id'];
+
+echo $roomId;
+
 $idUserFromSession = $_SESSION['id'];
 
 $messagesArray = []; 

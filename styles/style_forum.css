@@ -87,8 +87,8 @@ section
 .message_block
 {
     display: flex;
-    align-self: flex-start;
-    border: 1px solid black;
+    /*align-self: flex-start;*/
+    border: 0px solid rgb(71, 133, 184);
     flex-direction: column;
     padding: 0px;
     margin-bottom: 10px;
@@ -140,15 +140,6 @@ nav, aside
     justify-content: space-around;
     align-items: center;
     padding: 10px 0px;
-}
-nav
-{
-    margin-top: 20px;
-}
-aside
-{
-    margin-bottom: 20px;
-    
 }
 a, .roomP
 {
@@ -212,7 +203,7 @@ a:hover, .roomP:hover
     {
         min-width: 300px;
         margin: 0px;
-        padding: 0px;
+        padding: 0px 10px;
         max-height: 500px;
         overflow-x: hidden;
         flex-grow: 8;

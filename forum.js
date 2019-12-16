@@ -29,13 +29,11 @@ showMessages = function(arg)
         }
     }
     
-    request.open("POST", "outputMessage.php", true);
+    request.open("POST", "messagesUpload.php", true);
     request.send();
 };
 
-// Занесение сообщений в базу
-let send = document.getElementById('send');
-send.addEventListener("click", function(event)
+outputMessage = function()
 {
     let message = document.getElementById('message');
 
@@ -60,7 +58,23 @@ send.addEventListener("click", function(event)
             showMessages(true);
         })
     }
+}
+
+// Занесение сообщений в базу
+let send = document.getElementById('send');
+send.addEventListener("click", function(event)
+{
+    outputMessage();
 });
+
+// Если нажали на enter
+// document.addEventListener("keydown", function (event)
+// {
+//     if (event.code == 'Enter') 
+//     {
+//         outputMessage();
+//     }
+// });
 
 // Вывод в первый раз, чтобы не запаздывало на секунду
 showMessages();

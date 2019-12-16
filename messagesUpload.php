@@ -2,6 +2,10 @@
 SESSION_START();
 require_once "connection.php";
 
+$roomId = $_GET['id'];
+
+echo $roomId;
+
 $idUserFromSession = $_SESSION['id'];
 $id_room = $_POST['id_room'];
 

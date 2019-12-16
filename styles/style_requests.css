@@ -220,6 +220,27 @@ div.requestWrapper {
 	margin-top: 1%;
 }
 
+div.requestFooter {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-top: 1%;
+}
+
+div.requestFooter a.requestButton {
+	display: flex;
+	align-items: center;
+	color: rgb(7, 136, 247);
+	text-decoration: none;
+	text-align: center;
+	border-radius: 3px;
+	background-color: rgba(0, 169, 251, 0.3);
+	color: white;
+	padding: 0.2% 1%;
+	transition: all .1s;
+	font-size: 14pt;
+}
+
 @media screen and (max-width: 1500px)
 {
 	.addUser, .addRoom {

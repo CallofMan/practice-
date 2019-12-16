@@ -1,6 +1,32 @@
-let flag = 0;
+var buttonRoom = document.querySelectorAll('.roomP');
+var room;
+var key = 0;
+
+// Подсвечивает активную кнопку
+buttonRoom.forEach(function(dick)
+{
+    dick.addEventListener("click", function(event)
+    {
+        // Проверка на первый запуск страницы, когда переменная ещё не создана
+        // Потом предыдущей кнопке указываем стандартное значение, и показываем, что она не активна
+        if(key == 1)
+        {
+            room.style.backgroundColor = "rgba(0, 169, 251, 0.3)";
+        }
+        else key = 1;
+        
+        // Атрибуты активной кнопки
+        var idRoom = event.target.getAttribute('id');
+        room = document.getElementById(idRoom);
+        room.style.backgroundColor = "rgb(7, 136, 247)";
+    })
+})
+
+
 
 // Начался ajax
+
+let flag = 0;
 
 // Функция вывода сообщений из базы
 showMessages = function(arg)

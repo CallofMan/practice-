@@ -54,13 +54,11 @@
                 <h1>Комнаты</h1>
 
                 <?php
-                    $queryRoom = mysqli_query($link, "SELECT name_room, role FROM rooms");
+                    $queryRoom = mysqli_query($link, "SELECT id_room, name_room, role FROM rooms");
 
-                    $countId = 0;
                     while($nameRoom = mysqli_fetch_assoc($queryRoom))
                     {
-                        ++$countId;
-                        echo "<p id='room" . $countId . "' class='roomP'>" . $nameRoom['name_room'] . "</p>";
+                        echo "<p id='room" . $nameRoom['id_room'] . "' class='roomP'>" . $nameRoom['name_room'] . "</p>";
                     }
                 ?>
             </aside>

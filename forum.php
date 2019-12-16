@@ -58,7 +58,11 @@
 
                     while($nameRoom = mysqli_fetch_assoc($queryRoom))
                     {
-                        echo "<p id='room" . $nameRoom['id_room'] . "' class='roomP'>" . $nameRoom['name_room'] . "</p>";
+                        // Вывод комнат в зависимости от роли
+                        if($_SESSION['role'])
+                            echo "<p id='room" . $nameRoom['id_room'] . "' class='roomP'>" . $nameRoom['name_room'] . "</p>";
+                        else if (!$nameRoom['role'])
+                            echo "<p id='room" . $nameRoom['id_room'] . "' class='roomP'>" . $nameRoom['name_room'] . "</p>";
                     }
                 ?>
             </aside>

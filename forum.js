@@ -3,6 +3,7 @@ var idRoom = "room1";
 var room;
 var key = 0;
 var key2 = 0;
+var flagChangeRoom = 0;
 
 // Функция получения айди и нужна для подсчечивания кнопки
 var information = function()
@@ -49,7 +50,8 @@ buttonRoom.forEach(function(dick)
 {
     dick.addEventListener("click", function(event)
     {
-        information();   
+        information();  
+        flagChangeRoom = 1;
     })
 })
 
@@ -59,7 +61,7 @@ buttonRoom.forEach(function(dick)
 let flag = 0;
 
 // Функция вывода сообщений из базы
-showMessages = function(arg)
+showMessages = function(who)
 {
     // Создаем экземпляр класса XMLHttpRequest
     const request = new XMLHttpRequest();
@@ -84,9 +86,14 @@ showMessages = function(arg)
                 flag = 1;
             }
             // Если сообщение отправлено тобой, то скроллится вниз
-            if(arg == true)
+            if(who)
             {
                 document.querySelector('section').scrollTop = document.querySelector('section').scrollHeight;
+            }
+            // Если сменил комнату
+            if(flagChangeRoom)
+            {
+                document.querySelector('section').scrollTop = document.querySelector('section').scrollHeight; 
             }
         }
     }
@@ -133,7 +140,6 @@ let send = document.getElementById('send');
 send.addEventListener("click", function(event)
 {
     outputMessage();
-    
 });
 
 // Если нажали на enter

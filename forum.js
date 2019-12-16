@@ -29,7 +29,7 @@ showMessages = function(arg)
         }
     }
     
-    request.open("POST", "outputMessage.php", true);
+    request.open("POST", "messagesUpload.php", true);
     request.send();
 };
 

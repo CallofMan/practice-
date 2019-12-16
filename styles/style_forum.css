@@ -141,15 +141,6 @@ nav, aside
     align-items: center;
     padding: 10px 0px;
 }
-nav
-{
-    margin-top: 20px;
-}
-aside
-{
-    margin-bottom: 20px;
-    
-}
 a, .roomP
 {
     display: block;

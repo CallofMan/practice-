@@ -42,13 +42,6 @@ img.logo {
 	width: 40%;
 }
 
-a.login {
-	display: block;
-	text-decoration: none;
-	border-bottom: 2px solid rgba(214,205,205,1);
-	font-size: 16px;
-	color: rgba(214,205,205,1);
-}
 main {
 	display: flex;
 	flex-flow: row wrap;
@@ -94,13 +87,6 @@ nav.navigation > a:hover {
 	transition: all .1s;
 }
 
-section.center {
-    width: 100%;
-    margin-top: 1%;
-    display: flex;
-	flex-flow: column;
-	align-items: center;
-}
 
 form {
     width: 40%;
@@ -111,39 +97,17 @@ form {
     margin: 5% auto;
 }
 
-label {
-    color: white;
-    font-size: 18px;
-}
-
-input, textarea {
+input {
     margin: 2%;
     padding: 2%;
     font-size: 18px;
-}
-
-.radio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .button {
     cursor: pointer;
 }
 
-.message {
-	color: white;
-	margin: 1% 0px;
-	padding: 1% 0.5%;
-	font-size: 18px;
-	background-color: rgba(0, 0, 0, 0.5);
-}
 
-#adminRadio, #userRadio {
-	height: 20px;
-	width: 20px;
-}
 
 @media screen and (max-width: 1500px)
 {
@@ -156,15 +120,6 @@ input, textarea {
 {
 	nav.navigation > a {
 		font-size: 12px;
-	}
-
-	form > input, label {
-		font-size: 15px;
-	}
-
-	#adminRadio, #userRadio {
-		height: 15px;
-		width: 15px;
 	}
 
 	form {
@@ -184,14 +139,6 @@ input, textarea {
 		margin: 1%;
 	}
 
-	form > input, label {
-		font-size: 10px;
-	}
-
-	#adminRadio, #userRadio {
-		height: 10px;
-		width: 10px;
-	}
 
 	form {
 		width: 60%;
@@ -200,20 +147,8 @@ input, textarea {
 
 @media screen and (max-width: 500px)
 {
-	a.login {
-		font-size: 7px;
-	}
-
 	img.logo {
 		width: 45%;
 	}
 
-	form > input, label {
-		font-size: 6px;
-	}
-
-	#adminRadio, #userRadio {
-		height: 8px;
-		width: 8px;
-    }
 }

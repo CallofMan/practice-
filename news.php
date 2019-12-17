@@ -109,13 +109,6 @@
                 <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad30690010cac316c23ee0f843f9ae9db86e1352d97cde92bcf23c421ccedeba5&amp;width=1266&amp;height=697&amp;lang=ru_RU&amp;scroll=true"></script> -->
 
             </div>
-        
-        <div class="counter">
-            <?php 
-                echo "<p>Всего посещений: " . $allVisits['all_visits'] . "</p>";
-                echo "<p>Уникальных посещений: " . $uniqueVisits[0] . "</p>";
-            ?>
-        </div>
 
     </footer>
 

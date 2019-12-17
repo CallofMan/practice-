@@ -113,7 +113,7 @@
 							
 							<div style="margin-left: 30px;">
 								<p>Срок</p>
-								<input type="date" name="requestDate">
+								<input type="date" name="requestDate" required>
 							</div>
 						</div>
 

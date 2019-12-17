@@ -189,6 +189,7 @@ ul.infoUser > li {
 	margin: 2% 1%;
 	width: 35%;
 	justify-content: center;
+	align-items: center;
 	padding: 2%;
 	font-size: 25px;
 	border-radius: 5px;
@@ -196,6 +197,7 @@ ul.infoUser > li {
 	background-color: rgba(0, 169, 251, 0.3);
 	color: white;
 	text-decoration: none;
+	text-align: center;
 }
 .add:hover {
 	background-color: #1fcecb;
@@ -205,7 +207,7 @@ ul.infoUser > li {
 
 @media screen and (max-width: 1500px)
 {
-	.addUser, .addRoom {
+	.add {
 		font-size: 20px;
 	}
 	nav.navigation > a {
@@ -228,7 +230,7 @@ ul.infoUser > li {
 		font-size: 14px;
 	}
 
-	.addUser, .addRoom {
+	.add {
 		font-size: 16px;
 	}
 
@@ -236,7 +238,7 @@ ul.infoUser > li {
 		font-size: 12px;
 	}
 
-	ul.listUsers > li > p {
+	ul.listUsers > li > a.userListButtons {
 		font-size: 10px;
 	}
 	
@@ -261,7 +263,7 @@ ul.infoUser > li {
 		font-size: 10px;
 	}
 
-	.addUser, .addRoom {
+	.add {
 		font-size: 12px;
 	}
 
@@ -269,7 +271,7 @@ ul.infoUser > li {
 		font-size: 10px;
 	}
 
-	ul.listUsers > li > p {
+	ul.listUsers > li > a.userListButtons {
 		font-size: 7px;
 	}
 
@@ -288,7 +290,11 @@ ul.infoUser > li {
 		height: 275px;
 	}
 	
-	.addUser, .addRoom {
+	.add {
+		font-size: 8px;
+	}
+
+	ul.listUsers > li > h4 {
 		font-size: 8px;
 	}
 }
@@ -299,15 +305,15 @@ ul.infoUser > li {
 		font-size: 7px;
 	}
 
-	.addUser, .addRoom {
+	.add {
 		font-size: 6px;
 	}
 
 	ul.listUsers > li > h4 {
-		font-size: 6px;
+		font-size: 5px;
 	}
 
-	ul.listUsers > li > p {
+	ul.listUsers > li > a.userListButtons {
 		font-size: 4px;
 	}
 

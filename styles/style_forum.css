@@ -116,6 +116,22 @@ h6
     justify-content: flex-end;
     padding-right: 5px;
 }
+.delete_message
+{
+    color: white;
+    cursor: pointer;
+}
+.delete_message:hover
+{
+    color: red;
+    font-size: 13pt;
+}
+.deleteAndDate
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 #right
 {

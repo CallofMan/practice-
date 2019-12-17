@@ -76,12 +76,14 @@ section
     background-color: black;
     opacity: 0.8;
     color: white;
+    transition: all 0.4s;
 }
 #send:hover
 {
-    background-color: white;
+    background-color: rgb(12, 70, 57);
     opacity: 0.8;
     color: black;
+    transition: all 0.4s;
 }
 
 /*Блок сообщений*/

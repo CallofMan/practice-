@@ -82,6 +82,8 @@
 			<a href="#">Телефонный справочник</a>
 			<a href="#footerMap">Как добраться</a>
 			<a href="#">О компании</a>
+			<a href="allNews.php">Все новости</a>
+
 			<?php
 				if($_SESSION['role'] == 1)
 				{

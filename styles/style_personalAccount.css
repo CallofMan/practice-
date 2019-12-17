@@ -167,10 +167,11 @@ div.infoAndButton > img {
 }
 
 ul.infoUser > li {
-	width: 22%;
+	width: 18%;
 	color: white;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	font-size: 20px;
 	background-color: rgba(129, 129, 129, 0.5);
 	border-radius: 3px;
@@ -264,10 +265,14 @@ ul.infoUser > li {
 
 	ul.infoUser > li {
 		font-size: 10px;
+		margin: 2% 0px;
+		padding: 2% 0px;
+		width: 100%;
 	}
 
 	.add {
 		font-size: 12px;
+		width: 100%;
 	}
 
 	ul.listUsers > li > h4 {
@@ -284,6 +289,23 @@ ul.infoUser > li {
 
 	section.center, ul.listUsers {
 		height: 350px;
+	}
+
+	.buttons {
+		flex-flow: column;
+		align-items: center;
+	}
+
+	div.infoAndButton {
+		width: 35%;
+	}
+
+	ul.infoUser {
+		flex-flow: column;
+	}
+
+	ul.listUsers {
+		width: 65%;
 	}
 }
 

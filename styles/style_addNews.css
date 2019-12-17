@@ -52,10 +52,12 @@ main {
 }
 
 section.top {
+	margin-top: 15px;
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 100%;
 	padding: 0.6% 0.3%;
 	display: flex;
+	border-radius: 5px;
 }
 
 nav.navigation {
@@ -69,7 +71,6 @@ nav.navigation {
 
 nav.navigation > a {
 	display: block;
-	color: rgb(7, 136, 247);
 	text-decoration: none;
 	text-align: center;
 	border-radius: 3px;
@@ -78,7 +79,7 @@ nav.navigation > a {
 	padding: 2% 1%;
 	width: 18%;
 	transition: all .1s;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 nav.navigation > a:hover {

@@ -171,7 +171,7 @@ a.news article {
 
 a.news > p {
 	margin-top: auto;
-	float: right;
+	align-self: flex-end;
 }
 
 .images {

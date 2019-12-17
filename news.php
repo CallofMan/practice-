@@ -1,12 +1,15 @@
 <?php
     SESSION_START();
     require_once "connection.php";
+    $newsId = $_GET['id'];
+    $queryNews = mysqli_query($link, "SELECT * FROM `news` WHERE `id` = $newsId");
+    $newsArray = mysqli_fetch_assoc($queryNews)
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Все новости </title>
+	<title><? $newsArray['title'];?></title>
 	<link rel="stylesheet" href="styles/style_addNews.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" type="text/css" href="styles/style_allNews.css">
@@ -53,20 +56,17 @@
 			
 	</section>
 
-    <div class="newsWrapper">
+    <div class="newsWrapper" style="display: block;">
 
         <?
-            $queryNews = mysqli_query($link, "SELECT * FROM `news`");
-
-            while($newsArray = mysqli_fetch_assoc($queryNews))
-            {
-                echo "<a href='news.php?id=" . $newsArray['id'] . "' class='news'> 
-                <h3>".$newsArray['title']."</h3> 
-                <img src=".$newsArray['image']."> 
-                <article>".$newsArray['into_text']." </article> 
-                <p>".$newsArray['date']."</p>
-                </a>";
-            }
+                echo "
+                <div class='postWrapper' style='min-height: 500px;'>
+                    <h2>" . $newsArray['title'] . "</h2>
+                    <img src=". $newsArray['image'] .">
+                    <article>" . $newsArray['full_text'] . "</article>         
+                    <p>". $newsArray['date'] ."</p>
+                </div>
+                ";
         ?>
     
     </div>
@@ -122,3 +122,4 @@
 </div>
 </body>
 </html>
+

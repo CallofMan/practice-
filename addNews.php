@@ -45,7 +45,8 @@
 	<section class="top">
             
                 <nav class="navigation">	
-                    <a href="index.php">Главная</a>
+					<a href="index.php">Главная</a>
+					<a href="personalAccount.php">Личный кабинет</a>
                     <a href="#">Телефонный справочник</a>
                     <a href="forum.php">Форум</a>
                     <? if ( $_SESSION['role'] == 1) {

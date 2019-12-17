@@ -39,7 +39,7 @@ header {
 	background-color: rgba(0, 0, 0, 0.3);
 	margin-top: 0.5%;
 	padding: 10px;
-	width: 95%;
+	width: 100%;
 }
 
 img.logo {
@@ -59,7 +59,6 @@ main {
 	justify-content: flex-start;
 	align-items: flex-start;
 	width: 95%;
-	margin-top: 0.8%;
 }
 
 section.leftSidebar {
@@ -185,7 +184,7 @@ a.news > p {
 }
 
 .image > img {
-	width: 80%;
+	width: 40%;
 	height: 60%;
 	box-shadow: 0px 0px 10px #2AAEFF; /* Параметры тени */
 }

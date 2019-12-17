@@ -126,33 +126,14 @@
 
 				<div class="newsWrapper">
 
-					<a href="" class="news">
-						<h3>Антенны и распространение радиоволн</h3>
-						<img src="img/news/1.jpg">
-						<article>
-							В октябре 2019 года Санкт-Петербургская Антенная Неделя была проведена в СПбГЭТУ «ЛЭТИ» и включала в себя две конференции: русскоязычную «Антенны и Распространение Радиоволн» и англоязычную «Antennas Design and Measurement International Conference».
-						</article>
-						<p>01.01.2001</p>
-					</a>
-					
-					<a href="" class="news">
-						<h3>Антенны и распространение радиоволн</h3>
-						<img src="img/news/1.jpg">
-						<article>
-							В октябре 2019 года Санкт-Петербургская Антенная Неделя была проведена в СПбГЭТУ «ЛЭТИ» и включала в себя две конференции: русскоязычную «Антенны и Распространение Радиоволн» и англоязычную «Antennas Design and Measurement International Conference».
-						</article>
-						<p>01.01.2001</p>
-					</a>
+					<?
+						$queryNews = mysqli_query($link, "SELECT * FROM `news` ORDER BY `id` DESC LIMIT 4");
 
-					<a href="" class="news">
-						<h3>Антенны и распространение радиоволн</h3>
-						<img src="img/news/1.jpg">
-						<article>
-							В октябре 2019 года Санкт-Петербургская Антенная Неделя была проведена в СПбГЭТУ «ЛЭТИ» и включала в себя две конференции: русскоязычную «Антенны и Распространение Радиоволн» и англоязычную «Antennas Design and Measurement International Conference».
-						</article>
-						<p>01.01.2001</p>
-					</a>
-
+						while($newsArray = mysqli_fetch_assoc($queryNews))
+						{
+							echo '<a href="" class="news"> <h3>'.$newsArray["title"].'</h3> <img src="'.$newsArray["image"].'"> <article> '.$newsArray["into_text"].' </article> <p>'.$newsArray["date"].'</p></a>';
+						}
+					?>
 				</div>
 
 		</section>

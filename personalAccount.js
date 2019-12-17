@@ -1,4 +1,4 @@
-let listUser = document.querySelectorAll("ul.listUsers > li");
+let listUser = document.querySelectorAll("ul.listUsers > li > h4");
 listUser.forEach(function(e){
     e.addEventListener("click", function(elem){
 

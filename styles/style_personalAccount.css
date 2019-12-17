@@ -125,6 +125,11 @@ ul.listUsers > li > h4 {
 	display: flex;
 	align-items: center;
 	flex-grow: 12;
+	cursor: pointer;
+}
+ul.listUsers > li > h4:hover {
+	font-size: 13pt;
+	color: #1fcecb;
 }
 
 ul.listUsers > li > a.userListButtons {

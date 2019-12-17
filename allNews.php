@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="styles/style_allNews.css">
 	<link rel="icon" href="img/favicon.ico">
 	<meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
     

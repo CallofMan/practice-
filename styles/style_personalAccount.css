@@ -157,22 +157,39 @@ div.infoAndButton {
 	margin: 1%;
 }
 
-ul.infoUser {
-	list-style-type: none;
+div.avatarAndInfoUser {
 	display: flex;
-	flex-flow: row;
-	align-items: center;
-	justify-content: space-between;
-	margin: 5% 2%;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: flex-start;
 	width: 100%;
 }
 
-div.infoAndButton > img {
+div.avatarAndInfoUser > img {
 	width: 50%;
 }
 
+ul.infoUser {
+	list-style-type: none;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 100%;
+	width: 35%;
+}
+
 ul.infoUser > li {
-	width: 18%;
+	width: 100%;
+}
+
+ul.infoUser p.userInfoDescripton {
+	text-align: center;
+	color: white;
+	margin-bottom: 5px;
+}
+
+ul.infoUser p.innerUserInfo {
 	color: white;
 	display: flex;
 	justify-content: center;

@@ -56,7 +56,9 @@
     <title>Authorization</title>
     <link rel="stylesheet" href="styles/style_index.css">
     <link rel="stylesheet" href="styles/style_authorization.css">
+   <link rel="stylesheet" href="styles/general.css">
     <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 
 </head>
 <body>

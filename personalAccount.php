@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="styles/style_personalAccount.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="icon" href="img/favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -80,30 +82,50 @@
 
                 <div class="infoAndButton">
 
-                    <img src="img/iconUser.png">
+                    <div class="avatarAndInfoUser">
 
-                    <ul class="infoUser">
-                        <?php
-                        $sessionId = $_SESSION['id'];
-                        $selectInfo = mysqli_query($link,
-                        "SELECT first_name, second_name,
-                        login, password, telephone, mail, position
-                        FROM `users`
-                        WHERE id_user = $sessionId");
+                        <img src="img/iconUser.png">
 
-                        if ($selectInfo) {
-                            for ($i = 0; $i < mysqli_num_rows($selectInfo); $i++) {
-                                $selectInfoResult = mysqli_fetch_assoc($selectInfo);
+                        <ul class="infoUser">
+                            <?php
+                            $sessionId = $_SESSION['id'];
+                            $selectInfo = mysqli_query($link,
+                            "SELECT first_name, second_name,
+                            login, password, telephone, mail, position
+                            FROM `users`
+                            WHERE id_user = $sessionId");
+
+                            if ($selectInfo) {
+                                for ($i = 0; $i < mysqli_num_rows($selectInfo); $i++) {
+                                    $selectInfoResult = mysqli_fetch_assoc($selectInfo);
+                                }
+                                echo "
+                                <li>
+                                    <p class='userInfoDescripton'>Фамилия и Имя сотрудника</p>
+                                    <p class='innerUserInfo'>".$selectInfoResult['first_name'] . " " . $selectInfoResult['second_name']."</p>
+                                </li> 
+
+                                <li>
+                                    <p class='userInfoDescripton'>Должность сотрудника</p>
+                                    <p class='innerUserInfo'>".$selectInfoResult['position']."</p>
+                                </li>
+  
+                                <li> 
+                                    <p class='userInfoDescripton'>Логин сотрудника для внутренней сиситемы</p>
+                                    <p class='innerUserInfo'>". $selectInfoResult['login'] ."</p>
+                                </li>
+
+                                <li>
+                                    <p class='userInfoDescripton'>Email сотрудника</p>
+                                    <p class='innerUserInfo'>".$selectInfoResult['mail']."</p>
+                                </li>";
+
+
                             }
-                            echo "<li>".$selectInfoResult['first_name']."
-                            ".$selectInfoResult['second_name']."</li> 
-                            <li>".$selectInfoResult['position']."</li> 
-                            <li>".$selectInfoResult['login']."</li> 
-                            <li>".$selectInfoResult['password']."</li> 
-                            <li>".$selectInfoResult['mail']."</li>";
-                        }
-                        ?>
-                    </ul>
+                            ?>
+                        </ul>
+
+                    </div>
                     
                     <div class="buttons">
 

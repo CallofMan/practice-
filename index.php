@@ -55,6 +55,8 @@
 	<!-- Slider -->
 	<!-- CSS -->
 		<link rel="stylesheet" href="styles/general.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -83,6 +85,17 @@
 			<a href="#footerMap">Как добраться</a>
 			<a href="#">О компании</a>
 			<a href="allNews.php">Все новости</a>
+			
+			<script src="jquery-3.3.1.min.js"></script> <!--ща пойдет JS, который я скопипастил из кода ведущего, хз ваще как оно работает. Первый JS - плавный скролл-->
+			<script>
+			$(function(){
+				$('a[href^="#"]').click(function(){
+					var target = $(this).attr('href');
+					$('html, body').animate({scrollTop: $(target).offset().top}, 800);//800 - длительность скроллинга в мс
+					return false; 
+				}); 
+			});
+			</script>
 
 			<?php
 				if($_SESSION['role'] == 1)

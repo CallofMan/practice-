@@ -61,13 +61,13 @@
 
                 <ul class="listUsers">
                     <?
-                    $selectUsers = mysqli_query($link, "SELECT first_name, second_name FROM `users`");
+                    $selectUsers = mysqli_query($link, "SELECT id_user, first_name, second_name FROM `users`");
                     if ($selectUsers) {
                         for ($i = 0; $i < mysqli_num_rows($selectUsers); $i++) {
                             $selectUsersResult = mysqli_fetch_assoc($selectUsers);
                             ?>
                             <li>
-                                <h4><?echo $selectUsersResult['first_name']." ".$selectUsersResult['second_name']?></h4>
+                                <h4 class="<?php echo $selectUsersResult['id_user']?>"><?echo $selectUsersResult['first_name']." ".$selectUsersResult['second_name']?></h4>
                                 <a href="" class="userListButtons">edit</a>
                                 <a href="" class="userListButtons">delete</a>
                             </li>
@@ -75,6 +75,7 @@
                         }
                     }
                     ?>
+
                 </ul>
 
                 <div class="infoAndButton">
@@ -82,12 +83,26 @@
                     <img src="img/iconUser.png">
 
                     <ul class="infoUser">
+                        <?php
+                        $sessionId = $_SESSION['id'];
+                        $selectInfo = mysqli_query($link,
+                        "SELECT first_name, second_name,
+                        login, password, telephone, mail, position
+                        FROM `users`
+                        WHERE id_user = $sessionId");
 
-                        <li>Иван Иванов</li>
-                        <li>Должность</li>
-                        <li>Логин</li>
-                        <li>Почта</li>
-
+                        if ($selectInfo) {
+                            for ($i = 0; $i < mysqli_num_rows($selectInfo); $i++) {
+                                $selectInfoResult = mysqli_fetch_assoc($selectInfo);
+                            }
+                            echo "<li>".$selectInfoResult['first_name']."
+                            ".$selectInfoResult['second_name']."</li> 
+                            <li>".$selectInfoResult['position']."</li> 
+                            <li>".$selectInfoResult['login']."</li> 
+                            <li>".$selectInfoResult['password']."</li> 
+                            <li>".$selectInfoResult['mail']."</li>";
+                        }
+                        ?>
                     </ul>
                     
                     <div class="buttons">
@@ -105,6 +120,8 @@
         </main>
 
 </div>
+
+<script src="personalAccount.js"> </script>
 
 </body>
 </html>

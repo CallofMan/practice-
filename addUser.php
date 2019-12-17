@@ -68,6 +68,7 @@
     <title>add_user</title>
     <link rel="stylesheet" href="styles/style_addUser.css">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="icon" href="img/favicon.ico">
 </head>
 <body>
 
@@ -117,13 +118,13 @@
                     <input type="radio" value="Юзер" id="userRadio" name="radio" required=""><label for="userRadio">Юзер</label>
                 </div>
 
-                <input type="text" name="userName" placeholder="Введите имя" minlength="2" maxlength="20" requiered autofocus>
-                <input type="text" name="userSurname" placeholder="Введите фамилию" minlength="2" maxlength="20" requiered>
+                <input type="text" name="userName" placeholder="Введите имя" minlength="2" maxlength="20" requiered autofocus class="text">
+                <input type="text" name="userSurname" placeholder="Введите фамилию" minlength="2" maxlength="20" requiered class="text">
                 <input type="password" name="password" placeholder="Введите пароль" maxlength="20" requiered>
                 <input type="password" name="passwordRepeat" placeholder="Повторите пароль" maxlength="20" requiered>
-                <input type="text" name="login" placeholder="Введите логин" minlength="2" maxlength="30" requiered>
-                <input type="text" name="position" placeholder="Введите должность" maxlength="50" requiered>
-                <input type="tel" name="tel" placeholder="Введите номер телефона" pattern="+7[0-9]{10}" requiered>
+                <input type="text" name="login" placeholder="Введите логин" minlength="2" maxlength="30" requiered class="login">
+                <input type="text" name="position" placeholder="Введите должность" maxlength="50" requiered class="text">
+                <input type="tel" name="tel" placeholder="Введите номер телефона" pattern="+7[0-9]{10}" maxlength="12" requiered>
                 <input type="email" name="email" placeholder="Введите адрес эл. почты" requiered>
 
                 <input type="submit" name="createAccount" value="Создать аккаунт" class="button">
@@ -134,6 +135,8 @@
 
     </main>
 </div>
+
+<script src="addUser.js"></script>
 
 </body>
 </html>

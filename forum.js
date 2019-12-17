@@ -94,6 +94,7 @@ showMessages = function(who)
             if(flagChangeRoom)
             {
                 document.querySelector('section').scrollTop = document.querySelector('section').scrollHeight; 
+                flagChangeRoom = 0;
             }
         }
     }

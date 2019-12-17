@@ -48,7 +48,7 @@
                 ?>
                 
                 <a href="">Телефонный справочник</a>
-                <a href="">Новости</a>
+                <a href="allNews.php">Новости</a>
             </nav>
             <aside>
                 

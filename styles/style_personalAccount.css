@@ -104,7 +104,6 @@ section.center {
 
 ul.listUsers {
 	width: 50%;
-	height: 642px;
 	overflow-y: scroll;
 	display: flex;
 	flex-flow: column;
@@ -212,6 +211,10 @@ ul.infoUser > li {
 	}
 	nav.navigation > a {
 		font-size: 15px;
+	}
+
+	ul.listUsers {
+		height: 642px;
 	}
 
 }

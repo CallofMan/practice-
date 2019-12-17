@@ -5,10 +5,13 @@
 	box-sizing: border-box;
 }
 
+
+
 html {
 	background-image: url(../background/tile.png);
 	background-repeat: repeat;
 	backdrop-filter: blur(6px);
+	min-height: 100%;
 }
 
 body
@@ -175,7 +178,7 @@ ul.infoUser {
 	flex-flow: column;
 	align-items: center;
 	justify-content: space-around;
-	height: 100%;
+	min-height: 400px;
 	width: 35%;
 }
 

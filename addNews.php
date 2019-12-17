@@ -23,7 +23,7 @@
 <html>
 <head>
 	<title> Добавление новостей </title>
-	<link rel="stylesheet" href="styles/style_addUser.css">
+	<link rel="stylesheet" href="styles/style_addNews.css">
 	<link rel="stylesheet" href="styles/general.css">
 	<link rel="icon" href="img/favicon.ico">
 	<meta charset="utf-8">
@@ -40,8 +40,28 @@
     	?>
         <a href="logout.php" class="login">Выйти</a>
     
-    </header>
-  <form action="" method="POST">
+	</header>
+	
+	<section class="top">
+            
+                <nav class="navigation">	
+                    <a href="index.php">Главная</a>
+                    <a href="#">Телефонный справочник</a>
+                    <a href="forum.php">Форум</a>
+                    <? if ( $_SESSION['role'] == 1) {
+                        echo "<a href='requests.php'>Заявки</a>";
+                    }
+                    if ( $_SESSION['role'] == 0) {
+                        echo "<a href='requests.php'>Создать заявку</a>";
+                    }
+                    ?>
+                   
+                </nav>
+			
+			</section>
+			
+  <form action="" method="POST" class="form">
+    <h2 style="color:white; margin:20px auto; font-size:25px;">Добавление новости на главную</h2>
     <input type="text" name="title" placeholder="Введите название новости" required autofocus> 
 	<input type="text" name="preText" placeholder="Введите текст для главной" required>
 	<input type="text" name="text" placeholder="Введите весь текст" required>

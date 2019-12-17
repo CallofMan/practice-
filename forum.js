@@ -96,6 +96,17 @@ showMessages = function(who)
                 document.querySelector('section').scrollTop = document.querySelector('section').scrollHeight; 
                 flagChangeRoom = 0;
             }
+
+            // Удаление сообщения 
+            var class_message = document.querySelectorAll('.delete_message');
+            class_message.forEach(function(fallos)
+            {
+                fallos.addEventListener("click", function(event)
+                {
+                    deleteMessage();
+                    showMessages();
+                })
+            })
         }
     }
     
@@ -152,8 +163,30 @@ document.addEventListener("keydown", function (event)
     }
 });
 
+
+// Функция удаления сообщений 
+deleteMessage = function()
+{
+    let id_message = event.target.getAttribute('id');
+    console.log(id_message)
+    // Создаем экземпляр класса XMLHttpRequest
+    const request = new XMLHttpRequest();
+    const url = "messagesDelete.php";
+    const params = "id_message=" + id_message;
+
+    request.open("POST", url, true);
+
+    //В заголовке говорим что тип передаваемых данных закодирован. 
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    request.send(params);
+}
+
 // Вывод в первый раз, чтобы не запаздывало на секунду
 showMessages();
+
+
+
 
 // Вывод сообщений каждую секунду
 setInterval(showMessages,1000);

@@ -14,6 +14,8 @@
 	<title>Заявки</title>
 	<link rel="stylesheet" type="text/css" href="styles/style_requests.css">
 	<link rel="stylesheet" href="styles/general.css">
+	<meta charset="utf-8">
+	<link rel="icon" href="img/favicon.ico">
 </head>
 <body>
 

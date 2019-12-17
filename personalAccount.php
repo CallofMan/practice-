@@ -17,6 +17,7 @@
     <title>personalAccount</title>
     <link rel="stylesheet" href="styles/style_personalAccount.css">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="icon" href="img/favicon.ico">
 </head>
 <body>
 

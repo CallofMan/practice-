@@ -92,6 +92,7 @@
                     <div class="buttons">
 
                             <a href="addUser.php" class="addUser">Добавить пользователя</a>
+                            <a href="addNews.php" class="addRoom">Добавить новость</a>
                             <a href="#" class="addRoom">Добавить комнату</a>
 
                     </div>

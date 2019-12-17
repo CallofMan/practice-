@@ -125,8 +125,9 @@ section.center h2 {
 
 div.newsWrapper {
 	display: grid;
-	grid-gap: 5px;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	min-width: 100%;
+	grid-gap: 15px;
+	grid-template-columns: 1fr 1fr;
 	margin-top: 2%;
 }
 
@@ -280,6 +281,7 @@ div.counter {
 	div.newsWrapper
 	{
 		flex-flow: column wrap;
+		grid-template-columns: 1fr;
 	}
 	div.news
 	{

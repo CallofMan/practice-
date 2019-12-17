@@ -104,7 +104,7 @@ section.center {
 
 ul.listUsers {
 	width: 50%;
-	height: 630px;
+	height: 642px;
 	overflow-y: scroll;
 	display: flex;
 	flex-flow: column;

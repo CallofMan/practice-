@@ -158,10 +158,13 @@ nav, aside
     align-items: center;
     padding: 10px 0px;
 }
+aside 
+{
+    overflow-y: scroll;
+}
 
 aside h1 {
     color: white;
-
 }
 
 a, .roomP

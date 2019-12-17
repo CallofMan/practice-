@@ -43,7 +43,7 @@
 
                     <a href="index.php">Главная</a>
                     <a href="#">Телефонный справочник</a>
-                    <a href="forum.php?id=1">Форум</a>
+                    <a href="forum.php">Форум</a>
                     <? if ( $_SESSION['role'] == 1) {
                         echo "<a href='requests.php'>Заявки</a>";
                     }
@@ -92,9 +92,9 @@
                     
                     <div class="buttons">
 
-                            <a href="addUser.php" class="addUser">Добавить пользователя</a>
-                            <a href="addNews.php" class="addRoom">Добавить новость</a>
-                            <a href="#" class="addRoom">Добавить комнату</a>
+                            <a href="addUser.php" class="add">Добавить пользователя</a>
+                            <a href="addNews.php" class="add">Добавить новость</a>
+                            <a href="#" class="add">Добавить комнату</a>
 
                     </div>
 

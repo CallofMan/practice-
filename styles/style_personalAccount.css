@@ -184,20 +184,20 @@ ul.infoUser > li {
 	width: 100%;
 }
 
-.addUser, .addRoom {
+.add {
 	display: flex;
+	margin: 2% 1%;
 	width: 35%;
 	justify-content: center;
 	padding: 2%;
 	font-size: 25px;
-	margin-bottom: 2%;
 	border-radius: 5px;
 	cursor: pointer;
 	background-color: rgba(0, 169, 251, 0.3);
 	color: white;
 	text-decoration: none;
 }
-.addUser:hover, .addRoom:hover {
+.add:hover {
 	background-color: #1fcecb;
 	color: white;
 	transition: all .1s;

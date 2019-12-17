@@ -25,6 +25,8 @@
 	<title> Добавление новостей </title>
 	<link rel="stylesheet" href="styles/style_addUser.css">
 	<link rel="stylesheet" href="styles/general.css">
+	<link rel="icon" href="img/favicon.ico">
+	<meta charset="utf-8">
 </head>
 <body>	
 	<header>

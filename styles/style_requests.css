@@ -107,7 +107,6 @@ nav.navigation > a:hover {
 
 section.center {
 	width: 100%;
-	min-height: 1273px;
 	display: flex;
 	background-color: rgba(0, 0, 0, 0.5);
 	margin-top: 1%;
@@ -218,6 +217,10 @@ div.requestWrapper {
 	padding: 10px;
 	width: 100%;
 	margin-top: 1%;
+}
+
+input.category {
+	width: 47%;
 }
 
 div.requestFooter {

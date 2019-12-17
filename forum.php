@@ -17,7 +17,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Forum</title>
     <link rel="stylesheet" href="styles/style_forum.css">
+    <link rel="stylesheet" href="styles/general.css">
     <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
         <div id="chat">

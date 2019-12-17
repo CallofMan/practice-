@@ -82,12 +82,10 @@ nav.leftSidebarNavigation {
 
 nav.leftSidebarNavigation > a {
 	display: block;
-	color: rgb(7, 136, 247);
 	text-decoration: none;
 	text-align: center;
 	margin: 0px 20px;
 	border-radius: 3px;
-	
 	background-color: rgba(0, 169, 251, 0.3);
 	color: white;
 	padding: 2% 2%;

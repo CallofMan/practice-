@@ -55,6 +55,8 @@
 	<!-- Slider -->
 	<!-- CSS -->
 		<link rel="stylesheet" href="styles/general.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
 

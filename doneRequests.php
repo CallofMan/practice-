@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="styles/general.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 
 <div class="wrapper">
@@ -101,7 +102,7 @@
 										<p><?echo "Email: " . "<b>" . $selectRequestsResult['mail'] . "</b>";?></p>
 
 										<p style="margin-top: 2%;">Категория</p>
-										<input type="text" readonly value="<?echo $selectRequestsResult['categoryName'];?>">
+										<input type="text" readonly class="category" value="<?echo $selectRequestsResult['categoryName'];?>">
 										
 										<p style="margin-top: 2%;">Описание заявки</p>
 										<textarea readonly><?echo $selectRequestsResult['requestDescription']?></textarea>

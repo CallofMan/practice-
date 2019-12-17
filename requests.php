@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="styles/general.css">
 	<meta charset="utf-8">
 	<link rel="icon" href="img/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -177,7 +178,7 @@
 						echo "<p class='success'>Говно твоя попытка!</p>";
 						echo "<meta http-equiv='refresh' content='2'>";
 						echo "<br>";
-						echo "<p class='success'>requestDate - " . $requestDate . "</p>";
+						//echo "<p class='success'>requestDate - " . $requestDate . "</p>";
 					}
 				?>
 

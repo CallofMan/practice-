@@ -108,7 +108,7 @@ form {
     background-color: rgba(0, 0, 0, 0.5);
     flex-flow: column;
     padding: 1%;
-    margin: 10% auto;
+    margin: 5% auto;
 }
 
 label {
@@ -116,7 +116,7 @@ label {
     font-size: 18px;
 }
 
-input {
+input, textarea {
     margin: 2%;
     padding: 2%;
     font-size: 18px;

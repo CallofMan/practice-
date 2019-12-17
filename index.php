@@ -77,10 +77,7 @@
 
 	</header>
 
-	<main>
-
-		<section class="leftSidebar">
-		
+	<section class="leftSidebar">
 		<nav class="leftSidebarNavigation">		
 			<a href="#">Телефонный справочник</a>
 			<a href="#footerMap">Как добраться</a>
@@ -98,18 +95,9 @@
 				}
 			?>
 		</nav>
-
-		<!-- <script style="flex-grow: 1; width: 93%;" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A99dc76f7c463cec37b1c102ed12522e228ad0aa2b6582984d06190ddb248d015&amp;height=250&amp;width=93%&amp;%lang=ru_RU&amp;scroll=true"></script> -->
-
-		<!-- <script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
-			
-		<div id="vk_groups"></div>
-		<script type="text/javascript">
-		VK.Widgets.Group("vk_groups", {mode: 4, height: "400"}, 341989);
-		</script> -->
-
-		</section>
-
+	</section>
+	
+	<main>
 		<section class="center">
 			
 		<div class="images">

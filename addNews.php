@@ -63,8 +63,8 @@
   <form action="" method="POST" class="form">
     <h2 style="color:white; margin:20px auto; font-size:25px;">Добавление новости на главную</h2>
     <input type="text" name="title" placeholder="Введите название новости" required autofocus> 
-	<input type="text" name="preText" placeholder="Введите текст для главной" required>
-	<input type="text" name="text" placeholder="Введите весь текст" required>
+	<textarea name="preText" placeholder="Введите текст для главной" required></textarea>
+	<textarea name="text" placeholder="Введите весь текст" required></textarea>
 	<input type="text" name="image" placeholder="Вставьте ссылку на картинку" >
     <input type="submit" name="submit" value="Отправить" class="button">
 

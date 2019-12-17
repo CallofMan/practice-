@@ -64,18 +64,18 @@ main {
 
 section.leftSidebar {
 	background-color: rgba(0, 0, 0, 0.5);
-	width: 14%;
+	width: 95%;
 	padding: 0.6% 0.3%;
 	flex-grow: 1;
 	display: flex;
-	flex-flow: column nowrap;
+	flex-flow: row wrap;
 	align-items: center;
+	justify-content: space-between;
 }
 
 nav.leftSidebarNavigation {
 	display: flex;
-	flex-flow: column;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 }
@@ -85,12 +85,12 @@ nav.leftSidebarNavigation > a {
 	color: rgb(7, 136, 247);
 	text-decoration: none;
 	text-align: center;
-	margin: 4% 0px;
+	margin: 0px 20px;
 	border-radius: 3px;
 	
 	background-color: rgba(0, 169, 251, 0.3);
 	color: white;
-	padding: 4% 2%;
+	padding: 2% 2%;
 	width: 95%;
 	/* font-size: 1vw; */
 	transition: all .1s;
@@ -106,10 +106,9 @@ section.center {
 	display: flex;
 	flex-flow:  column;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 75%;
-	margin-left: 2%;
 	padding: 1%;
 	flex-grow: 1;
 	margin-bottom: 15px;

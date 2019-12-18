@@ -7,10 +7,9 @@
 <html>
 <head>
 	<title> Все новости АО "Особое конструкторское бюро Московского энергетического института"</title>
-	<link rel="stylesheet" href="styles/style_addNews.css">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" type="text/css" href="styles/style_index.css">   
-    <!-- <link rel="stylesheet" type="text/css" href="styles/style_allNews.css"> -->
+    <link rel="stylesheet" type="text/css" href="styles/style_index.css"> 
+    <link rel="stylesheet" href="styles/style_allNews.css">  
 	<link rel="icon" href="img/favicon.ico">
 	<meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">

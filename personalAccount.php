@@ -6,6 +6,32 @@
     {
         Header("Location: index.php");
     }
+
+    $nameRoom = $_POST['nameRoom'];
+
+    if(isset($_POST['radio'])){
+
+        if($_POST['radio'] == 'Админ'){
+            $role = 1;
+        }
+        if($_POST['radio'] == 'Юзер'){
+            $role = 0;
+        }
+
+    }
+
+    if(isset($_POST['buttonAddRoom'])){
+        $addRoomQuery = mysqli_query($link, 
+        "INSERT INTO `rooms`(   
+        `id_room`,
+        `name_room`,
+        `role`)
+        VALUES (
+        NULL,
+        '$nameRoom',
+        $role)");
+        echo "<meta http-equiv='refresh' content='0'>";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +50,29 @@
 <body>
 
 <div id="wrapper">
+
+        <div class="bgAddRoom">
+
+            <div class="addRoom">
+
+                <h2> Создание комнаты </h2>
+
+                <form action="" method="POST"> 
+
+                    <div class="radio">
+                        <div class="adminRadio"> <input type="radio" value="Админ" name="radio" id="adminRadio" requiered=""><label for="adminRadio">Для админов</label> </div>
+                        <div class="userRadio"><input type="radio" value="Юзер" name="radio" id="userRadio" requiered=""><label for="userRadio">Для юзеров</label> </div>
+                    </div>
+
+                    <input type="text" name="nameRoom" placeholder="Введите название комнаты" minlength="4" maxlength="20" requiered="" autofocus autocomplete="off">
+
+                    <input type="submit" name="buttonAddRoom" value="Добавить комнату">
+
+                </form>
+
+            </div>
+
+        </div>
 
         <header>
 			
@@ -131,7 +180,7 @@
 
                             <a href="addUser.php" class="add">Добавить пользователя</a>
                             <a href="addNews.php" class="add">Добавить новость</a>
-                            <a href="#" class="add">Добавить комнату</a>
+                            <a href="#" class="add" id="addRoom">Добавить комнату</a>
 
                     </div>
 
@@ -144,6 +193,19 @@
 </div>
 
 <script src="personalAccount.js"> </script>
+<script src="jquery-3.3.1.min.js"> </script>
+<script> 
+$(function(){
+    $('#addRoom').click(function(){
+        $('.bgAddRoom').css('display', 'flex');
+    });
+    $('.bgAddRoom').click(function(e){
+        if(e.target === this) {
+            $('.bgAddRoom').css('display', 'none');
+        }
+    });
+});
+</script>
 
 </body>
 </html>

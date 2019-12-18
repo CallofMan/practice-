@@ -222,10 +222,72 @@ ul.infoUser p.innerUserInfo {
 	text-decoration: none;
 	text-align: center;
 }
+
 .add:hover {
 	background-color: #1fcecb;
 	color: white;
 	transition: all .1s;
+}
+
+.bgAddRoom {
+	position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	display: none;
+	overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(210, 210, 210, 0.57);
+}
+
+.addRoom {
+	display: flex;
+	flex-flow: column;
+	width: 20%;
+	background-color: rgba(26, 26, 26, 0.5);
+	align-items: center;
+	justify-content: center;
+	padding: 1%;
+}
+
+.addRoom > h2 {
+	display: flex;
+	justify-content: center;
+}
+
+.addRoom > form {
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+}
+
+.radio {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+}
+
+.userRadio, .adminRadio {
+	display: flex;
+	align-items: center;
+	margin: 4% 0px;
+	font-size: 20px;
+}
+
+input[type="text"], input[type="submit"]{
+	margin-bottom: 4%;
+	font-size: 18px;
+}
+
+input[type="radio"]{
+	width: 18px;
+	height: 18px;
+}
+
+.addRoom > h2, .radio {
+	color: white;
 }
 
 /* @media screen and (max-width: 1500px)
@@ -246,6 +308,7 @@ ul.infoUser p.innerUserInfo {
 	}
 
 } */
+
 @media screen and (max-width: 1200px)
 {
 	p.innerUserInfo 
@@ -253,6 +316,7 @@ ul.infoUser p.innerUserInfo {
 		font-size: 13px;
 	}
 }
+
 @media screen and (max-width: 730px)
 {
 	div.avatarAndInfoUser, .buttons, section.center
@@ -282,6 +346,7 @@ ul.infoUser p.innerUserInfo {
 		width: 100%;
 	} 
 }
+
 /* @media screen and (max-width: 1100px)
 {
 	nav.navigation > a {

@@ -197,7 +197,6 @@ h6
     flex-direction: column;
     justify-content: space-between;
     border: 0px solid black;
-    height: 900px;
     flex: 1 7 300px;
     padding: 12px 0px;
     margin-left: 1%;
@@ -265,7 +264,6 @@ a:not(.logo):hover, .roomP:hover
 {
     #right
     {
-        height: auto;
         order: -1;
         margin: 0;
         padding: 0px;
@@ -288,8 +286,8 @@ a:not(.logo):hover, .roomP:hover
     }
 
     nav a, aside p.roomP {
-        font-size: 40px;
-        margin: 0% 4%;
+        font-size: 20px;
+        margin: 0% 4px;
         margin-top: 2%;
     }
 

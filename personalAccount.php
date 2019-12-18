@@ -221,8 +221,8 @@
                             ?>
                             <li>
                                 <h4 class="<?php echo $selectUsersResult['id_user']?>"><?echo $selectUsersResult['first_name']." ".$selectUsersResult['second_name']?></h4>
-                                <a href="" class="userListButtons">edit</a>
-                                <a href="" class="userListButtons">delete</a>
+                                <a href="#" class="userListButtonsE">edit</a>
+                                <a href="#" class="userListButtonsD" id="<?php echo $selectUsersResult['id_user']?>">delete</a>
                             </li>
                             <?
                         }

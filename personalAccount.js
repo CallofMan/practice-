@@ -1,4 +1,7 @@
 let listUser = document.querySelectorAll("ul.listUsers > li > h4");
+let listUserDelete = document.querySelectorAll("ul.listUsers > li > .userListButtonsD");
+
+// Вывод пользователя по нажатию
 listUser.forEach(function(e){
     e.addEventListener("click", function(elem){
 
@@ -26,4 +29,10 @@ listUser.forEach(function(e){
     });
 });
 
-
+// Удаление пользователя
+listUserDelete.forEach(function(ed){
+    ed.addEventListener("click", function(elemD){
+        let idUserDelete = event.target.getAttribute('id');
+        console.log(idUserDelete);
+    });
+});

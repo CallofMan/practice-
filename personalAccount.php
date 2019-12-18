@@ -32,6 +32,17 @@
         $role)");
         echo "<meta http-equiv='refresh' content='0'>";
     }
+
+    if(isset($_POST['submit']))
+	{
+		$nameNews = $_POST['title'];
+		$preText = $_POST['preText'];
+		$text = $_POST['text'];
+		$image = $_POST['image'];
+		$date = date("Y-m-d H:i:s");
+	}
+
+	$query=mysqli_query($link,"INSERT INTO `news`(`id`, `title`, `into_text`, `full_text`, `date`, `image`) VALUES (NULL,'$nameNews','$preText','$text','$date','$image')");
 ?>
 
 <!DOCTYPE html>
@@ -49,30 +60,39 @@
 </head>
 <body>
 
-<div id="wrapper">
+<div class="bgAddRoom">
+    <div class="addRoom">
+        <h2> Создание комнаты </h2>
+        <form action="" method="POST"> 
 
-        <div class="bgAddRoom">
-
-            <div class="addRoom">
-
-                <h2> Создание комнаты </h2>
-
-                <form action="" method="POST"> 
-
-                    <div class="radio">
-                        <div class="adminRadio"> <input type="radio" value="Админ" name="radio" id="adminRadio" requiered=""><label for="adminRadio">Для админов</label> </div>
-                        <div class="userRadio"><input type="radio" value="Юзер" name="radio" id="userRadio" requiered=""><label for="userRadio">Для юзеров</label> </div>
-                    </div>
-
-                    <input type="text" name="nameRoom" placeholder="Введите название комнаты" minlength="4" maxlength="20" requiered="" autofocus autocomplete="off">
-
-                    <input type="submit" name="buttonAddRoom" value="Добавить комнату">
-
-                </form>
-
+            <div class="radio">
+                <div class="adminRadio"> <input type="radio" value="Админ" name="radio" id="adminRadio" requiered=""><label for="adminRadio">Для админов</label> </div>
+                <div class="userRadio"><input type="radio" value="Юзер" name="radio" id="userRadio" requiered=""><label for="userRadio">Для юзеров</label> </div>
             </div>
 
-        </div>
+            <input type="text" name="nameRoom" placeholder="Введите название комнаты" minlength="4" maxlength="20" requiered="" autofocus autocomplete="off">
+
+            <input type="submit" class="button" name="buttonAddRoom" value="Добавить комнату">
+        </form>
+    </div>
+</div>
+
+<div class="bgAddNews">
+    <div class='addNews'>
+        <form action="" method="POST" class="form">
+            <h2 style="color:white; margin:20px auto; font-size:25px;">Добавление новости на главную</h2>
+            <input type="text" name="title" placeholder="Введите название новости" required autofocus> 
+            <textarea name="preText" placeholder="Введите текст для главной" required></textarea>
+            <textarea name="text" placeholder="Введите весь текст" required></textarea>
+            <input type="text" name="image" placeholder="Вставьте ссылку на картинку" >
+            <input type="submit" name="submit" value="Отправить" class="button">
+        </form>
+    </div>
+</div>
+
+<div id="wrapper">
+
+        
 
         <header>
 			
@@ -178,8 +198,8 @@
                     
                     <div class="buttons">
 
-                            <a href="addUser.php" class="add">Добавить пользователя</a>
-                            <a href="addNews.php" class="add">Добавить новость</a>
+                            <a href="#" class="add" id="addUser">Добавить пользователя</a>
+                            <a href="#" class="add" id="addNews">Добавить новость</a>
                             <a href="#" class="add" id="addRoom">Добавить комнату</a>
 
                     </div>
@@ -195,16 +215,28 @@
 <script src="personalAccount.js"> </script>
 <script src="jquery-3.3.1.min.js"> </script>
 <script> 
-$(function(){
-    $('#addRoom').click(function(){
-        $('.bgAddRoom').css('display', 'flex');
+    $(function(){
+        $('#addRoom').click(function(){
+            $('.bgAddRoom').css('display', 'flex');
+        });
+        $('.bgAddRoom').click(function(e){
+            if(e.target === this) {
+                $('.bgAddRoom').css('display', 'none');
+            }
+        });
     });
-    $('.bgAddRoom').click(function(e){
-        if(e.target === this) {
-            $('.bgAddRoom').css('display', 'none');
-        }
+
+    $(function()
+    {
+        $('#addNews').click(function(){
+            $('.bgAddNews').css('display', 'flex');
+        });
+        $('.bgAddNews').click(function(stuff){
+            if(stuff.target === this) {
+                $('.bgAddNews').css('display', 'none');
+            }
+        });
     });
-});
 </script>
 
 </body>

@@ -69,7 +69,6 @@
 	<textarea name="text" placeholder="Введите весь текст" required></textarea>
 	<input type="text" name="image" placeholder="Вставьте ссылку на картинку" >
     <input type="submit" name="submit" value="Отправить" class="button">
-
   </form>
 </body>
 </html>

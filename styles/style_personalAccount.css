@@ -246,6 +246,7 @@ ul.infoUser p.innerUserInfo {
 	display: flex;
 	flex-flow: column;
 	width: 35%;
+
 	background-color: rgba(26, 26, 26, 0.5);
 	align-items: center;
 	justify-content: center;
@@ -270,7 +271,7 @@ ul.infoUser p.innerUserInfo {
 	justify-content: space-around;
 }
 
-.userRadio, .adminRadio {
+#userRadio, #adminRadio, label {
 	display: flex;
 	align-items: center;
 	margin: 4% 0px;
@@ -354,4 +355,17 @@ input[type="radio"]{
 	{
 		width: 100%;
 	} 
+}
+
+@media screen and (max-width: 800px), (max-height: 800px)
+{
+	.addForm 
+	{
+		width: 80%;
+		min-height: 568px;
+	}
+	input 
+	{
+		height: 40px;
+	}
 }

@@ -80,7 +80,6 @@ a.login {
 {
     display: flex;
     border: 0px solid black;
-    min-height: 900px;
     flex: 7 1 900px;
     flex-direction: column;
     justify-content: space-between;
@@ -368,6 +367,10 @@ a:not(.logo):hover, .roomP:hover
     {
         font-size: 14pt;
     }
+    #form_message
+    {
+        margin-top: auto;
+    }
 }
 
 @media screen and (max-width: 770px) and (max-height: 700px) {
@@ -397,7 +400,6 @@ a:not(.logo):hover, .roomP:hover
     } 
  
     div#name h3 {
-
         font-size: 12pt;
     }
 }
@@ -414,6 +416,10 @@ a:not(.logo):hover, .roomP:hover
 
     div.hidden {
         display: block;
+    }
+    #chat
+    {
+        justify-content: space-between;
     }
 }
 

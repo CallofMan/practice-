@@ -83,7 +83,7 @@
 		<nav class="leftSidebarNavigation">		
 			<a href="#">Телефонный справочник</a>
 			<a href="#footerMap">Как добраться</a>
-			<a href="#">О компании</a>
+			<a href="aboutCompany.php">О компании</a>
 			<a href="allNews.php">Все новости</a>
 			
 			<script src="jquery-3.3.1.min.js"></script> <!--ща пойдет JS, который я скопипастил из кода ведущего, хз ваще как оно работает. Первый JS - плавный скролл-->

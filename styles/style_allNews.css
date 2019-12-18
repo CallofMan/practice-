@@ -54,9 +54,9 @@ main {
 	width: 95%;
 }
 
-section.leftSidebar {
+section.top {
 	background-color: rgba(0, 0, 0, 0.5);
-	width: 14%;
+	width: 100%;
 	padding: 0.6% 0.3%;
 	flex-grow: 1;
 	display: flex;
@@ -64,29 +64,32 @@ section.leftSidebar {
 	align-items: center;
 }
 
-nav.leftSidebarNavigation {
+nav.navigation {
 	display: flex;
-	flex-flow: column;
-	justify-content: flex-start;
+	flex-flow: row;
+	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 }
 
-nav.leftSidebarNavigation > a {
-	display: block;
+nav.navigation > a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 72px;
 	color: rgb(7, 136, 247);
 	text-decoration: none;
 	text-align: center;
-	margin: 4% 0px;
 	border-radius: 3px;
+	line-height: 25px;
 	background-color: rgba(0, 169, 251, 0.3);
 	color: white;
-	padding: 4% 2%;
-	width: 95%;
+	width: 190px;
+	/* font-size: 1vw; */
 	transition: all .1s;
 }
 
-nav.leftSidebarNavigation > a:hover {
+nav.navigation > a:hover {
 	background-color: #1fcecb;
 	color: white;
 	transition: all .1s;

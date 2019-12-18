@@ -134,7 +134,7 @@
 <div class="bgAddNews">
     <div class='addForm'>
         <form action="" method="POST" class="form">
-            <h2 style="color:white; margin:20px auto; font-size:25px;">Добавление новости на главную</h2>
+            <h2 style="color:white; margin:20px auto;">Добавление новости на главную</h2>
             <input type="text" name="title" placeholder="Введите название новости" required autofocus> 
             <textarea name="preText" placeholder="Введите текст для главной" required></textarea>
             <textarea name="text" placeholder="Введите весь текст" required></textarea>
@@ -156,8 +156,8 @@
         <form action="" method="POST">
 
             <div class="radio">
-                <input type="radio" value="Админ" id="adminRadio" name="radio" required=""><label for="adminRadio">Админ</label>
-                <input type="radio" value="Юзер" id="userRadio" name="radio" required=""><label for="userRadio">Юзер</label>
+                <label for="adminRadio"><input type="radio" value="Админ" id="adminRadio" name="radio" required="">Админ</label>
+                <label for="userRadio"><input type="radio" value="Юзер" id="userRadio" name="radio" required="">Юзер</label>
             </div>
 
             <input type="text" name="userName" placeholder="Введите имя" minlength="2" maxlength="20" requiered="" autofocus class="text" autocomplete="off">

@@ -229,10 +229,10 @@ ul.infoUser p.innerUserInfo {
 	transition: all .1s;
 }
 
-.bgAddRoom, .bgAddNews {
+.bgAddNews, .bgAddUser, .bgAddRoom{
 	position: fixed;
 	top: 0%;
-    left: 0;
+	left: 0;
     width: 100%;
     min-height: 100%;
 	display: none;
@@ -242,7 +242,7 @@ ul.infoUser p.innerUserInfo {
     background-color: rgba(210, 210, 210, 0.57);
 }
 
-.addRoom, .addNews {
+.addForm {
 	display: flex;
 	flex-flow: column;
 	width: 35%;
@@ -252,12 +252,13 @@ ul.infoUser p.innerUserInfo {
 	padding: 1%;
 }
 
-.addRoom > h2, .addNews > h2 {
+.addForm > h2 {
 	display: flex;
 	justify-content: center;
+	color: white;
 }
 
-.addRoom > form, .addNews > form {
+.addForm > form {
 	display: flex;
 	flex-flow: column;
 	width: 85%;
@@ -294,7 +295,7 @@ input, textarea
 
 .button:hover
 {
-	background-color: rgb(12, 70, 57);
+	background-color: rgb(71, 133, 184);
 	color: black;
     transition: all 0.4s;
 }
@@ -306,6 +307,14 @@ input[type="radio"]{
 
 .addRoom > h2, .radio {
 	color: white;
+}
+
+.message {
+	color: white;
+	margin: 1% 0px;
+	padding: 1% 0.5%;
+	font-size: 18px;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 

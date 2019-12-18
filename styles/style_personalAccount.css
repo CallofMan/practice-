@@ -274,7 +274,7 @@ ul.infoUser p.innerUserInfo {
 #userRadio, #adminRadio, label {
 	display: flex;
 	align-items: center;
-	margin: 4% 0px;
+	margin: 4% 4px;
 	font-size: 20px;
 }
 
@@ -282,7 +282,7 @@ input, textarea
 {
 	height: 70px;
 	font-size: 16pt;
-	margin: 2% 0px;
+	margin: 2px 0px;
 }
 
 .button
@@ -370,14 +370,23 @@ input[type="radio"]{
 	}
 }
 
-@media screen and (max-height: 500px)
+@media screen and (max-height: 550px)
 {
-	input 
+	input, textarea
 	{
-		height: 20px;
+		height: 15px;
+		width: 180px;
 	}
-	.button
+	.addForm > .form > h2 
 	{
-		font-size: 12pt;
+		font-size: 11pt;
+	}
+	.button, input, textarea
+	{
+		font-size: 8pt;
+	}
+	.addForm > form 
+	{
+		align-items: center;
 	}
 }

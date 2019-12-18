@@ -6,10 +6,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Все новости </title>
+	<title> Все новости АО "Особое конструкторское бюро Московского энергетического института"</title>
 	<link rel="stylesheet" href="styles/style_addNews.css">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" type="text/css" href="styles/style_allNews.css">
+    <link rel="stylesheet" type="text/css" href="styles/style_index.css">   
+    <!-- <link rel="stylesheet" type="text/css" href="styles/style_allNews.css"> -->
 	<link rel="icon" href="img/favicon.ico">
 	<meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
@@ -28,9 +29,9 @@
             
             <?
 			if (isset($_SESSION['id'])) {
-				echo "<a href='logout.php' class='login'>Выйти</a>";
+				echo "<a href='logout.php' class='login' style='display: flex;'>Выйти</a>";
 			}
-			else echo "<a href='authorization.php' class='login'>Авторизация</a>";
+			else echo "<a href='authorization.php' class='login' style='display: flex;'>Авторизация</a>";
             ?>
             
 		</div>
@@ -49,6 +50,8 @@
             }
             ?>
             <a href="#">Телефонный справочник</a>
+            <a href="#footerMap">Как добраться</a>
+            <a href="#">О компании</a>
            
         </nav>
 			
@@ -57,7 +60,7 @@
     <div class="newsWrapper">
 
         <?
-            $queryNews = mysqli_query($link, "SELECT * FROM `news`");
+            $queryNews = mysqli_query($link, "SELECT * FROM `news` ORDER BY `date` DESC");
 
             while($newsArray = mysqli_fetch_assoc($queryNews))
             {
@@ -114,5 +117,12 @@
     </footer>
 
 </div>
+
+<!-- Слайдер -->
+<script type="text/javascript" src="slider.js?speed=0"></script>
+<!-- Плавный скролл -->
+<script src="jquery-3.3.1.min.js?speed=0"></script>
+<script src="js scripts/softScroll.js?speed=0"></script>
+
 </body>
 </html>

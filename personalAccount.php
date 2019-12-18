@@ -92,7 +92,7 @@
             '$userPassword',
             '$phone',
             '$email',
-            $role,
+             $role,
             '$position')");
     }
 ?>
@@ -156,8 +156,8 @@
         <form action="" method="POST">
 
             <div class="radio">
-                <label for="adminRadio"><input type="radio" value="Админ" id="adminRadio" name="radio" required="">Админ</label>
-                <label for="userRadio"><input type="radio" value="Юзер" id="userRadio" name="radio" required="">Юзер</label>
+                <label for="adminRadio1"><input type="radio" value="Админ" id="adminRadio1" name="radio" required="">Админ</label>
+                <label for="userRadio1"><input type="radio" value="Юзер" id="userRadio1" name="radio" required="">Юзер</label>
             </div>
 
             <input type="text" name="userName" placeholder="Введите имя" minlength="2" maxlength="20" requiered="" autofocus class="text" autocomplete="off">
@@ -170,6 +170,37 @@
             <input type="email" name="email" placeholder="Введите адрес эл. почты" requiered="">
 
             <input type="submit" name="createAccount" value="Создать аккаунт" class="button">
+
+        <form>
+    </div>
+</div>
+
+<!-- форма изменения данных пользователя -->
+<div class="bgEditUser" style="display: none;">
+    <div class="addForm">
+        <?php
+            if($editUser) {
+                echo "<p class='message'>Данные аккаунта изменены!</p>";
+            }
+        ?>
+
+        <form action="" method="POST">
+
+            <div class="radio">
+                <label for="adminRadio2"><input type="radio" value="Админ" id="adminRadio2" name="radio" required="">Админ</label>
+                <label for="userRadio2"><input type="radio" value="Юзер" id="userRadio2" name="radio" required="">Юзер</label>
+            </div>
+
+            <input type="text" name="userName" placeholder="Введите имя" minlength="2" maxlength="20" requiered="" autofocus class="text" autocomplete="off">
+            <input type="text" name="userSurname" placeholder="Введите фамилию" minlength="2" maxlength="20" requiered="" class="text" autocomplete="off">
+            <input type="password" name="password" placeholder="Введите пароль" maxlength="20" requiered="">
+            <input type="password" name="passwordRepeat" placeholder="Повторите пароль" maxlength="20" requiered="">
+            <input type="text" name="login" placeholder="Введите логин" minlength="2" maxlength="30" requiered="" class="login">
+            <input type="text" name="position" placeholder="Введите должность" maxlength="50" requiered="" class="text">
+            <input type="tel" name="tel" placeholder="Введите номер телефона" pattern="+7[0-9]{10}" maxlength="12" requiered="">
+            <input type="email" name="email" placeholder="Введите адрес эл. почты" requiered="">
+
+            <input type="submit" name="editUser" value="Внести изменения в аккаунт" class="button">
 
         <form>
     </div>

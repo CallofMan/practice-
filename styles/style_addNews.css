@@ -98,7 +98,7 @@ form {
     margin: 5% auto;
 }
 
-input {
+input, textarea {
     margin: 2%;
     padding: 2%;
     font-size: 18px;

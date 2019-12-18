@@ -32,6 +32,7 @@ div.hidden {
 
 div.hidden > img {
     width: 40px;
+    transition: all .5s;
 }
 
 /* img#downArrowButton:hover + nav {

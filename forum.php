@@ -142,7 +142,7 @@ document.getElementById('downArrowButton').addEventListener("click", function ()
 
     else {
         document.getElementById('hiddenNav').style.display = "none";
-        document.getElementById('downArrowButton').style.transform = "rotate(-180deg)";
+        document.getElementById('downArrowButton').style.transform = "rotate(360deg)";
     }
 
 })  

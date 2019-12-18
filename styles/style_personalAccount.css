@@ -349,7 +349,6 @@ input[type="radio"]{
 	nav.navigation > a
 	{
 		font-size: 10px;
-    	min-width: 24%;
 	}
 	header, main
 	{
@@ -388,5 +387,17 @@ input[type="radio"]{
 	.addForm > form 
 	{
 		align-items: center;
+	}
+}
+@media screen and (max-width: 550px)
+{
+	main > .top > .navigation
+	{
+		flex-flow: column;
+	}
+	.navigation > a 
+	{
+		min-width: 100%;
+		margin: 4px 0px;
 	}
 }

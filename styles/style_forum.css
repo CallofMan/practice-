@@ -81,6 +81,7 @@ a.login {
     display: flex;
     border: 0px solid black;
     flex: 7 1 900px;
+    height: 900px;
     flex-direction: column;
     justify-content: space-between;
     padding: 12px 0px;

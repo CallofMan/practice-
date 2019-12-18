@@ -33,6 +33,26 @@ listUser.forEach(function(e){
 listUserDelete.forEach(function(ed){
     ed.addEventListener("click", function(elemD){
         let idUserDelete = event.target.getAttribute('id');
-        console.log(idUserDelete);
+
+        const request = new XMLHttpRequest();
+        const url = "deleteUser.php";
+        const params = "idUser=" + idUserDelete;
+
+        request.open("POST", url, true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        request.addEventListener("readystatechange", () => {
+            if(request.readyState === 4 && request.status === 200) {
+                console.log(200);
+            }
+            if(request.readyState === 4 && request.status === 401) {
+                console.log(401);
+            }
+            if(request.readyState === 4 && request.status === 500) {
+                console.log(500);
+            }
+        });
+
+        request.send(params);
     });
 });

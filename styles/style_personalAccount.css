@@ -133,7 +133,7 @@ ul.listUsers > li > h4:hover {
 	color: #1fcecb;
 }
 
-ul.listUsers > li > a.userListButtons {
+ul.listUsers > li > a.userListButtonsE, a.userListButtonsD {
 	display: flex;
 	flex-grow: 1;
 	justify-content: center;
@@ -145,8 +145,13 @@ ul.listUsers > li > a.userListButtons {
 	transition: all .2s;
 }
 
-ul.listUsers > li > a.userListButtons:hover {
+ul.listUsers > li > a.userListButtonsE:hover {
 	color: blue;
+	transition: all .2s;
+}
+
+ul.listUsers > li > a.userListButtonsD:hover {
+	color: red;
 	transition: all .2s;
 }
 

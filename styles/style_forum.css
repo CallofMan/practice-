@@ -17,8 +17,66 @@ html {
 body
 {
     margin: 0 auto;
-    max-width: 1700px;
-    display: flex; 
+    max-width: 1500px;
+    display: flex;
+    flex-flow: column;
+    min-width: 300px;
+}
+
+div.hidden {
+    display: none;
+    background-color: black;
+    opacity: 0.8;
+    margin-bottom: 2%;
+}
+
+div.hidden > img {
+    width: 40px;
+}
+
+/* img#downArrowButton:hover + nav {
+    display: flex;
+} */
+
+div.hidden a {
+    font-size: 10pt;
+    width: 50%;
+}
+
+div.hidden nav:hover {
+    display: flex;
+}
+
+#hiddenNav {
+
+}
+
+div.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    width: 100%;
+}
+
+img.logo {
+    width: 80%;
+}
+
+a.login {
+    display: block;
+    border-bottom: 2px solid rgba(214,205,205,1);
+    font-size: 16px;
+    color: rgba(214,205,205,1);
 }
 
 #chat
@@ -29,8 +87,8 @@ body
     flex: 7 1 900px;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px 0px;
-    margin-left: 160px;
+    padding: 12px 0px;
+    width: 100%;
 }
 section
 {
@@ -144,8 +202,7 @@ h6
     border: 0px solid black;
     height: 900px;
     flex: 1 7 300px;
-    padding: 30px 0px;
-    margin-right: 160px;
+    padding: 12px 0px;
     margin-left: 1%;
 }
 nav, aside 
@@ -170,7 +227,7 @@ aside h1 {
     color: white;
 }
 
-a, .roomP
+a:not(.logo), .roomP
 {
     display: block;
 	color: rgb(7, 136, 247);
@@ -178,7 +235,6 @@ a, .roomP
 	text-align: center;
 	margin: 4%;
 	border-radius: 3px;
-	
 	background-color: rgba(0, 169, 251, 0.3);
 	color: white;
 	padding: 4% 2%;
@@ -190,7 +246,7 @@ a, .roomP
 {
     cursor: pointer;
 }
-a:hover, .roomP:hover
+a:not(.logo):hover, .roomP:hover
 {
     background-color: #1fcecb;
 	color: white;
@@ -210,10 +266,6 @@ a:hover, .roomP:hover
 
 @media screen and (max-width: 1400px)
 {
-    body
-    {
-        flex-flow: column nowrap;
-    }
     #right
     {
         height: auto;
@@ -318,5 +370,52 @@ a:hover, .roomP:hover
     #message
     {
         font-size: 14pt;
+    }
+}
+
+@media screen and (max-width: 770px && max-height: 700px) {
+    
+    div#right {
+        flex-flow: row wrap;
+    }
+
+    nav, aside {
+        min-width: 45%;
+    }
+
+    div#right > nav a, div#right > aside p {
+        font-size: 12pt;
+    }
+
+    aside > h1 {
+        font-size: 10pt;
+    }
+
+    nav, aside {
+        min-width: 45%;
+    }
+    
+    div#name {
+        margin-top: 2%;
+    } 
+ 
+    div#name h3 {
+
+        font-size: 12pt;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    
+    nav {
+        display: none;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    div.hidden {
+        display: block;
     }
 }

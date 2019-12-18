@@ -51,6 +51,7 @@
                 echo '<a href="forum.php">Форум</a>';
             }
             ?>
+            <a href="#footerMap">Как добраться</a>
             <a href="#">Телефонный справочник</a>
            
         </nav>
@@ -114,6 +115,9 @@
     </footer>
 
 </div>
+
+<script src="jquery-3.3.1.min.js?speed=0"></script>
+<script src="js scripts/softScroll.js?speed=0"></script>
 </body>
 </html>
 

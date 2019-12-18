@@ -50,9 +50,6 @@
 	<link rel="icon" href="img/favicon.ico">
 	<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="styles/style_index.css">	
-	<!-- Slider -->
-		<link rel="stylesheet" href="slider/css/style.css">
-	<!-- Slider -->
 	<!-- CSS -->
 		<link rel="stylesheet" href="styles/general.css">
 	<!-- Google Fonts -->
@@ -65,7 +62,7 @@
 	<header>
 			
 		<div class="logo">
-			<img class="logo" src="../background/logo_okbmei1.png" alt="logo">
+			<a href="index.php" class="logo"><img class="logo" src="../background/logo_okbmei1.png" alt="logo"></a>
 		</div>
 
 		<div class="login">
@@ -85,17 +82,6 @@
 			<a href="#footerMap">Как добраться</a>
 			<a href="#">О компании</a>
 			<a href="allNews.php">Все новости</a>
-			
-			<script src="jquery-3.3.1.min.js"></script> <!--ща пойдет JS, который я скопипастил из кода ведущего, хз ваще как оно работает. Первый JS - плавный скролл-->
-			<script>
-			$(function(){
-				$('a[href^="#"]').click(function(){
-					var target = $(this).attr('href');
-					$('html, body').animate({scrollTop: $(target).offset().top}, 800);//800 - длительность скроллинга в мс
-					return false; 
-				}); 
-			});
-			</script>
 
 			<?php
 				if($_SESSION['role'] == 1)
@@ -115,29 +101,29 @@
 	<main>
 		<section class="center">
 			
-		<div class="images">
+			<div class="images">
 
-			<div class="image"><img src="./img/news/1.jpg" alt="image"></div>
-			<div class="image"><img src="./img/news/2.jpg" alt="image"></div>
-			<div class="image"><img src="./img/news/3.jpg" alt="image"></div>
-			<div class="image"><img src="./img/news/1.jpg" alt="image"></div>
-			<div class="buttons"></div>
+				<div class="image"><img src="./img/news/1.jpg" alt="image"></div>
+				<div class="image"><img src="./img/news/2.jpg" alt="image"></div>
+				<div class="image"><img src="./img/news/3.jpg" alt="image"></div>
+				<div class="image"><img src="./img/news/1.jpg" alt="image"></div>
+				<div class="buttons"></div>
 
-		</div>
+			</div>
 
-				<h2>Новости</h2>
+			<a class="title" href="allNews.php">Новости</a>
 
-				<div class="newsWrapper">
+			<div class="newsWrapper">
 
-					<?
-						$queryNews = mysqli_query($link, "SELECT * FROM `news` ORDER BY `id` DESC LIMIT 4");
+				<?
+					$queryNews = mysqli_query($link, "SELECT * FROM `news` ORDER BY `date` DESC LIMIT 4");
 
-						while($newsArray = mysqli_fetch_assoc($queryNews))
-						{
-							echo '<a href="" class="news"> <h3>'.$newsArray["title"].'</h3> <img src="'.$newsArray["image"].'"> <article> '.$newsArray["into_text"].' </article> <p>'.$newsArray["date"].'</p></a>';
-						}
-					?>
-				</div>
+					while($newsArray = mysqli_fetch_assoc($queryNews))
+					{
+						echo '<a href="news.php?id='. $newsArray["id"] .'" class="news"> <h3>'.$newsArray["title"].'</h3> <img src="'.$newsArray["image"].'"> <article> '.$newsArray["into_text"].' </article> <p>'.$newsArray["date"].'</p></a>';
+					}
+				?>
+			</div>
 
 		</section>
 
@@ -193,7 +179,10 @@
 
 </div>
 
-<script type="text/javascript" src="slider.js"> </script>
-
+<!-- Слайдер -->
+<script type="text/javascript" src="slider.js?speed=0"></script>
+<!-- Плавный скролл -->
+<script src="jquery-3.3.1.min.js?speed=0"></script>
+<script src="js scripts/softScroll.js?speed=0"></script>
 </body>
 </html>

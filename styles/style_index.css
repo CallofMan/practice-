@@ -116,11 +116,13 @@ section.center {
 	color: rgba(214,205,205,1);
 }
 
-section.center h2 {
+section.center a.title {
 	padding: 1px 10px;
 	text-align: center;
 	color: rgba(214,205,205,1);
 	width: 100%;
+	text-decoration: none;
+	font-size: 18pt;
 }
 
 div.newsWrapper {
@@ -138,7 +140,7 @@ a.news {
 	align-items: center;
 	border: 2px solid  rgba(0, 169, 251, 0.8);
 	background-color: rgba(0, 0, 0, 0.7);
-	padding: 25px;
+	padding: 18px 25px;
 	border-radius: 3px;
 	color: rgba(214,205,205,1);
 	text-decoration: none;
@@ -152,18 +154,19 @@ a.news:hover {
 }
 
 a.news h3 {
+	font-size: 18pt;
 	text-align: center;
 }
 
 a.news img {
-	margin: 2% 0;
+	margin: 7% 0;
 	width: 300px;
 	max-width: 100%;
 	border-radius: 7px;
 }
 
 a.news article {
-	margin-top: 5%;
+	/* margin-top: 5%; */
 	margin-bottom: 15px;
 	text-indent: 15px;
 	line-height: 25px;
@@ -286,36 +289,58 @@ div.counter {
 		margin-left: unset;
 	}
 }
+
 @media screen and (max-width: 400px)
 {
-	nav.leftSidebarNavigation > a
-	{
+	nav.leftSidebarNavigation > a {
 		height: 30px;
 		width: 100%;
 		margin: 1%;
-		font-size: 7pt;
+		font-size: 10pt;
 		line-height: 100%;
 	}
-	nav.leftSidebarNavigation
-	{
+
+	nav.leftSidebarNavigation {
 		display: flex;
 		flex-direction: column;
 	}
-	div.wrapper
-	{
+
+	div.wrapper {
 		margin: 0px;
 		width: 100%;
 	}
-	main, header, section.leftSidebar, footer 
-	{
+	main, header, section.leftSidebar, footer  {
 		width: 100%;
 	}
+	
+	div.images {
+		margin-top: 2%;
+	}
+
+	div.image img{
+		width: 98%;
+	}
+
 }
 
 @media screen and (max-width: 870px)
 {
+
+	header {
+		padding: 0;
+	}
+
 	div.logo 
 	{
-		width: 45%;
+		width: 100%;
 	}
+
+	div.logo > img {
+		width:100%;
+	}
+	
+	a.login {
+		font-size: 8pt;
+	}
+
 }

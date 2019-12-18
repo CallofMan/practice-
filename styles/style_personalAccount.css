@@ -362,10 +362,22 @@ input[type="radio"]{
 	.addForm 
 	{
 		width: 80%;
-		min-height: 568px;
+		min-height: 300px;
 	}
 	input 
 	{
 		height: 40px;
+	}
+}
+
+@media screen and (max-height: 500px)
+{
+	input 
+	{
+		height: 20px;
+	}
+	.button
+	{
+		font-size: 12pt;
 	}
 }

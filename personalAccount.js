@@ -1,58 +1,87 @@
-let listUser = document.querySelectorAll("ul.listUsers > li > h4");
-let listUserDelete = document.querySelectorAll("ul.listUsers > li > .userListButtonsD");
+// Функция вывода всех пользователей
+showUsers = function(){
+    const request = new XMLHttpRequest();
+    const url = "showUsers.php";
 
-// Вывод пользователя по нажатию
-listUser.forEach(function(e){
-    e.addEventListener("click", function(elem){
+    request.open("POST", url, true);
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-        const request = new XMLHttpRequest();
-        const url = "outputUser.php?idUser="+elem.target.className;
-        const params = "idUser=" + elem.target.className;
+    request.addEventListener("readystatechange", () => {
+        if(request.readyState === 4 && request.status === 200) {
+            document.querySelector('.listUsers').innerHTML = request.responseText;
+            console.log(200);
+            let listUser = document.querySelectorAll("ul.listUsers > li > h4");
+            let listUserDelete = document.querySelectorAll("ul.listUsers > li > .userListButtonsD");
 
-        request.open("GET", url, true);
-        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            // Вывод пользователя по нажатию
+            listUser.forEach(function(e){
+                e.addEventListener("click", function(elem){
 
-        request.addEventListener("readystatechange", () => {
-            if(request.readyState === 4 && request.status === 200) {
-                document.querySelector('.infoUser').innerHTML = request.responseText;
-                console.log(200);
-            }
-            if(request.readyState === 4 && request.status === 401) {
-                console.log(401);
-            }
-            if(request.readyState === 4 && request.status === 500) {
-                console.log(500);
-            }
-        });
+                    const request = new XMLHttpRequest();
+                    const url = "outputUser.php?idUser="+elem.target.className;
+                    const params = "idUser=" + elem.target.className;
 
-        request.send(params);
+                    request.open("GET", url, true);
+                    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                    request.addEventListener("readystatechange", () => {
+                        if(request.readyState === 4 && request.status === 200) {
+                            document.querySelector('.infoUser').innerHTML = request.responseText;
+                            console.log(200);
+                        }
+                        if(request.readyState === 4 && request.status === 401) {
+                            console.log(401);
+                        }
+                        if(request.readyState === 4 && request.status === 500) {
+                            console.log(500);
+                        }
+                    });
+
+                    request.send(params);
+                });
+            });
+
+            // Удаление пользователя
+            listUserDelete.forEach(function(ed){
+                ed.addEventListener("click", function(event){
+                    let idUserDelete = event.target.getAttribute('id');
+
+                    const request = new XMLHttpRequest();
+                    const url = "deleteUser.php";
+                    const params = "idUser=" + idUserDelete;
+
+                    request.open("POST", url, true);
+                    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                    request.addEventListener("readystatechange", () => {
+                        if(request.readyState === 4 && request.status === 200) {
+                            document.querySelector('.listUsers').innerHTML = request.responseText;
+                            console.log(200);
+                            showUsers();
+                        }
+                        if(request.readyState === 4 && request.status === 401) {
+                            console.log(401);
+                        }
+                        if(request.readyState === 4 && request.status === 500) {
+                            console.log(500);
+                        }
+                    });
+
+                    request.send(params);
+                });
+            });
+        }
+        if(request.readyState === 4 && request.status === 401) {
+            console.log(401);
+        }
+        if(request.readyState === 4 && request.status === 500) {
+            console.log(500);
+        }
     });
-});
 
-// Удаление пользователя
-listUserDelete.forEach(function(ed){
-    ed.addEventListener("click", function(elemD){
-        let idUserDelete = event.target.getAttribute('id');
+    request.send();
+}
 
-        const request = new XMLHttpRequest();
-        const url = "deleteUser.php";
-        const params = "idUser=" + idUserDelete;
+// Вывод польователей при загрузке страницы
+showUsers();
 
-        request.open("POST", url, true);
-        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-        request.addEventListener("readystatechange", () => {
-            if(request.readyState === 4 && request.status === 200) {
-                console.log(200);
-            }
-            if(request.readyState === 4 && request.status === 401) {
-                console.log(401);
-            }
-            if(request.readyState === 4 && request.status === 500) {
-                console.log(500);
-            }
-        });
-
-        request.send(params);
-    });
-});

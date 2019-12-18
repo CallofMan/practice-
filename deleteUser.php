@@ -1,6 +1,7 @@
 <?php
 require_once "connection.php";
 
+// Запрос удаления
 $id_user = $_POST['idUser'];
 echo $id_user;
 

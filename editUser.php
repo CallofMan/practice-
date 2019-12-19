@@ -2,44 +2,31 @@
 require_once "connection.php";
 
 $idUser = $_POST['idUser'];
-$userName = $_POST['userName'];
-$userSurname = $_POST['userSurname'];
+$userName = $_POST['userNameE'];
+$userSurname = $_POST['userSurnameE'];
 
-if ($_POST['password'] == $_POST['passwordRepeat']){
+if ($_POST['passwordE'] == $_POST['passwordRepeatE']){
 
-    $userPassword = $_POST['password'];
-
-}
-
-$login = $_POST['login'];
-$position = $_POST['position'];
-$phone = $_POST['tel'];
-$email = $_POST['email'];
-
-if(isset($_POST['radio'])){
-
-    if($_POST['radio'] == 'Админ'){
-        $role = 1;
-    }
-    if($_POST['radio'] == 'Юзер'){
-        $role = 0;
-    }
+    $userPassword = $_POST['passwordE'];
 
 }
+$role = $_POST['radioE'];
+$login = $_POST['loginE'];
+$position = $_POST['positionE'];
+$phone = $_POST['telE'];
+$email = $_POST['emailE'];
 
-if(isset($_POST['userListButtonsE'])){
-    $editUser = mysqli_query($link,
-        "UPDATE `users`
-        SET
-        `first_name` = '$userName',
-        `second_name` = '$userSurname',
-        `login` = '$login',
-        `password` = '$userPassword',
-        `telephone` = '$phone',
-        `mail` = '$email',
-        `role` = $role,
-        `position` = '$position'
-        WHERE
-        `id_user` = $idUser");
-}
+$editUser = mysqli_query($link,
+    "UPDATE `users`
+    SET
+    `first_name` = '$userName',
+    `second_name` = '$userSurname',
+    `login` = '$login',
+    `password` = '$userPassword',
+    `telephone` = '$phone',
+    `mail` = '$email',
+    `role` = $role,
+    `position` = '$position'
+    WHERE
+    `id_user` = $idUser");
 ?>

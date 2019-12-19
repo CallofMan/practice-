@@ -51,6 +51,7 @@
                 echo '<a href="forum.php">Форум</a>';
             }
             ?>
+            <a href="allNews.php">Все новости</a>
             <a href="#footerMap">Как добраться</a>
             <a href="#">Телефонный справочник</a>
            

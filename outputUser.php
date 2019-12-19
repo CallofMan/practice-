@@ -43,7 +43,7 @@ if ($selectInfo) {
     </li>
     
     <li>
-        <p class='userInfoDescripton'>Телефон</p>
+        <p class='userInfoDescripton'>Роль</p>
         <p class='innerUserInfo'>".$roleName['name_role']."</p>
     </li>";
 }

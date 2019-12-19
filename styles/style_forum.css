@@ -217,10 +217,22 @@ nav, aside
 aside 
 {
     overflow-y: scroll;
+    max-height: 404px;
 }
 
 aside h1 {
     color: white;
+}
+
+a.logo
+{
+    color: white;
+    text-decoration: none;
+}
+a.logo:hover
+{
+    color: rgb(7, 136, 247);
+    font-size: 13pt; 
 }
 
 a:not(.logo), .roomP

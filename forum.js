@@ -107,6 +107,34 @@ showMessages = function(who)
                     showMessages();
                 })
             })
+
+            // Переход в личный кибинет
+            var class_message_personal = document.querySelectorAll('a.logo');
+            class_message_personal.forEach(function(cant)
+            {
+                cant.addEventListener("click", function(eventPersonal)
+                {
+                    let idUserPersonal = eventPersonal.target.getAttribute('id');
+                    console.log(idUserPersonal);
+                    // Создаем экземпляр класса XMLHttpRequest
+                    const requestPersonal = new XMLHttpRequest();
+                    const urlPersonal = "transitionPersonal.php";
+                    const paramsPersonal = "id_user=" + idUserPersonal;
+
+                    requestPersonal.open("POST", urlPersonal, true);
+                    //В заголовке говорим что тип передаваемых данных закодирован. 
+                    requestPersonal.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                    requestPersonal.addEventListener("readystatechange", () => {
+
+                        if(requestPersonal.readyState === 4 && requestPersonal.status === 200) {       
+                            console.log(200);
+                        }
+                    });
+
+                    requestPersonal.send(paramsPersonal);
+                })
+            })
         }
     }
     

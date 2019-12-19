@@ -171,7 +171,7 @@
 
             <input type="submit" name="createAccount" value="Создать аккаунт" class="button">
 
-        <form>
+        </form>
     </div>
 </div>
 

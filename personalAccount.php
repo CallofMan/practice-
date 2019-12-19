@@ -246,44 +246,93 @@
 
                         <ul class="infoUser">
                             <?php
-                            $sessionId = $_SESSION['id'];
-                            $selectInfo = mysqli_query($link,
-                            "SELECT first_name, second_name,
-                            login, password, telephone, mail, position
-                            FROM `users`
-                            WHERE id_user = $sessionId");
+                            // Если перешли с форума на чувака, то выводится его инфа 
+                            if($_SESSION['id_user_for_perosnal'])
+                            {
+                                echo $_SESSION['id_user_for_perosnal'];
+                                $sessionId = $_SESSION['id_user_for_perosnal'];
+                                $selectInfo = mysqli_query($link,
+                                "SELECT first_name, second_name,
+                                login, password, telephone, mail, position
+                                FROM `users`
+                                WHERE id_user = $sessionId");
+                    
+                                if ($selectInfo) {
+                                    for ($i = 0; $i < mysqli_num_rows($selectInfo); $i++) {
+                                        $selectInfoResult = mysqli_fetch_assoc($selectInfo);
+                                    }
+                                    echo "
+                                    <li>
+                                        <p class='userInfoDescripton'>Фамилия и Имя сотрудника</p>
+                                        <p class='innerUserInfo'>".$selectInfoResult['first_name'] . " " . $selectInfoResult['second_name']."</p>
+                                    </li> 
 
-                            if ($selectInfo) {
-                                for ($i = 0; $i < mysqli_num_rows($selectInfo); $i++) {
-                                    $selectInfoResult = mysqli_fetch_assoc($selectInfo);
+                                    <li>
+                                        <p class='userInfoDescripton'>Должность сотрудника</p>
+                                        <p class='innerUserInfo'>".$selectInfoResult['position']."</p>
+                                    </li>
+    
+                                    <li> 
+                                        <p class='userInfoDescripton'>Логин сотрудника для внутренней сиситемы</p>
+                                        <p class='innerUserInfo'>". $selectInfoResult['login'] ."</p>
+                                    </li>
+
+                                    <li>
+                                        <p class='userInfoDescripton'>Email сотрудника</p>
+                                        <p class='innerUserInfo'>".$selectInfoResult['mail']."</p>
+                                    </li>
+
+                                    <li>
+                                        <p class='userInfoDescripton'>Телефон</p>
+                                        <p class='innerUserInfo'>".$selectInfoResult['telephone']."</p>
+                                    </li>";
+
+
                                 }
-                                echo "
-                                <li>
-                                    <p class='userInfoDescripton'>Фамилия и Имя сотрудника</p>
-                                    <p class='innerUserInfo'>".$selectInfoResult['first_name'] . " " . $selectInfoResult['second_name']."</p>
-                                </li> 
+                                $_SESSION['id_user_for_perosnal'] = 0;
+                            }
+                            else 
+                            {
+                                // Выводится инфа залогиненного пользователя
+                                $sessionId = $_SESSION['id'];
+                                $selectInfo = mysqli_query($link,
+                                "SELECT first_name, second_name,
+                                login, password, telephone, mail, position
+                                FROM `users`
+                                WHERE id_user = $sessionId");
+                    
+                                if ($selectInfo) {
+                                    for ($i = 0; $i < mysqli_num_rows($selectInfo); $i++) {
+                                        $selectInfoResult = mysqli_fetch_assoc($selectInfo);
+                                    }
+                                    echo "
+                                    <li>
+                                        <p class='userInfoDescripton'>Фамилия и Имя сотрудника</p>
+                                        <p class='innerUserInfo'>".$selectInfoResult['first_name'] . " " . $selectInfoResult['second_name']."</p>
+                                    </li> 
 
-                                <li>
-                                    <p class='userInfoDescripton'>Должность сотрудника</p>
-                                    <p class='innerUserInfo'>".$selectInfoResult['position']."</p>
-                                </li>
-  
-                                <li> 
-                                    <p class='userInfoDescripton'>Логин сотрудника для внутренней сиситемы</p>
-                                    <p class='innerUserInfo'>". $selectInfoResult['login'] ."</p>
-                                </li>
+                                    <li>
+                                        <p class='userInfoDescripton'>Должность сотрудника</p>
+                                        <p class='innerUserInfo'>".$selectInfoResult['position']."</p>
+                                    </li>
+    
+                                    <li> 
+                                        <p class='userInfoDescripton'>Логин сотрудника для внутренней сиситемы</p>
+                                        <p class='innerUserInfo'>". $selectInfoResult['login'] ."</p>
+                                    </li>
 
-                                <li>
-                                    <p class='userInfoDescripton'>Email сотрудника</p>
-                                    <p class='innerUserInfo'>".$selectInfoResult['mail']."</p>
-                                </li>
+                                    <li>
+                                        <p class='userInfoDescripton'>Email сотрудника</p>
+                                        <p class='innerUserInfo'>".$selectInfoResult['mail']."</p>
+                                    </li>
 
-                                <li>
-                                    <p class='userInfoDescripton'>Телефон</p>
-                                    <p class='innerUserInfo'>".$selectInfoResult['telephone']."</p>
-                                </li>";
+                                    <li>
+                                        <p class='userInfoDescripton'>Телефон</p>
+                                        <p class='innerUserInfo'>".$selectInfoResult['telephone']."</p>
+                                    </li>";
 
 
+                                }
                             }
                             ?>
                         </ul>

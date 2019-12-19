@@ -8,8 +8,8 @@ if ($selectUsers) {
         
         echo "<li>
             <h4 class='" . $selectUsersResult['id_user'] . "'>" . $selectUsersResult['first_name']." ".$selectUsersResult['second_name'] . "</h4>
-            <a href='#' class='userListButtonsE'>edit</a>
+            <a href='#' class='userListButtonsE' id='" . $selectUsersResult['id_user'] . "'>edit</a>
             <a href='#' class='userListButtonsD' id='" . $selectUsersResult['id_user'] . "'>delete</a>
-        </li>";
+            </li>";
     }
 }

@@ -234,7 +234,7 @@ ul.infoUser p.innerUserInfo {
 	transition: all .1s;
 }
 
-.bgAddNews, .bgAddUser, .bgAddRoom{
+.bgAddNews, .bgAddUser, .bgAddRoom, .bgEditUser{
 	position: fixed;
 	top: 0%;
 	left: 0;
@@ -276,7 +276,7 @@ ul.infoUser p.innerUserInfo {
 	justify-content: space-around;
 }
 
-#userRadio, #adminRadio, label {
+#userRadio, #userRadio1, #userRadio2, #adminRadio, #adminRadio1, #adminRadio2, label {
 	display: flex;
 	align-items: center;
 	margin: 4% 4px;

@@ -59,6 +59,13 @@
         }
 
         $login = $_POST['login'];
+
+        $checkLogin = mysqli_query($link,
+        "SELECT login
+        FROM `users`
+        WHERE login = '$login'");
+        $resultCheckLogin = mysqli_fetch_assoc($checkLogin);
+        
         $position = $_POST['position'];
         $phone = $_POST['tel'];
         $email = $_POST['email'];
@@ -73,6 +80,7 @@
             }
 
         }
+        if(!$resultCheckLogin){
         $createAccount = mysqli_query($link,
             "INSERT INTO `users` (
             `id_user`,
@@ -94,6 +102,7 @@
             '$email',
              $role,
             '$position')");
+        }
     }
 ?>
 
@@ -208,7 +217,7 @@
             <a href="logout.php" class="login">Выйти</a>
     
         </header>
-
+        
         <main>
 
             <section class="top">

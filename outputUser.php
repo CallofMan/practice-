@@ -32,6 +32,11 @@ if ($selectInfo) {
     <li>
         <p class='userInfoDescripton'>Email сотрудника</p>
         <p class='innerUserInfo'>".$selectInfoResult['mail']."</p>
+    </li>
+    
+    <li>
+        <p class='userInfoDescripton'>Телефон</p>
+        <p class='innerUserInfo'>".$selectInfoResult['telephone']."</p>
     </li>";
 }
 ?>

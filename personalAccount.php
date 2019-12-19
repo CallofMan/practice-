@@ -31,7 +31,6 @@
         NULL,
         '$nameRoom',
         $role)");
-        echo "<meta http-equiv='refresh' content='0'>";
     }
 
     // код добавления новости
@@ -41,38 +40,39 @@
 		$preText = $_POST['preText'];
 		$text = $_POST['text'];
 		$image = $_POST['image'];
-		$date = date("Y-m-d H:i:s");
+        $date = date("Y-m-d H:i:s");
+        
+        $query=mysqli_query($link,"INSERT INTO `news`(`id`, `title`, `into_text`, `full_text`, `date`, `image`) VALUES (NULL,'$nameNews','$preText','$text','$date','$image')");
 	}
 
-	$query=mysqli_query($link,"INSERT INTO `news`(`id`, `title`, `into_text`, `full_text`, `date`, `image`) VALUES (NULL,'$nameNews','$preText','$text','$date','$image')");
+    
 
     // код добавления юзера
-    $userName = $_POST['userName'];
-    $userSurname = $_POST['userSurname'];
-    
-    if ($_POST['password'] == $_POST['passwordRepeat']){
+    if(isset($_POST['createAccount']) && $_POST['password'] != null){
+        $userName = $_POST['userName'];
+        $userSurname = $_POST['userSurname'];
+        
+        if ($_POST['password'] == $_POST['passwordRepeat']){
 
-        $userPassword = $_POST['password'];
+            $userPassword = $_POST['password'];
 
-    }
-
-    $login = $_POST['login'];
-    $position = $_POST['position'];
-    $phone = $_POST['tel'];
-    $email = $_POST['email'];
-
-    if(isset($_POST['radio'])){
-
-        if($_POST['radio'] == 'Админ'){
-            $role = 1;
-        }
-        if($_POST['radio'] == 'Юзер'){
-            $role = 0;
         }
 
-    }
-    
-    if(isset($_POST['createAccount']) && $userPassword != null){
+        $login = $_POST['login'];
+        $position = $_POST['position'];
+        $phone = $_POST['tel'];
+        $email = $_POST['email'];
+
+        if(isset($_POST['radio'])){
+
+            if($_POST['radio'] == 'Админ'){
+                $role = 1;
+            }
+            if($_POST['radio'] == 'Юзер'){
+                $role = 0;
+            }
+
+        }
         $createAccount = mysqli_query($link,
             "INSERT INTO `users` (
             `id_user`,
@@ -147,11 +147,6 @@
 <!-- форма добавления пользователя -->
 <div class="bgAddUser">
     <div class="addForm">
-        <?php
-            if($createAccount) {
-                echo "<p class='message'>Аккаунт создан!</p>";
-            }
-        ?>
 
         <form action="" method="POST">
 
@@ -223,6 +218,7 @@
                     <a href="index.php">Главная</a>
                     <a href="#">Телефонный справочник</a>
                     <a href="forum.php">Форум</a>
+                    <a href="allNews.php">Новости</a>
                     <? if ( $_SESSION['role'] == 1) {
                         echo "<a href='requests.php'>Заявки</a>";
                     }

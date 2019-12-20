@@ -213,8 +213,5 @@ deleteMessage = function()
 // Вывод в первый раз, чтобы не запаздывало на секунду
 showMessages();
 
-
-
-
 // Вывод сообщений каждую секунду
 setInterval(showMessages,1000);

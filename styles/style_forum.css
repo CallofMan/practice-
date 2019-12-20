@@ -190,6 +190,10 @@ h6
     justify-content: space-between;
     align-items: center;
 }
+img 
+{
+    max-width: 100%;
+}
 
 #right
 {

@@ -50,7 +50,7 @@
             ?>
             <a href="#">Телефонный справочник</a>
             <a href="#footerMap">Как добраться</a>
-            <a href="#">О компании</a>
+            <a href="aboutCompany.php">О компании</a>
            
         </nav>
 			
@@ -75,33 +75,6 @@
     </div>
 
     <footer style="color: white;">
-
-        <div class="footerNav">
-            <nav class="footerNav Left">
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="" class="bottomA">Lorem ipsum</a>
-            </nav>
-
-            <nav class="footerNav Left">
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="" class="bottomA">Lorem ipsum</a>
-            </nav>
-
-            <nav class="footerNav Left">
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="" class="bottomA">Lorem ipsum</a>
-            </nav>      
-
-        </div>
 
         <div id="footerMap">
 

@@ -76,32 +76,6 @@
 
     <footer style="color: white;">
 
-        <div class="footerNav">
-            <nav class="footerNav Left">
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="" class="bottomA">Lorem ipsum</a>
-            </nav>
-
-            <nav class="footerNav Left">
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="" class="bottomA">Lorem ipsum</a>
-            </nav>
-
-            <nav class="footerNav Left">
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="">Lorem ipsum</a>
-                <a href="" class="bottomA">Lorem ipsum</a>
-            </nav>      
-
-        </div>
 
         <div id="footerMap">
 

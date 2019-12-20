@@ -1,0 +1,254 @@
+* {
+	padding:  0;
+	margin:  0;
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+html {
+	background-image: url(../background/tile.png);
+	background-repeat: repeat;
+	backdrop-filter: blur(6px);
+}
+
+body
+{
+	margin: 0 auto;
+	max-width: 1440px;
+}
+
+div.wrapper {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100%;
+	width: 86%;
+	margin: 0 auto;
+}
+
+header, section.center, section.leftSidebar, footer{
+	background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+header {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	background-color: rgba(0, 0, 0, 0.3);
+	margin-top: 0.5%;
+	padding: 10px;
+	width: 95%;
+}
+
+img.logo {
+	width: 80%;
+}
+
+a.login {
+	display: block;
+	border-bottom: 2px solid rgba(214,205,205,1);
+	font-size: 16px;
+	color: rgba(214,205,205,1);
+}
+
+main {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 95%;
+	margin-top: 0.8%;
+}
+
+section.leftSidebar {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 95%;
+	padding: 0.6% 0.3%;
+	flex-grow: 1;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav.leftSidebarNavigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 100%;
+}
+
+nav.leftSidebarNavigation > a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 72px;
+	color: rgb(7, 136, 247);
+	text-decoration: none;
+	text-align: center;
+	border-radius: 3px;
+	line-height: 25px;
+	background-color: rgba(0, 169, 251, 0.3);
+	color: white;
+	width: 190px;
+	/* font-size: 1vw; */
+	transition: all .1s;
+}
+
+nav.leftSidebarNavigation > a:hover {
+	background-color: #1fcecb;
+	color: white;
+	transition: all .1s;
+}
+
+section.center {
+	display: flex;
+	flex-flow:  column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 75%;
+	padding: 1%;
+	flex-grow: 1;
+	margin-bottom: 15px;
+	color: rgba(214,205,205,1);
+}
+
+section.center h2 {
+	padding: 1px 10px;
+	text-align: center;
+	color: rgba(214,205,205,1);
+	width: 100%;
+}
+
+div.newsWrapper {
+	display: grid;
+	min-width: 100%;
+	grid-gap: 15px;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 2%;
+}
+
+a.news {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid  rgba(0, 169, 251, 0.8);
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 25px;
+	border-radius: 3px;
+	color: rgba(214,205,205,1);
+	text-decoration: none;
+	transition: all .1s;
+	box-shadow: 0px 0px 10px #2AAEFF; /* Параметры тени */
+}
+
+
+.buttons {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+footer {
+	justify-content: center;
+	margin-top: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 95%;
+	padding: 10px;
+	margin-bottom: 1%;
+}
+
+div.footerNav {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+nav.footerNav {
+	width: 25%;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 2% 0;
+	list-style-type: none;
+}
+
+nav.footerNav > a {
+	width: 70%;
+	display: block;
+	color: white;
+	background-color: rgba(0, 169, 251, 0.3);
+	text-decoration: none;
+	text-align: center;
+	margin-bottom: 5%;
+	padding: 2%;
+	border-radius: 3px;
+	transition: all .2s;
+}
+
+nav.footerNav > a.bottomA {
+	margin-bottom: 0%;
+}
+
+nav.footerNav > a:hover {
+	transition: all .2s;
+	background-color: #1fcecb;
+}
+
+div#footerMap {
+	display: flex;
+	justify-content: center;
+}
+
+div.counter {
+	margin-top: 2%;
+}
+
+ul.textTable {
+    margin-left: 35px;
+}
+
+div.text > p {
+    margin: 13px;
+}
+
+@media screen and (max-width: 320px)
+{
+
+	header
+	{
+		margin-bottom: 10px;
+	}
+	section.center
+	{
+		margin-bottom: 10px;
+		margin-left: unset;
+	}
+}
+@media screen and (max-width: 400px)
+{
+
+	div.wrapper
+	{
+		margin: 0px;
+		width: 100%;
+	}
+	main, header, footer 
+	{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 870px)
+{
+	div.logo 
+	{
+		width: 45%;
+	}
+}
